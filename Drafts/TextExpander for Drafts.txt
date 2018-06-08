@@ -9,7 +9,7 @@ vv  → 
 tk 👋 @estimate(01 min) @due(Saturday 18:30) @context(1️⃣)
 buy 🛒 @estimate(05 min) @due(Saturday 18:20) @context(🛒🛒 Shopping)
 
-**插件执行**
+插件执行
 chat 💬️ @estimate(01 min) @due(Today 18:50) @context(💬️💬️ Communicate)
 chad 💬️ @estimate(01 min) @defer(Saturday 18:50) @due(Saturday 20:00) @context(💬️💬️ Communicate)
 
@@ -23,11 +23,11 @@ sunf @estimate(05 min) @defer(Sunday 20:00) @due(Sunday 20:00) @context(5️⃣)
 sunt @estimate(10 min) @defer(Sunday 20:00) @due(Sunday 20:00) @context(1️⃣0️⃣)
 sunh @estimate(30 min) @defer(Sunday 20:00) @due(Sunday 20:00) @context(3️⃣0️⃣)
 
-**插件执行、Workflow 执行**
+Popclip 插件执行、Workflow 执行
 wwh 🤔 @estimate(01 min) @context(🤔🤔 What Why How)
 rel 🔖 @estimate(10 min) @context(📕📕 Reading Lists)
 wrr @estimate(60 min) @context(📑📑 Research & Article)
 
-**插件执行**
+Popclip 插件执行
 mus 🎧 @estimate(01 min) @context(🎧🎧 Music to Listen)
 mvy 🎬 @estimate(10 min) @context(🎬🎬 Movies to watch)
