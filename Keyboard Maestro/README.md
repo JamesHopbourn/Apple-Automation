@@ -1,6 +1,6 @@
 ## Keyboard Maestro
 ### OmniFocus Reading List
-OmniFocus Reading List 动作用于自动化添加网页文章到 OmniFocus 的阅读列表上下文中，默认使用 option+L 激活。
+自动化添加当前网页文章到 OmniFocus 的阅读列表上下文中，默认使用 option+L 激活。
 
 #### 配置
 1. 在 Safari 的个人收藏文件夹中新建名称为「JS」的文件夹。（因为还有其他 JS 脚本，所以统一放在同一个文件夹中整理起来更方便一些。）
@@ -10,9 +10,10 @@ OmniFocus Reading List 动作用于自动化添加网页文章到 OmniFocus 的�
 ```
 javascript:window.location='omnifocus:///add?note='+encodeURIComponent(window.location)+'&name=🔖 '+encodeURIComponent(document.title.replace(/GitHub - |丨.*|-.*|\|.*|【.*】|“|”|……|[.*]|「|」|！|–.* |\(|\)|\[|\]|Medium|_.*| ｜.*/,""))+'&context=📕📕 Reading Lists'+'&estimate=04 mins'
 ```
+<img src="/Keyboard%20Maestro/PIC/OmniFocus.gif" width="640" height="360"/>
 
 ### DEVONthink
-自动化添加网页文章到 DEVONthink 中。
+自动化添加当前网页文章到 DEVONthink 中，默认使用 option+; 激活。
 
 #### 配置
 1. 在 Safari 的个人收藏文件夹中新建名称为「JS」的文件夹。（因为还有其他 JS 脚本，所以统一放在同一个文件夹中整理起来更方便一些。）
@@ -23,4 +24,3 @@ javascript:window.location='omnifocus:///add?note='+encodeURIComponent(window.lo
 javascript:window.location='x-devonthink://clip?title='+encodeURIComponent(document.title)+'&location='+encodeURIComponent(window.location)+'&referrer='+encodeURIComponent(document.referrer)+'&width='+window.innerWidth+'&text='+encodeURIComponent(getSelection())+'&source='+encodeURIComponent(document.documentElement.outerHTML)+ '&encoding='+encodeURIComponent(document.characterSet);
 ```
 <img src="/Keyboard%20Maestro/PIC/DEVONthink.gif" width="640" height="360"/>
-
