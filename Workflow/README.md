@@ -7,5 +7,5 @@
 - 如果匹配到微信链接，添加完任务后会自动跳转回微信。
 - 如果传入是文本的话，跳转到 Safari 并用谷歌进行搜索。
 
-![](/Workflow/PIC/OmniFocus.png)
 <img src="/Workflow/PIC/OmniFocus.gif" width="375" height="667" />
+![](/Workflow/PIC/OmniFocus.png)
