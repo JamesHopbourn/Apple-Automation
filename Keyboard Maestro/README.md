@@ -1,5 +1,5 @@
 ## Keyboard Maestro
-- OmniFocus Reading List
+### OmniFocus Reading List
 OmniFocus Reading List 动作用于自动化添加网页文章到 OmniFocus 的阅读列表上下文中，默认使用 option+L 激活。
 
 #### 配置
@@ -11,7 +11,7 @@ OmniFocus Reading List 动作用于自动化添加网页文章到 OmniFocus 的�
 javascript:window.location='omnifocus:///add?note='+encodeURIComponent(window.location)+'&name=🔖 '+encodeURIComponent(document.title.replace(/GitHub - |丨.*|-.*|\|.*|【.*】|“|”|……|[.*]|「|」|！|–.* |\(|\)|\[|\]|Medium|_.*| ｜.*/,""))+'&context=📕📕 Reading Lists'+'&estimate=04 mins'
 ```
 
-- DEVONthink
+### DEVONthink
 自动化添加网页文章到 DEVONthink 中。
 
 #### 配置
