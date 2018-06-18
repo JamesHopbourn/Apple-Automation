@@ -8,4 +8,4 @@
 - 如果传入是文本的话，跳转到 Safari 并用谷歌进行搜索。
 
 ![](/Workflow/PIC/OmniFocus.png)
-<img src="/Workflow/PIC/OmniFocus.gif" width="40" height="40" />
+<img src="/Workflow/PIC/OmniFocus.gif" width="200" height="280" />
