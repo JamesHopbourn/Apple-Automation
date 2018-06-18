@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>DisplayKind</key>
+		<string>None</string>
+		<key>IncludeStdErr</key>
+		<false/>
+		<key>MacroActionType</key>
+		<string>ExecuteAppleScript</string>
+		<key>NotifyOnFailure</key>
+		<false/>
+		<key>Path</key>
+		<string></string>
+		<key>StopOnFailure</key>
+		<false/>
+		<key>Text</key>
+		<string>tell application "System Events"
+	tell process "Safari"
+		click menu item "OmniFocus" of menu "JS" of menu item "JS" of menu "Favorites" of menu item "Favorites" of menu "Bookmarks" of menu bar item "Bookmarks" of menu bar 1
+		click button "Allow" of group 1 of tab group 1 of splitter group 1 of window 1
+		click button "Save" of window 1 of application process "OmniFocus" of application "System Events"
+		tell application "Safari" to activate
+	end tell
+end tell</string>
+		<key>TimeOutAbortsMacro</key>
+		<true/>
+		<key>TrimResults</key>
+		<true/>
+		<key>TrimResultsNew</key>
+		<true/>
+		<key>UseText</key>
+		<true/>
+	</dict>
+</array>
+</plist>

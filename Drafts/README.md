@@ -12,7 +12,7 @@
 用途：批量添加事件到 Fantastical 中，支持自然语言识别。
 
 # 致谢
-[YuktimH](https://sspai.com/user/47944/updates) 的「神奇搜索」是 Alfred 的原型。
+[YuktimH](https://sspai.com/user/47944/updates) 的[神奇搜索](https://sspai.com/post/35377)是 Alfred 的原型。
 
 [Soff Chen](https://github.com/soffchen) 为 Alfred 优化了代码，取消了区分大小写与标识符判断。
 
