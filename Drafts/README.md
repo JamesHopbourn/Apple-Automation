@@ -2,10 +2,13 @@
 ## [Alfred](https://drafts4-actions.agiletortoise.com/a/2PS)
 用途：类似 macOS 上的 Alfred，使用关键词+内容启动特定的 URL Scheme，默认动作为 TaskPaper，可根据自己需求进行修改。
 
+## [URL](https://drafts4-actions.agiletortoise.com/a/2PV)
+用途：使用 Drafts 内置的函数在 Drafts 内打开网页。
+
 ## [TaskPaper](https://drafts4-actions.agiletortoise.com/a/2PT)
 用途：根据 OmniFocus 的 TaskPaper 语法批量添加任务到 OmniFocus 中，配合 TextExpander 进行文本替换。
 
-##[Fantastical Events](https://drafts4-actions.agiletortoise.com/a/2PU)
+## [Fantastical Events](https://drafts4-actions.agiletortoise.com/a/2PU)
 用途：批量添加事件到 Fantastical 中，支持自然语言识别。
 
 # 致谢
