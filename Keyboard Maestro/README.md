@@ -24,3 +24,8 @@ javascript:window.location='omnifocus:///add?note='+encodeURIComponent(window.lo
 javascript:window.location='x-devonthink://clip?title='+encodeURIComponent(document.title)+'&location='+encodeURIComponent(window.location)+'&referrer='+encodeURIComponent(document.referrer)+'&width='+window.innerWidth+'&text='+encodeURIComponent(getSelection())+'&source='+encodeURIComponent(document.documentElement.outerHTML)+ '&encoding='+encodeURIComponent(document.characterSet);
 ```
 <img src="/Keyboard%20Maestro/PIC/DEVONthink.gif" width="640" height="360"/>
+
+### AirDrop
+自动发送当前 Safari 当前阅读页面到 AirDrop 的第一个设备中默认使用 option+A 激活。
+
+<img src="/Keyboard%20Maestro/PIC/AirDrop.gif" width="640" height="360"/>
