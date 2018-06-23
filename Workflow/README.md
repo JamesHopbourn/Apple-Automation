@@ -12,7 +12,7 @@
 
 ## [OmniFocus URLs](https://workflow.is/workflows/327d6900a61640bb86b9987b06029eca)
 用途：批量抓取 URL 标题等信息添加到 OmniFocus 中。
-![](/Workflow/PIC/OmniFocusURLS.png)
+![](/Workflow/PIC/OmniFocusURLs.png)
 
 
 ## [少数派 Workflow 墙](http://workflow.sspai.com/#/main/workflow)
