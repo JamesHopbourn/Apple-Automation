@@ -10,8 +10,9 @@
 ![](/Workflow/PIC/OmniFocus.png)
 <img src="/Workflow/PIC/OmniFocus.gif" width="375" height="667"/>
 
-## [OmniFocus URLs](https://workflow.is/workflows/5a10a486d9834efb83ac13c581720391)
+## [OmniFocus URLs](https://workflow.is/workflows/327d6900a61640bb86b9987b06029eca)
 用途：批量抓取 URL 标题等信息添加到 OmniFocus 中。
+![](/Workflow/PIC/OmniFocusURLS.png)
 
 
 ## [少数派 Workflow 墙](http://workflow.sspai.com/#/main/workflow)
