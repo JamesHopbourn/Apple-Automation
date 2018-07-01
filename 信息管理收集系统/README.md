@@ -16,6 +16,8 @@ Drafts 4：[Alfred](https://drafts4-actions.agiletortoise.com/a/2P4)、[TaskPape
 
 Alfred：[Bear](https://github.com/chrisbro/alfred-bear)、[DEVONthink Search](http://www.packal.org/workflow/devonthink-search)
 
+Safari 插件：[DEVONthink](https://safari-extensions.apple.com/details/?id=com.devon-technologies.think.clip-679S2QUWR8)、[Bear](https://safari-extensions.apple.com/details/?id=net.shinyfrog.bearExtension-9K33E3U3T4)
+
 |关键词|说明|
 |:--:|:--:|
 |bs|按照内容进行搜索|
