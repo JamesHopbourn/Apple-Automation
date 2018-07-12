@@ -1,5 +1,5 @@
 ## Keyboard Maestro
-<img src="/Keyboard%20Maestro/PIC/keyboard.jpg" width="1315" height="652"/>
+![](https://github.com/JamesHopbourn/Apple-Automation/raw/master/Keyboard%20Maestro/PIC/keyboard.jpg)
 
 ### OmniFocus
 自动化添加当前网页文章到 OmniFocus 的阅读列表上下文中，默认使用 option+L 激活。
