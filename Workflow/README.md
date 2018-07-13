@@ -1,5 +1,6 @@
 # Worklfow
-## [OmniFocus](https://workflow.is/workflows/20e2800391254d0c8e9e4672891d99a3)
+## [OmniFocus](https://workflow.is/workflows/4b3ba3e33be5444e9b2273b2fcff6f89
+)
 用途：自动化添加来自剪切板链接到 OmniFocus，并在备注里添加附上链接。如果是微信链接会一同带上公众号名称与作者。
 
 特点：
@@ -12,6 +13,7 @@
 
 ## [OmniFocus URLs](https://workflow.is/workflows/327d6900a61640bb86b9987b06029eca)
 用途：批量抓取 URL 标题等信息添加到 OmniFocus 中。
+
 ![](/Workflow/PIC/OmniFocusURLs.png)
 
 
