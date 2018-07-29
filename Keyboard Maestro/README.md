@@ -34,3 +34,7 @@ javascript:window.location='x-devonthink://clip?title='+encodeURIComponent(docum
 
 ### PDF Expert
 导出 PDF Expert 阅读笔记到 Bear.
+
+### Open in Chrome
+将 Safari 当前页面使用 Chrome 打开，使用 option + command + C 激活。
+用途：有些网站比较娇气，必须要 Chrome 或者 IE 浏览器才能正常使用。例如教育网站、政府网站。
