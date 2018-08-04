@@ -15,7 +15,7 @@
 
 ![](/Workflow/PIC/OmniFocusURLs.png)
 
-## [Bear Contents](https://workflow.is/workflows/d59b76b347bc4225abbd40de99646925)
+## [Bear Contents](https://workflow.is/workflows/8caa8b8174b646c6b281b266a26f6e0f)
 用途：抓取网页链接全文内容保存到 Bear，也有其他判断规则。
 ![](/Workflow/PIC/BearWorkflow.png)
 
