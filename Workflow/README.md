@@ -1,5 +1,5 @@
 # Worklfow
-## [OmniFocus](https://workflow.is/workflows/4b3ba3e33be5444e9b2273b2fcff6f89)
+## [OmniFocus](https://workflow.is/workflows/0373c0fb66554d66a1b82200364ef3dc)
 用途：自动化添加来自剪切板链接到 OmniFocus，并在备注里添加附上链接。如果是微信链接会一同带上公众号名称与作者。
 
 特点：
@@ -15,5 +15,8 @@
 
 ![](/Workflow/PIC/OmniFocusURLs.png)
 
+## [Bear Contents](https://workflow.is/workflows/d59b76b347bc4225abbd40de99646925)
+用途：抓取网页链接全文内容保存到 Bear，也有其他判断规则。
+![](/Workflow/PIC/BearWorkflow.png)
 
 ## [少数派 Workflow 墙](http://workflow.sspai.com/#/main/workflow)
