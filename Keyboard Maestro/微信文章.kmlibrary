@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Author</key>
+	<string></string>
+	<key>AuthorURL</key>
+	<string></string>
+	<key>CanDragToMacroGroup</key>
+	<true/>
+	<key>Category1</key>
+	<string>Interface Control</string>
+	<key>Category2</key>
+	<string></string>
+	<key>Description</key>
+	<string></string>
+	<key>Items</key>
+	<array>
+		<dict>
+			<key>Activate</key>
+			<string>Normal</string>
+			<key>CreationDate</key>
+			<real>553070599.28655601</real>
+			<key>Macros</key>
+			<array>
+				<dict>
+					<key>Actions</key>
+					<array>
+						<dict>
+							<key>DisplayKind</key>
+							<string>None</string>
+							<key>IncludeStdErr</key>
+							<false/>
+							<key>MacroActionType</key>
+							<string>ExecuteAppleScript</string>
+							<key>NotifyOnFailure</key>
+							<false/>
+							<key>Path</key>
+							<string></string>
+							<key>StopOnFailure</key>
+							<false/>
+							<key>Text</key>
+							<string>tell application "System Events"	tell process "Safari"		click menu item "WeChat" of menu "⚙️" of menu item "⚙️" of menu "个人收藏" of menu item "个人收藏" of menu "书签" of menu bar item "书签" of menu bar 1		click button "允许" of group 1 of tab group 1 of splitter group 1 of window 1	end tell	tell application "Safari" to activateend tell</string>
+							<key>TimeOutAbortsMacro</key>
+							<true/>
+							<key>TrimResults</key>
+							<true/>
+							<key>TrimResultsNew</key>
+							<true/>
+							<key>UseText</key>
+							<true/>
+						</dict>
+					</array>
+					<key>CreationDate</key>
+					<real>553160376.65859795</real>
+					<key>ModificationDate</key>
+					<real>555385993.56525099</real>
+					<key>Name</key>
+					<string>微信文章</string>
+					<key>Triggers</key>
+					<array>
+						<dict>
+							<key>FireType</key>
+							<string>Pressed</string>
+							<key>KeyCode</key>
+							<integer>39</integer>
+							<key>MacroTriggerType</key>
+							<string>HotKey</string>
+							<key>Modifiers</key>
+							<integer>2048</integer>
+						</dict>
+					</array>
+					<key>UID</key>
+					<string>2ED626D0-3287-48AA-B31B-3E2DA4E473BA</string>
+				</dict>
+			</array>
+			<key>Name</key>
+			<string>Safari</string>
+			<key>Targeting</key>
+			<dict>
+				<key>Targeting</key>
+				<string>Included</string>
+				<key>TargetingApps</key>
+				<array>
+					<dict>
+						<key>BundleIdentifier</key>
+						<string>com.apple.Safari</string>
+						<key>Name</key>
+						<string>Safari</string>
+						<key>NewFile</key>
+						<string>/Applications/Safari.app</string>
+					</dict>
+				</array>
+			</dict>
+			<key>ToggleMacroUID</key>
+			<string>CCC2DE27-FF29-4F00-800D-60AFE0B4E11A</string>
+			<key>UID</key>
+			<string>A1E1B545-11D1-4EAB-88E2-73877DBC307D</string>
+		</dict>
+	</array>
+	<key>UID</key>
+	<string>73951C9D-11D8-41A2-A21F-36B24DE6C6A0</string>
+</dict>
+</plist>
