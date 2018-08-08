@@ -5,7 +5,7 @@
 特点：
 - 匹配并删除网页链接中多余网站的标题信息。
 - 如果匹配到微信链接，添加完任务后会自动跳转回微信。
-- 如果传入是文本的话，跳转到 Safari 并用谷歌进行搜索。
+- 如果传入是文本的话，添加为待办事项并归属「疑问」上下文。
 
 ![](/Workflow/PIC/OmniFocus.png)
 <img src="/Workflow/PIC/OmniFocus.gif" width="375" height="667"/>
