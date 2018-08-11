@@ -36,3 +36,9 @@ javascript:void !function(){var h=function(){var k=document.body.innerHTML;var j
 ```
 javascript:window.location='iina://weblink?url='+encodeURIComponent(window.location)
 ```
+
+## 网页分屏
+
+```
+javascript:document.write('%3CHTML%3E%3CHEAD%3E%3C/HEAD%3E%3CFRAMESET%20COLS=\'50%25,*\'%3E%3CFRAME%20SRC='%20+%20location.href%20+%20'%3E%3CFRAME%20SRC='%20+%20location.href%20+%20'%3E%3C/FRAMESET%3E%3C/HTML%3E')
+```
