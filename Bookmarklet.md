@@ -2,8 +2,8 @@
 
 ```
 javascript:(function(){
-var url = encodeURIComponent(window.location);
-var match = url.match(/mp.weixin.qq.com/g);
+url = encodeURIComponent(window.location);
+match = url.match(/mp.weixin.qq.com/g);
 if (match == null) {
 	url = 'omnifocus:///add?note='+encodeURIComponent(window.location)+'&name=🔖 '+encodeURIComponent(document.title.replace(/GitHub -/,""))+'&context=📕📕 Reading Lists'+'&estimate=05 mins&autosave=true';
 } else {
