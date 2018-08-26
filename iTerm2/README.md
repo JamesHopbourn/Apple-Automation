@@ -5,15 +5,19 @@ https://gist.githubusercontent.com/gnachman/4cbe6743baa7fe07536b/raw/61fceba4a0b
 # 配置 iTerm 2
 ## 安装 oh-my-zsh
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+
 chsh -s /bin/zsh
 
 ## 安装 Powerline status
 sudo easy_install pip
+
 pip install powerline-status
 
 ## 安装 Powerline 字体
 git clone https://github.com/powerline/fonts
+
 cd fonts & ./install.sh
+
 cd .. & rm -rf /fonts
 
 ## 修改配置文件
