@@ -1,0 +1,60 @@
+# Others
+alias rm=rmtrash
+DEFAULT_USER="james"
+ZSH_THEME="agnoster"
+CASE_SENSITIVE="false"
+export LANG=en_US.UTF-8
+export HOMEBREW_NO_AUTO_UPDATE=1
+
+# Surge Proxy
+proxy (){
+	export https_proxy=http://127.0.0.1:1225
+	export http_proxy=http://127.0.0.1:1225
+	export all_proxy=socks5://127.0.0.1:1226
+	echo "Http Proxy on"
+}
+
+noproxy (){
+	unset https_proxy
+	unset http_proxy
+	unset all_proxy
+	echo "Http Proxy off"
+}
+
+# ZSH Path
+export ZSH=$HOME/.oh-my-zsh
+
+# Bin Path
+export PATH=$HOME/.pyenv:$PATH
+export PATH=/usr/local/bin:$PATH
+export PATH=/opt/local/bin:$PATH
+export PATH=/usr/local/anaconda3/bin:$PATH
+
+# Custom Path
+export THEOS=/opt/theos
+export PATH=/opt/theos/bin/:$PATH
+export PATH=$HOME/Dropbox/bin:$PATH
+export PATH=/opt/MonkeyDev/bin:$PATH
+export MonkeyDevPath=/opt/MonkeyDev
+export MonkeyDevDeviceIP=192.168.123.6
+
+# Aliases/Homebrew
+alias bl="brew list"
+alias bs="brew search"
+alias bcl="brew cask list"
+alias bi="brew install"
+alias bu="brew uninstall"
+alias bci="brew cask install"
+alias bcu="brew cask uninstall"
+alias bcr="brew cask uninstall"
+alias sha256="openssl dgst -sha256"
+alias update="brew update && brew cask upgrade && brew cu -a -y && mas upgrade"
+
+# Plugins
+plugins=(
+   autojump zsh-syntax-highlighting zsh-autosuggestions sublime sudo osx git
+)
+
+# Source
+source $ZSH/oh-my-zsh.sh
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
