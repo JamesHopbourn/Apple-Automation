@@ -5,7 +5,7 @@ javascript:(function(){
 url = encodeURIComponent(window.location);
 match = url.match(/mp.weixin.qq.com/g);
 if (match == null) {
-	url = 'omnifocus:///add?note='+encodeURIComponent(window.location)+'&name=🔖 '+encodeURIComponent(document.title.replace(/\(.*?私信.*?\)|\(\d+\)/,""))+'&context=📕📕 Reading Lists'+'&estimate=05 mins&autosave=true';
+	url = 'omnifocus:///add?note='+encodeURIComponent(window.location)+'&name=🔖 '+encodeURIComponent(document.title.replace(/\(.*?私信.*?\)|\(\d+\)|- (YouTube|知乎|简书|少数派|iOSRE|博客园)/,""))+'&context=📕📕 Reading Lists'+'&estimate=05 mins&autosave=true';
 } else {
 	code = (document.documentElement.outerHTML);
 	title = code.match(/msg_title = ".*"/g);
