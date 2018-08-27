@@ -15,9 +15,10 @@ bn 新建笔记
 ```
 
 ## [Create OmniFocus Task]
-使用 TaskPaper 语法创建 OmniFocus 任务，[下载链接](https://github.com/JamesHopbourn/Apple-Automation/raw/master/Alfed/Create%20OmniFocus%20Task.alfredworkflow)z
+使用 TaskPaper 语法创建 OmniFocus 任务，[下载链接](https://github.com/JamesHopbourn/Apple-Automation/raw/master/Alfed/Create%20OmniFocus%20Task.alfredworkflow)。
 ```
 todo 任务名称 [@due(18:00)] [@estimate(01 min)] [@context(Communicate)] [@defer(20:00) [@flagged]
+
 [] 内为常用的可选参数，建议使用 TextExpander、aText 此类软件输入。
 
 ⚠️ 如果 TextExpander、aText 这类软件在 Alfred 输入框中无法正常使用，请下载 TE_ExpandAllLangCodes 程序并执行后即可正常使用。
