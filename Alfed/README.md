@@ -14,10 +14,13 @@ bst 标题
 bn 新建笔记
 ```
 
-## [OmniFocus](https://discourse.omnigroup.com/t/adding-tasks-from-alfred-3/35232/5)
-使用 todo 来添加新的 OmniFocus 待办事项，使用语法：
+## [Create OmniFocus Task]
+使用 TaskPaper 语法创建 OmniFocus 任务，[下载链接](https://github.com/JamesHopbourn/Apple-Automation/raw/master/Alfed/Create%20OmniFocus%20Task.alfredworkflow)z
 ```
-todo 任务名称 
+todo 任务名称 [@due(18:00)] [@estimate(01 min)] [@context(Communicate)] [@defer(20:00) [@flagged]
+[] 内为常用的可选参数，建议使用 TextExpander、aText 此类软件输入。
+
+⚠️ 如果 TextExpander、aText 这类软件在 Alfred 输入框中无法正常使用，请下载 TE_ExpandAllLangCodes 程序并执行后即可正常使用。
 ```
 
 ## [AppCleaner](https://www.alfredforum.com/topic/1324-open-application-in-appzapper-or-appcleaner/)
