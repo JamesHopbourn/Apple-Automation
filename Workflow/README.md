@@ -7,7 +7,7 @@
 - 如果匹配到微信链接，添加完任务后会自动跳转回微信。
 - 如果传入是文本的话，添加为待办事项并归属「疑问」上下文。
 
-![](/Workflow/PIC/OmniFocusWorkflow)
+![](/Workflow/PIC/OmniFocusWorkflow.png)
 <img src="/Workflow/PIC/OmniFocus.gif" width="375" height="667"/>
 
 ![](/Workflow/PIC/OmniFocusURLs.png)
