@@ -52,7 +52,7 @@ alias update="brew update && brew cask upgrade && brew cu -a -y && mas upgrade"
 
 # Plugins
 plugins=(
-   autojump zsh-syntax-highlighting zsh-autosuggestions sublime sudo osx git
+   autojump zsh-syntax-highlighting zsh-autosuggestions sublime sudo osx git extract
 )
 
 # Source
