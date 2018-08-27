@@ -14,7 +14,7 @@ bst 标题
 bn 新建笔记
 ```
 
-## [Create OmniFocus Task]
+## Create OmniFocus Task
 使用 TaskPaper 语法创建 OmniFocus 任务，[下载链接](https://github.com/JamesHopbourn/Apple-Automation/raw/master/Alfed/Create%20OmniFocus%20Task.alfredworkflow)。
 ```
 todo 任务名称 [@due(18:00)] [@estimate(01 min)] [@context(Communicate)] [@defer(20:00) [@flagged]
@@ -33,8 +33,8 @@ clean 应用名称
 ## [Add To-Do to Things 3](https://support.culturedcode.com/customer/en/portal/articles/2803574-creating-to-dos-with-a-launcher)
 Things 官方添加任务的 Workflow，使用语法：
 ```
-+ title #tag1 #tag2 [project name/area name] ::note >duedate
++ title #tag1 #tag2 [project name|area name] ::note >duedate
 ```
 
 ## 截图阴影
-使用关键词 addsd、removesd 来增加或者去掉截屏的阴影边缘。
+使用关键词 addsd、removesd 来增加或者去掉截屏的阴影边缘，[下载链接](https://github.com/JamesHopbourn/Apple-Automation/raw/master/Alfed/截屏阴影.alfredworkflow)。
