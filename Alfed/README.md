@@ -36,5 +36,10 @@ Things 官方添加任务的 Workflow，使用语法：
 + title #tag1 #tag2 [project name|area name] ::note >duedate
 ```
 
+## [Sublime Text](https://github.com/franzheidl/alfred-workflows/tree/master/open-with-sublime-text)
+```
+subl 文件名
+```
+
 ## 截图阴影
 使用关键词 addsd、removesd 来增加或者去掉截屏的阴影边缘，[下载链接](https://github.com/JamesHopbourn/Apple-Automation/raw/master/Alfed/截屏阴影.alfredworkflow)。
