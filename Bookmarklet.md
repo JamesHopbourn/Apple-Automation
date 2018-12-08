@@ -6,8 +6,9 @@ url = encodeURIComponent(window.location);
 
 zhihu = url.match(/zhihu/g);
 sspai = url.match(/sspai/g);
-video = url.match(/bilibili|youtube.com/g);
+video = url.match(/bilibili|youtube.com|v.qq/g);
 wechat = url.match(/mp.weixin.qq.com/g);
+reverse = url.match(/pediy.com|freebuf|iosre/g);
 shopping = url.match(/taobao|jd.com|dangdang/g);
 
 if (zhihu !== null) {
@@ -17,7 +18,7 @@ if (zhihu !== null) {
 	url = 'omnifocus:///add?note='+encodeURIComponent(window.location)+'&name=🔖 '+encodeURIComponent(document.title.replace(/- 少数派/g,""))+'&context=📑📑 Research Article'+'&estimate=10 mins&autosave=true';
 	} else {
 		if (video !== null) {
-	url = 'omnifocus:///add?note='+encodeURIComponent(window.location)+'&name='+encodeURIComponent(document.title.replace(/- YouTube|- 哔哩哔哩弹幕视频网.*/g,""))+'&context=🎬🎬 Movies to watch'+'&estimate=30 mins&autosave=true';
+	url = 'omnifocus:///add?note='+encodeURIComponent(window.location)+'&name='+encodeURIComponent(document.title.replace(/- YouTube|\(\d+\)|_.*?bilibili|_腾讯视频/g,""))+'&context=🎬🎬 Movies to watch'+'&estimate=30 mins&autosave=true';
 		} else {
 			if (wechat !== null) {
 	code = (document.documentElement.outerHTML);
@@ -30,9 +31,13 @@ if (zhihu !== null) {
 	url = 'omnifocus:///add?note='+encodeURIComponent(window.location)+"   "+author+"   "+nickname+'&name=🔖 '+title+'&context=📕📕 Reading Lists'+'&estimate=05 mins&autosave=true';
 			} else {
 				if (shopping !== null) {
-	url = 'omnifocus:///add?note='+encodeURIComponent(window.location)+'&name='+encodeURIComponent(document.title.replace(/-淘宝网|- 京东.*/g,""))+'&context=🛒🛒 Shopping'+'&estimate=05 mins&autosave=true';
+	url = 'omnifocus:///add?note='+encodeURIComponent(window.location)+'&name='+encodeURIComponent(document.title.replace(/-淘宝网|- 京东.*?/g,""))+'&context=🛒🛒 Shopping'+'&estimate=05 mins&autosave=true';
 				} else {
-	url = 'omnifocus:///add?note='+encodeURIComponent(window.location)+'&name=🔖 '+encodeURIComponent(document.title.replace(/\(.*?(私信|消息).*?\)|\(\d+\)| (-|–|_|\|) (简书|iOSRE|博客园|MBA智库百科|维基百科，自由的百科全书|Medium|阮一峰的网络日志|腾讯视频|幕后|CSDN博客|SegmentFault 思否|Stack Overflow)|(-|_)(什么值得买|使用评测|PingWest 品玩)/g,""))+'&context=📕📕 Reading Lists'+'&estimate=05 mins&autosave=true';
+					if (reverse !== null) {
+	url = 'omnifocus:///add?note='+encodeURIComponent(window.location)+'&name='+encodeURIComponent(document.title.replace(/-看雪安全论坛|-.*?\|.*?|- FreeBuf.*?/g,""))+'&context=⚙️⚙️ Reverse Engineering'+'&estimate=30 mins&autosave=true';
+					} else {
+	url = 'omnifocus:///add?note='+encodeURIComponent(window.location)+'&name=🔖 '+encodeURIComponent(document.title.replace(/\(.*?(私信|消息).*?\)|\(\d+\)| (-|–|_|\|) (简书|博客园|MBA智库百科|维基百科，自由的百科全书|Medium|阮一峰的网络日志|幕后|CSDN博客|SegmentFault 思否|Stack Overflow)|(-|_)(什么值得买|使用评测|PingWest 品玩)/g,""))+'&context=📕📕 Reading Lists'+'&estimate=05 mins&autosave=true';
+					}
 				}
 			}
 		}
