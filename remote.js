@@ -1,1 +1,0 @@
-javascript: (function(){alert("ok");})();
