@@ -1,8 +1,10 @@
 # Others
 alias rm=rmtrash
-DEFAULT_USER="james"
+
 ZSH_THEME="agnoster"
+DEFAULT_USER="james"
 CASE_SENSITIVE="false"
+
 export LANG=en_US.UTF-8
 export HOMEBREW_NO_AUTO_UPDATE=1
 
@@ -28,7 +30,9 @@ export ZSH=$HOME/.oh-my-zsh
 export PATH=$HOME/.pyenv:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/opt/local/bin:$PATH
-export PATH=/usr/local/anaconda3/bin:$PATH
+p3 (){
+	export PATH=/usr/local/anaconda3/bin:$PATH
+}
 
 # Custom Path
 export THEOS=/opt/theos
