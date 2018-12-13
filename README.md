@@ -16,6 +16,3 @@ Telegram Channel：[James Here](https://t.me/JamesHere)
 @[Se7en]() Alfred Drafts 5代码适配
 
 @[JailbreakHum](https://sspai.com/user/681230/updates) 提出修改意见
-
-# 参考项目
-[163OpenCourse_playbackRate](https://github.com/theFool32/163OpenCourse_playbackRate)
