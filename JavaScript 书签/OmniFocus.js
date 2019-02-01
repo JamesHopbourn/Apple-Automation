@@ -14,7 +14,6 @@ if (zhihu !== null) {
 	} else {
 		if (sspai !== null) {
 			url = 'omnifocus:///add?note='+encodeURIComponent(window.location)+'&name='+encodeURIComponent(document.title.replace(/- 少数派/g,""))+'&context=📑📑 SSPAI Article'+'&estimate=10 mins&autosave=true';
-
 		} else {
 			if (github !== null) {
 				url = 'omnifocus:///add?note='+encodeURIComponent(window.location)+'&name='+encodeURIComponent(document.title.replace(/github/g,""))+'&context=👍👍 GitHub Project'+'&estimate=30 mins&autosave=true';
