@@ -3,7 +3,7 @@ url = encodeURIComponent(window.location);
 
 zhihu = url.match(/zhihu/g);
 sspai = url.match(/sspai/g);
-github = url.match(/github.com/);
+github = url.match(/github.com/g);
 wechat = url.match(/mp.weixin.qq.com/g);
 video = url.match(/bilibili|youtube.com|v.qq/g);
 shopping = url.match(/taobao|jd.com|dangdang/g);
