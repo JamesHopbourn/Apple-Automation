@@ -6,7 +6,7 @@ sspai = url.match(/sspai/g);
 github = url.match(/github.com/g);
 wechat = url.match(/mp.weixin.qq.com/g);
 video = url.match(/bilibili|youtube.com|v.qq/g);
-shopping = url.match(/taobao|jd.com|dangdang/g);
+shopping = url.match(/taobao|jd.com|dangdang|douban/g);
 reverse = url.match(/pediy|freebuf|iosre|csdn|segmentfault|stackoverflow|cnblogs/g);
 
 if (zhihu !== null) {
