@@ -33,19 +33,19 @@ switch (url[0]) {
 	   +'&name='+encodeURIComponent(document.title.replace(/- YouTube|\(\d+\)|_.*?bilibili|_腾讯视频/g,""))
 	   +'&context=🎬🎬 Movies to watch'
 	   +'&estimate=20 mins&autosave=true';
-	  break;
+		break;
 	case 'github':
 	  url = 'omnifocus:///add?note='+encodeURIComponent(window.location)
 	   +'&name='+encodeURIComponent(document.title.replace(/github/g,""))
 	   +'&context=👍👍 GitHub Project'
 	   +'&estimate=30 mins&autosave=true';
-	  break;
+		break;
 	case 'pediy'||'freebuf'||'iosre'||'csdn'||'segmentfault'||'stackoverflow'||'cnblogs':
 	  url = 'omnifocus:///add?note='+encodeURIComponent(window.location)
 	  +'&name='+encodeURIComponent(document.title.replace(/-看雪安全论坛|-.*?\|.*?|- FreeBuf.*?|CSDN博客|SegmentFault 思否|Stack Overflow|博客园/g,""))
 	  +'&context=⚙️⚙️ Reverse Engineering'
 	  +'&estimate=20 mins&autosave=true';
-	  break;
+		break;
 	case 'mp.weixin.qq.com':
 		code = (document.documentElement.outerHTML);
 		title = code.match(/msg_title = ".*"/g);
@@ -61,20 +61,20 @@ switch (url[0]) {
 				 +'&context=玉树芝兰'
 				 +'&estimate=10 mins&autosave=true';
 				break;
-		  default:
+			default:
 				url = 'omnifocus:///add?note='+encodeURIComponent(window.location)+"  "+author+"  "+nickname
 				 +'&name='+title
 				 +'&context=📖📖 Reading Lists'
 				 +'&estimate=05 mins&autosave=true';
 				break;
 		}
-	  break;
+		break;
   	default:
 	  url = 'omnifocus:///add?note='+encodeURIComponent(window.location)
 	  +'&name='+encodeURIComponent(document.title.replace(/\(\d+\)| (-|–|_|\|) (简书|MBA智库百科|维基百科，自由的百科全书|Medium)|(-|_)(什么值得买|使用评测|PingWest 品玩)/g,""))
 	  +'&context=📖📖 Reading Lists'
 	  +'&estimate=05 mins&autosave=true';
-	  break;
+		break;
 }
 alert(url);
 window.open(url,'_self');
