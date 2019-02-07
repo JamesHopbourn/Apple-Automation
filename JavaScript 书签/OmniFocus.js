@@ -1,4 +1,4 @@
-vascript:(function(){
+javascript:(function(){
 url = encodeURIComponent(window.location);
 
 zhihu = url.match(/zhihu/g);
