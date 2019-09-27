@@ -10,7 +10,7 @@ text = text.replace(/chat/gi, "@context(💬️💬️ 沟通交流) ")
 text = text.replace(/wwh/gi, "@context(🤔🤔 知乎问题 : 疑问)")
 text = text.replace(/mov/gi, "@context(🎬🎬 电影视频 : 清单)")
 text = text.replace(/rel/gi, "@context(📖📖 阅读列表)")
-text = text.replace(/td/gi, "@flagged @due(bToday 22:00)")
+text = text.replace(/td/gi, "@flagged @due(Today 22:00)")
 text = text.replace(/tm/gi, "@estimate(01 min) @flagged @due(Tomorrow 12:00) @context(1️⃣)")
 text = text.replace(/ssp/gi, "@context(✏️✏️ 文章写作)")
 text = text.replace(/myc/gi, "@context(💭 James Here Channel)")
@@ -34,11 +34,9 @@ weblink = text.match(/\[.*\]\(.*\)/g);
 if (weblink != null) {
    title = text.match(/\[.*\]/g);
    link = text.match(/\(http.*\)/g);
-   text = "- 🔖 "+title+" @estimate(05 min) @context(📕📕 Reading Lists)"+"\n"+link
+   text = "title+" @estimate(05 min) @context(📖📖 阅读列表)"+"\n"+link
    target = 'inbox';
 }
 
 draft.defineTag('text',text);
 draft.defineTag('target',target);
-
-//Open a URL: omnifocus:///paste?content=[[text]]&target=[[target]]&x-success=drafts4://
