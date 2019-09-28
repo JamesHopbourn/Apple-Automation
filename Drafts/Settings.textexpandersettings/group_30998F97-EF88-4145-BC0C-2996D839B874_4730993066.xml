@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>expandAfterMode</key>
+	<integer>0</integer>
+	<key>expanderExceptionsMode</key>
+	<integer>4</integer>
+	<key>name</key>
+	<string>Drafts</string>
+	<key>snippetPlists</key>
+	<array>
+		<dict>
+			<key>abbreviation</key>
+			<string>sod</string>
+			<key>abbreviationMode</key>
+			<integer>1</integer>
+			<key>creationDate</key>
+			<date>2019-09-28T14:31:29Z</date>
+			<key>extraInfo</key>
+			<dict>
+				<key>RTF</key>
+				<string>{\rtf1\ansi\ansicpg1252
+{\fonttbl\f0\fnil\fcharset0 PingFangHK-Regular;\f1\fnil\fcharset0 AppleColorEmoji;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\deftab720
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 @context(
+\f1 \AppleTypeServices\AppleTypeServicesF29097985 1\uc0\u65039 \u8419 
+\f0 \AppleTypeServices )}</string>
+			</dict>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2019-09-28T14:31:29Z</date>
+			<key>plainText</key>
+			<string>@context(1️⃣)</string>
+			<key>snippetType</key>
+			<integer>1</integer>
+			<key>uuidString</key>
+			<string>B0A1D1D1-E040-490C-8C47-40EFC18AE8C4</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>sfd</string>
+			<key>abbreviationMode</key>
+			<integer>1</integer>
+			<key>creationDate</key>
+			<date>2019-09-28T14:31:48Z</date>
+			<key>extraInfo</key>
+			<dict>
+				<key>RTF</key>
+				<string>{\rtf1\ansi\ansicpg1252
+{\fonttbl\f0\fnil\fcharset0 PingFangHK-Regular;\f1\fnil\fcharset0 AppleColorEmoji;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\partightenfactor0
+
+\f0\fs34 \cf0 @context(
+\f1 \AppleTypeServices\AppleTypeServicesF29097985 5\uc0\u8419 \u65039 
+\f0 \AppleTypeServices )}</string>
+			</dict>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2019-09-28T14:31:48Z</date>
+			<key>plainText</key>
+			<string>@context(5⃣️)</string>
+			<key>snippetType</key>
+			<integer>1</integer>
+			<key>uuidString</key>
+			<string>E2A7CE25-8901-45A2-8A5A-A1BF7EAFA669</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>ssw</string>
+			<key>abbreviationMode</key>
+			<integer>1</integer>
+			<key>creationDate</key>
+			<date>2019-09-28T14:32:10Z</date>
+			<key>extraInfo</key>
+			<dict>
+				<key>RTF</key>
+				<string>{\rtf1\ansi\ansicpg1252
+{\fonttbl\f0\fnil\fcharset0 PingFangHK-Regular;\f1\fnil\fcharset0 AppleColorEmoji;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\deftab720
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 @context(
+\f1 \AppleTypeServices\AppleTypeServicesF29097985 \uc0\u55357 \u56607 5\u8419 \u65039 
+\f0 \AppleTypeServices )}</string>
+			</dict>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2019-09-28T14:32:10Z</date>
+			<key>plainText</key>
+			<string>@context(🔟5⃣️)</string>
+			<key>snippetType</key>
+			<integer>1</integer>
+			<key>uuidString</key>
+			<string>7B5F8FFA-E54A-4676-993F-29E3D837C0A8</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>sss</string>
+			<key>abbreviationMode</key>
+			<integer>1</integer>
+			<key>creationDate</key>
+			<date>2019-09-28T14:32:21Z</date>
+			<key>extraInfo</key>
+			<dict>
+				<key>RTF</key>
+				<string>{\rtf1\ansi\ansicpg1252
+{\fonttbl\f0\fnil\fcharset0 PingFangHK-Regular;\f1\fnil\fcharset0 AppleColorEmoji;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\partightenfactor0
+
+\f0\fs34 \cf0 @context(
+\f1 \AppleTypeServices\AppleTypeServicesF29097985 3\uc0\u8419 \u65039 0\u8419 \u65039 
+\f0 \AppleTypeServices )}</string>
+			</dict>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2019-09-28T14:32:21Z</date>
+			<key>plainText</key>
+			<string>@context(3⃣️0⃣️)</string>
+			<key>snippetType</key>
+			<integer>1</integer>
+			<key>uuidString</key>
+			<string>CC923D41-C71D-4E7E-A02E-98EA6E9137CC</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>rel</string>
+			<key>abbreviationMode</key>
+			<integer>1</integer>
+			<key>creationDate</key>
+			<date>2019-09-28T14:32:30Z</date>
+			<key>extraInfo</key>
+			<dict>
+				<key>RTF</key>
+				<string>{\rtf1\ansi\ansicpg1252
+{\fonttbl\f0\fnil\fcharset0 PingFangHK-Regular;\f1\fnil\fcharset0 AppleColorEmoji;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\partightenfactor0
+
+\f0\fs34 \cf0 @context(
+\f1 \AppleTypeServices\AppleTypeServicesF29097985 \uc0\u55357 \u56534 \u55357 \u56534 
+\f0 \AppleTypeServices  \uc0\u38405 \u35835 \u21015 \u34920 )}</string>
+			</dict>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2019-09-28T14:32:30Z</date>
+			<key>plainText</key>
+			<string>@context(📖📖 阅读列表)</string>
+			<key>snippetType</key>
+			<integer>1</integer>
+			<key>uuidString</key>
+			<string>FE883516-3AE2-4447-A595-BF9851B24F11</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>buy</string>
+			<key>abbreviationMode</key>
+			<integer>1</integer>
+			<key>creationDate</key>
+			<date>2019-09-28T14:32:38Z</date>
+			<key>extraInfo</key>
+			<dict>
+				<key>RTF</key>
+				<string>{\rtf1\ansi\ansicpg1252
+{\fonttbl\f0\fnil\fcharset0 PingFangHK-Regular;\f1\fnil\fcharset0 AppleColorEmoji;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\partightenfactor0
+
+\f0\fs34 \cf0 @context(
+\f1 \AppleTypeServices\AppleTypeServicesF29097985 \uc0\u55357 \u57042 \u55357 \u57042 
+\f0 \AppleTypeServices  \uc0\u36141 \u29289 \u28165 \u21333 )}</string>
+			</dict>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2019-09-28T14:32:38Z</date>
+			<key>plainText</key>
+			<string>@context(🛒🛒 购物清单)</string>
+			<key>snippetType</key>
+			<integer>1</integer>
+			<key>uuidString</key>
+			<string>A95CDF11-84CC-4821-9004-417C82F4D6C5</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>td</string>
+			<key>abbreviationMode</key>
+			<integer>1</integer>
+			<key>creationDate</key>
+			<date>2019-09-28T14:32:47Z</date>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2019-09-28T14:32:47Z</date>
+			<key>plainText</key>
+			<string>@flagged @due(Today 22:00) </string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>46C134A0-A9C1-4265-9BA9-8C3F3DE4B616</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>tm</string>
+			<key>abbreviationMode</key>
+			<integer>1</integer>
+			<key>creationDate</key>
+			<date>2019-09-28T14:32:55Z</date>
+			<key>extraInfo</key>
+			<dict>
+				<key>RTF</key>
+				<string>{\rtf1\ansi\ansicpg1252
+{\fonttbl\f0\fnil\fcharset0 PingFangHK-Regular;\f1\fnil\fcharset0 AppleColorEmoji;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\partightenfactor0
+
+\f0\fs34 \cf0 @estimate(01 min) @flagged @due(Tomorrow 12:00) @context(
+\f1 \AppleTypeServices\AppleTypeServicesF29097985 1\uc0\u65039 \u8419 
+\f0 \AppleTypeServices )}</string>
+			</dict>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2019-09-28T14:32:55Z</date>
+			<key>plainText</key>
+			<string>@estimate(01 min) @flagged @due(Tomorrow 12:00) @context(1️⃣)</string>
+			<key>snippetType</key>
+			<integer>1</integer>
+			<key>uuidString</key>
+			<string>6B8FF24A-210C-4556-8218-8BF8A9292353</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>myc</string>
+			<key>abbreviationMode</key>
+			<integer>1</integer>
+			<key>creationDate</key>
+			<date>2019-09-28T14:33:34Z</date>
+			<key>extraInfo</key>
+			<dict>
+				<key>RTF</key>
+				<string>{\rtf1\ansi\ansicpg1252
+{\fonttbl\f0\fnil\fcharset0 PingFangHK-Regular;\f1\fnil\fcharset0 AppleColorEmoji;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\deftab720
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 @context(
+\f1 \AppleTypeServices\AppleTypeServicesF29097985 \uc0\u55357 \u56493 
+\f0 \AppleTypeServices  James Here Channel)}</string>
+			</dict>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2019-09-28T14:33:34Z</date>
+			<key>plainText</key>
+			<string>@context(💭 James Here Channel)</string>
+			<key>snippetType</key>
+			<integer>1</integer>
+			<key>uuidString</key>
+			<string>E08341C7-D4C8-47DD-8FA1-6AE81C703DD5</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>wrr</string>
+			<key>abbreviationMode</key>
+			<integer>1</integer>
+			<key>creationDate</key>
+			<date>2019-09-28T14:33:48Z</date>
+			<key>extraInfo</key>
+			<dict>
+				<key>RTF</key>
+				<string>{\rtf1\ansi\ansicpg1252
+{\fonttbl\f0\fnil\fcharset0 PingFangHK-Regular;\f1\fnil\fcharset0 AppleColorEmoji;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\deftab720
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 @context(
+\f1 \AppleTypeServices\AppleTypeServicesF29097985 \uc0\u9999 \u65039 \u9999 \u65039 
+\f0 \AppleTypeServices  \uc0\u25991 \u31456 \u20889 \u20316 )}</string>
+			</dict>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2019-09-28T14:33:48Z</date>
+			<key>plainText</key>
+			<string>@context(✏️✏️ 文章写作)</string>
+			<key>snippetType</key>
+			<integer>1</integer>
+			<key>uuidString</key>
+			<string>B3814D75-4784-43C6-A58E-43C33D372C94</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>vv</string>
+			<key>abbreviationMode</key>
+			<integer>1</integer>
+			<key>creationDate</key>
+			<date>2019-09-28T14:34:20Z</date>
+			<key>extraInfo</key>
+			<dict>
+				<key>RTF</key>
+				<string>{\rtf1\ansi\ansicpg1252
+{\fonttbl\f0\fnil\fcharset0 PingFangHK-Regular;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\deftab720
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \'a0\uc0\u8594 \'a0}</string>
+			</dict>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2019-09-28T14:34:20Z</date>
+			<key>plainText</key>
+			<string> → </string>
+			<key>snippetType</key>
+			<integer>1</integer>
+			<key>uuidString</key>
+			<string>4101B38C-A277-44EC-ACC2-8D0394F27CE1</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>tk</string>
+			<key>abbreviationMode</key>
+			<integer>1</integer>
+			<key>creationDate</key>
+			<date>2019-09-28T14:34:33Z</date>
+			<key>extraInfo</key>
+			<dict>
+				<key>RTF</key>
+				<string>{\rtf1\ansi\ansicpg1252
+{\fonttbl\f0\fnil\fcharset0 PingFangHK-Regular;\f1\fnil\fcharset0 AppleColorEmoji;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\partightenfactor0
+
+\f0\fs34 \cf0 @context(
+\f1 \AppleTypeServices\AppleTypeServicesF29097985 \uc0\u55357 \u56395 \u55357 \u56395 
+\f0 \AppleTypeServices  \uc0\u29289 \u21697 \u25343 \u21462 )}</string>
+			</dict>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2019-09-28T14:34:38Z</date>
+			<key>plainText</key>
+			<string>@context(👋👋 物品拿取)</string>
+			<key>snippetType</key>
+			<integer>1</integer>
+			<key>uuidString</key>
+			<string>3DF26A5E-B9CC-4424-9BA4-8B7E034731A3</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>chat</string>
+			<key>abbreviationMode</key>
+			<integer>1</integer>
+			<key>creationDate</key>
+			<date>2019-09-28T14:34:45Z</date>
+			<key>extraInfo</key>
+			<dict>
+				<key>RTF</key>
+				<string>{\rtf1\ansi\ansicpg1252
+{\fonttbl\f0\fnil\fcharset0 PingFangHK-Regular;\f1\fnil\fcharset0 AppleColorEmoji;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\partightenfactor0
+
+\f0\fs34 \cf0 @context(
+\f1 \AppleTypeServices\AppleTypeServicesF29097985 \uc0\u55357 \u56492 \u65039 \u55357 \u56492 \u65039 
+\f0 \AppleTypeServices  \uc0\u27807 \u36890 \u20132 \u27969 ) }</string>
+			</dict>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2019-09-28T14:34:59Z</date>
+			<key>plainText</key>
+			<string>@context(💬️💬️ 沟通交流) </string>
+			<key>snippetType</key>
+			<integer>1</integer>
+			<key>uuidString</key>
+			<string>1F2FA5AD-F9E9-4A50-B58C-4D2A9B73CA1B</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>mov</string>
+			<key>abbreviationMode</key>
+			<integer>1</integer>
+			<key>creationDate</key>
+			<date>2019-09-28T14:35:04Z</date>
+			<key>extraInfo</key>
+			<dict>
+				<key>RTF</key>
+				<string>{\rtf1\ansi\ansicpg1252
+{\fonttbl\f0\fnil\fcharset0 PingFangHK-Regular;\f1\fnil\fcharset0 AppleColorEmoji;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\partightenfactor0
+
+\f0\fs34 \cf0 @context(
+\f1 \AppleTypeServices\AppleTypeServicesF29097985 \uc0\u55356 \u57260 \u55356 \u57260 
+\f0 \AppleTypeServices  \uc0\u30005 \u24433 \u35270 \u39057  : \u28165 \u21333 )}</string>
+			</dict>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2019-09-28T14:35:09Z</date>
+			<key>plainText</key>
+			<string>@context(🎬🎬 电影视频 : 清单)</string>
+			<key>snippetType</key>
+			<integer>1</integer>
+			<key>uuidString</key>
+			<string>78FE3299-0573-462D-8D56-BDCB62ECEE7E</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>wwh</string>
+			<key>abbreviationMode</key>
+			<integer>1</integer>
+			<key>creationDate</key>
+			<date>2019-09-28T14:35:13Z</date>
+			<key>extraInfo</key>
+			<dict>
+				<key>RTF</key>
+				<string>{\rtf1\ansi\ansicpg1252
+{\fonttbl\f0\fnil\fcharset0 PingFangHK-Regular;\f1\fnil\fcharset0 AppleColorEmoji;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\partightenfactor0
+
+\f0\fs34 \cf0 @context(
+\f1 \AppleTypeServices\AppleTypeServicesF29097985 \uc0\u55358 \u56596 \u55358 \u56596 
+\f0 \AppleTypeServices  \uc0\u30693 \u20046 \u38382 \u39064  : \u30097 \u38382 )}</string>
+			</dict>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2019-09-28T14:35:13Z</date>
+			<key>plainText</key>
+			<string>@context(🤔🤔 知乎问题 : 疑问)</string>
+			<key>snippetType</key>
+			<integer>1</integer>
+			<key>uuidString</key>
+			<string>CD875B8B-9647-4D9D-A3FB-8F933D3BA854</string>
+		</dict>
+	</array>
+	<key>snippetUUIDs</key>
+	<array>
+		<string>B0A1D1D1-E040-490C-8C47-40EFC18AE8C4</string>
+		<string>E2A7CE25-8901-45A2-8A5A-A1BF7EAFA669</string>
+		<string>7B5F8FFA-E54A-4676-993F-29E3D837C0A8</string>
+		<string>CC923D41-C71D-4E7E-A02E-98EA6E9137CC</string>
+		<string>FE883516-3AE2-4447-A595-BF9851B24F11</string>
+		<string>A95CDF11-84CC-4821-9004-417C82F4D6C5</string>
+		<string>46C134A0-A9C1-4265-9BA9-8C3F3DE4B616</string>
+		<string>6B8FF24A-210C-4556-8218-8BF8A9292353</string>
+		<string>E08341C7-D4C8-47DD-8FA1-6AE81C703DD5</string>
+		<string>B3814D75-4784-43C6-A58E-43C33D372C94</string>
+		<string>4101B38C-A277-44EC-ACC2-8D0394F27CE1</string>
+		<string>3DF26A5E-B9CC-4424-9BA4-8B7E034731A3</string>
+		<string>1F2FA5AD-F9E9-4A50-B58C-4D2A9B73CA1B</string>
+		<string>78FE3299-0573-462D-8D56-BDCB62ECEE7E</string>
+		<string>CD875B8B-9647-4D9D-A3FB-8F933D3BA854</string>
+	</array>
+	<key>suggestAbbreviations</key>
+	<true/>
+	<key>updateFrequency</key>
+	<integer>0</integer>
+	<key>uuidString</key>
+	<string>30998F97-EF88-4145-BC0C-2996D839B874</string>
+	<key>writable</key>
+	<true/>
+</dict>
+</plist>
