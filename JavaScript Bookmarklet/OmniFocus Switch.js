@@ -7,21 +7,21 @@ switch(url[0]){
 	case 'pingwest':
 		url = 'omnifocus:///add?note='+encodeURIComponent(window.location)
      	 +'&name='+encodeURIComponent(document.title.replace(/- 少数派/g,""))
-     	 +'&context=📑📑 SSPAI Article'
+     	 +'&context=📑📑 科技文章 : 少数派'
      	 +'&estimate=10 mins&autosave=true';
 		break;
 
    	case 'zhihu':
 		url = 'omnifocus:///add?note='+encodeURIComponent(window.location)
 		 +'&name='+encodeURIComponent(document.title.replace(/ - 知乎|\(.*?(私信|消息).*?\)/g,""))
-		 +'&context=🤔🤔 What Why How'
+		 +'&context=🤔🤔 知乎问题 : 回答'
 		 +'&estimate=10 mins&autosave=true';
    		break;
 
    	case 'github':
 		url = 'omnifocus:///add?note='+encodeURIComponent(window.location)
 	   	 +'&name='+encodeURIComponent(document.title.replace(/github/g,""))
-	  	 +'&context=👍👍 GitHub Project'
+	  	 +'&context=👍👍 开源项目'
 	  	 +'&estimate=30 mins&autosave=true';
 	  	break;
 
@@ -35,7 +35,7 @@ switch(url[0]){
 		author = author[0].replace(/js_preview_reward_author_name">|<\/div>/g,'');
 		url = 'omnifocus:///add?note='+encodeURIComponent(window.location)+"  "+author+"  "+nickname
 		 +'&name='+title
-		 +'&context=📖📖 Reading Lists'
+		 +'&context=📖📖 阅读列表'
 		 +'&estimate=05 mins&autosave=true';
 		break;  	
 
@@ -45,7 +45,7 @@ switch(url[0]){
 	case 'dangdang':
 		url = 'omnifocus:///add?note='+encodeURIComponent(window.location)
 		 +'&name='+encodeURIComponent(document.title.replace(/-淘宝网|- 京东.*?/g,""))
-		 +'&context=🛒🛒 Shopping'
+		 +'&context=🛒🛒 购物清单'
 		 +'&estimate=01 mins&autosave=true';
 		break;
 
@@ -54,7 +54,7 @@ switch(url[0]){
 	case 'v.qq':
 	 	url = 'omnifocus:///add?note='+encodeURIComponent(window.location)
 	  	 +'&name='+encodeURIComponent(document.title.replace(/- YouTube|\(\d+\)|_.*?bilibili|_腾讯视频/g,""))
-	   	 +'&context=🎬🎬 Movies to watch'
+	   	 +'&context=🎬🎬 电影视频'
 	   	 +'&estimate=20 mins&autosave=true';
 	   	break;
 
@@ -67,14 +67,14 @@ switch(url[0]){
 	case 'cnblogs':
 	 	url = 'omnifocus:///add?note='+encodeURIComponent(window.location)
 	 	 +'&name='+encodeURIComponent(document.title.replace(/-看雪安全论坛|-.*?\|.*?|- FreeBuf.*?|CSDN博客|SegmentFault 思否|Stack Overflow|博客园/g,""))
-	 	 +'&context=⚙️⚙️ Reverse Engineering'
+	 	 +'&context=⚙️⚙️ 逆向工程'
 	  	 +'&estimate=20 mins&autosave=true';
 	  	break;
 
 	default:
 		url = 'omnifocus:///add?note='+encodeURIComponent(window.location)
 	  	 +'&name='+encodeURIComponent(document.title.replace(/\(\d+\)| (-|–|_|\|) (简书|MBA智库百科|维基百科，自由的百科全书|Medium)|(-|_)(什么值得买|使用评测|PingWest 品玩)/g,""))
-	 	 +'&context=📖📖 Reading Lists'
+	 	 +'&context=📖📖 阅读列表'
 	 	 +'&estimate=05 mins&autosave=true';
 		break;
 }
