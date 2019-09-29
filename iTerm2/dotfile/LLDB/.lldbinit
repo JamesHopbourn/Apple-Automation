@@ -1,9 +1,0 @@
-command script import /usr/local/opt/chisel/libexec/fblldb.py
-command script import $HOME/.lldb/sbr.py
-settings set target.x86-disassembly-flavor intel
-
-command alias bp breakpoint set -a %1
-command alias bl breakpoint list
-command alias rtc breakpoint set -o -a %1
-command alias pof expression -OAv -- %1
-command alias pcc process connect connect://localhost:1234
