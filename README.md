@@ -10,6 +10,7 @@ Telegram Channel：[James Here](https://t.me/JamesHere)
  
  - 网易云音乐 JavaScript 脚本
  - svn keyboard maestro
+ - AppleScript URL Scheme 利用
 
 # 致谢
 @[YuktimH](https://sspai.com/user/47944/updates) 开发的神奇搜索是 Alfred 原型
