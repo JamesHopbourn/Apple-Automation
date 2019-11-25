@@ -6,6 +6,11 @@ Make Something Wonderful.
 
 Telegram Channel：[James Here](https://t.me/JamesHere)
 
+# todo
+ 
+ - 网易云音乐 JavaScript 脚本
+ - svn keyboard maestro
+
 # 致谢
 @[YuktimH](https://sspai.com/user/47944/updates) 开发的神奇搜索是 Alfred 原型
 
