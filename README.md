@@ -11,7 +11,7 @@ Telegram Channel：[James Here](https://t.me/JamesHere)
  - 网易云音乐 JavaScript 脚本
  - ~~svn keyboard maestro~~
  - AppleScript URL Scheme 利用
-
+ - iTerm AppleScript URL Scheme
 # 致谢
 
 @[SoffChen](https://github.com/soffchen) Alfred 代码优化
