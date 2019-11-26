@@ -1,7 +1,0 @@
-sspai.com###home > div.top-banner:first-child
-sspai.com###home > div.container:last-child > div.main:first-child > div.series-carousel-card:nth-child(3)
-sspai.com###app > div.article-wrapper:nth-child(2) > div.article-detail:first-child > article > img.banner.clock:first-child
-sspai.com###app > div.article-wrapper:nth-child(2) > div.article-detail:first-child > article > div.recommend.article-margin.clock:nth-child(10) > div.products-wrapper.clearfix
-sspai.com###app > div.article-wrapper:nth-child(2) > div.article-detail:first-child > article > div.close_comment:nth-child(11)
-sspai.com###footer
-zhihu.com###root > div > main.App-main:nth-child(3) > div.QuestionPage > div.Question-main:last-child > div.Question-sideColumn.Question-sideColumn--sticky:last-child
