@@ -24,7 +24,6 @@ Ulysses 本身自带表格功能，只是藏地比较深而已，在软件的介
 使用 LaTeX 的表格功能，表格代码：
 ```
 ~~$$\begin{array}{c|lcr}物质 & \text{状态} & \text{颜色} & \text{性质} & \text{保存方法} & \text{萃取颜色}\\\hline ~Cl_{2}~ & 气体 & 黄绿色 & 易液化 & 钢瓶存储 & 无 \\ ~Br_{2} & 液体 & 深红棕色 & 易挥发 & 水封保存 & 橙红色\\ ~I_{2}~ & 固体 & 紫黑色 & 易升华 & 棕色瓶子 & 紫色(上层)\\ \end{array} $$
-```
 
 ~~ <script type="text/x-mathjax-config">
 ~~ MathJax.Hub.Config({tex2jax: {inlineMath:[['$','$']]}});
@@ -36,6 +35,7 @@ Ulysses 本身自带表格功能，只是藏地比较深而已，在软件的介
 ~~});
 ~~</script>
 ~~<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+```
 
 ## 格式
 ```
