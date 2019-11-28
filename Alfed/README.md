@@ -5,6 +5,7 @@
 dnk 关键词
 dnkd 数据库名称 → 关键词
 ```
+## [Github Search](http://www.packal.org/workflow/github)
 
 ## [Bear Search](https://github.com/chrisbro/alfred-bear)
 使用 bs、bst、bn 对 Bear 进行查询和新建笔记，使用语法：
