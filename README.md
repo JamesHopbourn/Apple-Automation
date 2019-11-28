@@ -12,6 +12,8 @@ Telegram Channel：[James Notes](https://t.me/JamesNotes)
  - svn keyboard maestro
  - AppleScript URL Scheme 利用
  - iTerm AppleScript URL Scheme
+ - 重新设计 OmniFocus JavaScript 脚本，解决无响应问题
+ 
 # 致谢
 
 @[SoffChen](https://github.com/soffchen) Alfred 代码优化
