@@ -13,6 +13,7 @@ Telegram Channel：[James Notes](https://t.me/JamesNotes)
  - AppleScript URL Scheme 利用
  - iTerm AppleScript URL Scheme
  - 重新设计 OmniFocus JavaScript 脚本，解决无响应问题
+ - 设计两个 OmniFocus 脚本，新的可以再弹出自定义 context
  
 # 致谢
 
