@@ -18,8 +18,8 @@ body = '\n'.join(list)
 cmd = """osascript -e 'tell application "Reminders"
 	make new reminder at list "Drafts" with properties {name:"namehere", body:"bodyhere"}
 end tell'"""
-cmd = cmd.replace("namehere", name);
-cmd = cmd.replace("bodyhere", body);
+cmd = cmd.replace("namehere", name)
+cmd = cmd.replace("bodyhere", body)
 
 def addreminders():
      os.system(cmd)
