@@ -1,4 +1,5 @@
 #!/usr/local/bin/python3
+#-*-coding:utf-8-*-
 # @Time    : 2019-12-11
 # @Author  : James Hopbourn
 # @Email   : hopbourncontact@gmail.com
