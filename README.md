@@ -22,6 +22,8 @@ Telegram Channel：[James Notes](https://t.me/JamesNotes)
 
 @[JailbreakHum](https://sspai.com/user/681230/updates) 提出修改意见
 
+@[harry](https://sspai.com/u/cjmqfh6v)JavaScript 编程问题指导
+
 @[Se7en]() Alfred Drafts 5代码适配
 
 @[YuktimH](https://sspai.com/user/47944/updates) 开发的神奇搜索是 Alfred 原型
