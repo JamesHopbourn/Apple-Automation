@@ -1,10 +1,11 @@
 #!/usr/local/bin/python3
-#-*-coding:utf-8-*-
-# @Time    : 2019-12-11
-# @Author  : James Hopbourn
-# @Email   : hopbourncontact@gmail.com
-# @File    : Clipboard to Reminders.py
-# @Software: Clipboard to Reminders
+#-*- coding:utf-8 -*-
+#  Clipboard to Reminders.py
+#  Clipboard to Reminders
+#
+#  Created by James Hopbourn on 2019/12/11.
+#  Copyright © 2019 James Hopbourn. All rights reserved.
+#
 
 import os
 import pyperclip
