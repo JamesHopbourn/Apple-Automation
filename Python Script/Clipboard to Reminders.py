@@ -5,7 +5,6 @@
 #
 #  Created by James Hopbourn on 2019/12/11.
 #  Copyright © 2019 James Hopbourn. All rights reserved.
-#
 
 import os
 import pyperclip
