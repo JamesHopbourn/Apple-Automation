@@ -7,15 +7,15 @@ iOS/macOS 自动化，效率玩法探索。
 Telegram Channel：[James Notes](https://t.me/JamesNotes)
 
 # todo
- - [x] ~~[谷歌娘语音 command line](https://sspai.com/post/57876)~~
+ - [x] [谷歌娘语音 command line](https://sspai.com/post/57876)
  - [ ] 网易云音乐 JavaScript 脚本
  - [ ] svn keyboard maestro
  - [ ] AppleScript URL Scheme 利用
- - [x] ~~[macOS 快速发送文本给 Drafts 4](https://sspai.com/post/57784)~~
+ - [x] [macOS 快速发送文本给 Drafts 4](https://sspai.com/post/57784)
  - [ ] iTerm AppleScript URL Scheme
  - [ ] 重新设计 OmniFocus JavaScript 脚本，解决无响应问题
  - [ ] 设计两个 OmniFocus 脚本，新的可以再弹出自定义 context（配合 TextExpander）
- - [x] ~~[Keyboard Maestro + Reminders + Drafts sync](https://github.com/JamesHopbourn/Apple-Automation/blob/master/Python/Clipboard%20to%20Reminders.py)~~
+ - [x] [Keyboard Maestro + Reminders + Drafts sync](https://github.com/JamesHopbourn/Apple-Automation/blob/master/Python/Clipboard%20to%20Reminders.py)
  
 # 致谢
 
