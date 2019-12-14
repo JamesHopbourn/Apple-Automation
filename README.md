@@ -7,7 +7,7 @@ iOS/macOS 自动化，效率玩法探索。
 Telegram Channel：[James Notes](https://t.me/JamesNotes)
 
 # todo
- 
+ - [x] [谷歌娘语音 command line](https://sspai.com/post/57876)
  - [ ] 网易云音乐 JavaScript 脚本
  - [ ] svn keyboard maestro
  - [ ] AppleScript URL Scheme 利用
