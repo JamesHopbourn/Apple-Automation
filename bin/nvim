@@ -1,3 +1,10 @@
+#!/usr/bin/env zsh
+#  nvim.sh
+#  nvim
+#
+#  Created by James Hopbourn on 2019/12/18
+#  Copyright © 2019 James Hopbourn. All rights reserved.
+
 author='James Hopbourn'
 filename=`echo $1|awk -F . '{print $1}'`
 extension=`echo $1|awk -F . '{print $NF}'`
