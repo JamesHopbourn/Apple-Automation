@@ -9,6 +9,11 @@ author='James Hopbourn'
 filename=`echo $1|awk -F . '{print $1}'`
 extension=`echo $1|awk -F . '{print $NF}'`
 
+if [ -f "$1" ]; then
+    vim $1
+    exit
+fi
+
 case $extension in
 py)
     echo '#!/usr/local/bin/python3' > $1
