@@ -47,4 +47,7 @@ sh)
     chmod +x $1
     vim $1
     ;;
+*)
+    vim $1
+    ;;
 esac

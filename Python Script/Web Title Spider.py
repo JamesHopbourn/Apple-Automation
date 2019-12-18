@@ -1,5 +1,5 @@
 #!/usr/local/bin/python
-#-*-coding:utf-8-*-
+#-*- coding:utf-8 -*-
 #  Web Title Spider.py
 #  Web Title Spider
 #
