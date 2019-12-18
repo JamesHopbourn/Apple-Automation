@@ -1,0 +1,19 @@
+author='James Hopbourn'
+filename=`echo $1|awk -F . '{print $1}'`
+extension=`echo $1|awk -F . '{print $NF}'`
+
+case $extension in
+py)
+    echo '#!/usr/local/bin/python3' > $1
+    echo '#-*- coding:utf-8 -*-' >> $1
+    echo '#  '$1 >> $1
+    echo '#  '$filename >> $1
+    echo '#' >> $1
+    echo '#  Created by '$author' on '`date +%Y/%m/%d` >> $1
+    echo '#  Copyright © '`date +%Y`' '$author'. All rights reserved.' >> $1
+    echo '' >> $1
+    vim $1
+    ;;
+sh)
+    ;;
+esac
