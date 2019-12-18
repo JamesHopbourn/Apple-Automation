@@ -14,6 +14,19 @@ py)
     echo '' >> $1
     vim $1
     ;;
-sh)
+c)
+    echo '#include<stdio.h>' > $1
+    echo '/*' >> $1
+    echo '  '$1 and>> $1
+    echo '  '$filename >> $1
+    echo '' >> $1
+    echo '  Created by '$author' on '`date +%Y/%m/%d` >> $1
+    echo '  Copyright © '`date +%Y`' '$author'. All rights reserved.' >> $1
+    echo '*/' >> $1
+    echo '' >> $1
+    echo 'int main(){' >> $1
+    echo '' >> $1
+    echo '}' >> $1
+    vim $1
     ;;
 esac
