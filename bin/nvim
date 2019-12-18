@@ -37,6 +37,7 @@ sh)
     echo '#  Created by '$author' on '`date +%Y/%m/%d` >> $1
     echo '#  Copyright © '`date +%Y`' '$author'. All rights reserved.' >> $1
     echo '' >> $1
+    chmod +x $1.sh
     vim $1
     ;;
 esac
