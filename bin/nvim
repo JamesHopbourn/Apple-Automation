@@ -16,7 +16,7 @@ fi
 
 case $extension in
 py)
-    echo '#!/usr/local/bin/python3' > $1
+    echo '#!/usr/bin/env python3' > $1
     echo '#-*- coding:utf-8 -*-' >> $1
     echo '#  '$1 >> $1
     echo '#  '$filename >> $1
@@ -24,6 +24,7 @@ py)
     echo '#  Created by '$author' on '`date +%Y/%m/%d` >> $1
     echo '#  Copyright © '`date +%Y`' '$author'. All rights reserved.' >> $1
     echo '' >> $1
+    chmod +x $1
     vim $1
     ;;
 c)
@@ -40,9 +41,10 @@ c)
     echo '' >> $1
     echo '}' >> $1
     vim $1
+    gcc $1 -o $filename
     ;;
 sh)
-    echo '#!/usr/bin/zsh' > $1
+    echo '#!/usr/bin/env zsh' > $1
     echo '#  '$1 >> $1
     echo '#  '$filename >> $1
     echo '#' >> $1
