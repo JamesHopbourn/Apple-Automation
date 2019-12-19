@@ -12,6 +12,9 @@ extension=`echo $1|awk -F . '{print $NF}'`
 if [ -f "$1" ]; then
     vim $1
     exit
+ else
+    echo '请输入新建新建名'
+    exit
 fi
 
 case $extension in
