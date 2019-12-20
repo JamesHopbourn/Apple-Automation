@@ -10,8 +10,28 @@ filename=`echo $1|awk -F . '{print $1}'`
 extension=`echo $1|awk -F . '{print $NF}'`
 
 if [ -f "$1" ]; then
-    vim $1
-    exit
+    case $extension in
+        py)
+        vim $1
+		python $1
+		exit
+		;;
+		c)
+		vim $1
+		gcc $1 -o $filename
+		./$filename
+		exit
+		;;
+		sh)
+		vim $1
+		chmod +x $1
+		./$1
+		exit
+		;;
+		*)
+		vim $1
+		exit
+    esac
 fi
 
 case $extension in
