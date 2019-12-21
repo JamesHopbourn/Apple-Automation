@@ -44,8 +44,8 @@ py)
     echo '#  Created by '$author' on '`date +%Y/%m/%d` >> $1
     echo '#  Copyright © '`date +%Y`' '$author'. All rights reserved.' >> $1
     echo '' >> $1
+    chmod +x $1
     vim $1
-	python3 $1
     ;;
 c)
     echo '#include<stdio.h>' > $1
@@ -62,7 +62,6 @@ c)
     echo '}' >> $1
     vim $1
     gcc $1 -o $filename
-	./$filename
     ;;
 sh)
     echo '#!/usr/bin/env zsh' > $1
@@ -74,9 +73,9 @@ sh)
     echo '' >> $1
     chmod +x $1
     vim $1
-	./$1
     ;;
 *)
     vim $1
+    chmod +x $1
     ;;
 esac
