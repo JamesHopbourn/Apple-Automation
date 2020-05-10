@@ -37,3 +37,12 @@ crontab -e
 
 @reboot cd ~/Coding;python -m SimpleHTTPServer
 ```
+
+Chrome 书签地址：
+```
+javascript: (function() {
+    var js = document.createElement('script');
+    js.setAttribute('src', 'http://127.0.0.1:8000/bookmarklet.js');
+    document.body.appendChild(js);
+})();
+```
