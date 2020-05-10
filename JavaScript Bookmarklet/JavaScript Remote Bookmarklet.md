@@ -29,8 +29,7 @@ url = 'omnifocus:///add?note='+encodeURIComponent(window.location)
 
 直接调用这个本地文件会提示：Not allowed to load local resource
   
-所以我们需要把这个脚本上传到服务器上或者本地搭建环境，我个人建议是使用本地搭建环境：crontab
-+ pyhton
+所以我们需要把这个脚本上传到服务器上或者本地搭建环境，我个人建议是使用本地搭建环境：crontab 配合 pyhton 实现
 
 开机自启
 ```
