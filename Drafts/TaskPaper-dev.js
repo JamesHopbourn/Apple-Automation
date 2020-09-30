@@ -1,32 +1,51 @@
 var text = draft.content;
 
-var chta = /@context\(\ud83d[\udcac].*\) @due\(today 19:10\)/g
-var chtb = /@context\(\ud83d[\udcac].*\) @due\(today 19:20\)/g
-var chtc = /@context\(\ud83d[\udcac].*\) @due\(today 19:30\)/g
-var chtd = /@context\(\ud83d[\udcac].*\) @due\(today 19:40\)/g
-var chat = /@context\(\ud83d[\udcac].*\) @due\(today 19:50\)/g
+if (text.match(/Communicate/) != null){
+	var temp = ''
+	line = text.split("\n")
+	length = line.length
 
-if (text.match(chta) != null){ text = "1⃣️ " + text; }
-if (text.match(chtb) != null){ text = "2⃣️ " + text; }
-if (text.match(chtc) != null){ text = "3⃣️ " + text; }
-if (text.match(chtd) != null){ text = "4⃣️ " + text; }
-if (text.match(chat) != null){ text = "💬️ " + text; }
+	for (var i = 0; i < line.length; i++) {
+	var text = line[i]
+	var chta = /@context\(\ud83d[\udcac].*\) @due\(today 19:10\)/g
+	var chtb = /@context\(\ud83d[\udcac].*\) @due\(today 19:20\)/g
+	var chtc = /@context\(\ud83d[\udcac].*\) @due\(today 19:30\)/g
+	var chtd = /@context\(\ud83d[\udcac].*\) @due\(today 19:40\)/g
+	var chat = /@context\(\ud83d[\udcac].*\) @due\(today 19:50\)/g
 
-// 原本要使用十个关键词，但是想来一下可以用上面的这组关键词+tm关键词代替下面的这五个关键词，所以要安排到明天需要两个关键词实现，例如：chta tm
-var tchta = /@context\(\ud83d[\udcac].*\) @due\(today 19:10\) @due\(tom .*\)/g
-var tchtb = /@context\(\ud83d[\udcac].*\) @due\(today 19:20\) @due\(tom .*\)/g
-var tchtc = /@context\(\ud83d[\udcac].*\) @due\(today 19:30\) @due\(tom .*\)/g
-var tchtd = /@context\(\ud83d[\udcac].*\) @due\(today 19:40\) @due\(tom .*\)/g
-var tchat = /@context\(\ud83d[\udcac].*\) @due\(today 19:50\) @due\(tom .*\)/g
+	if (text.match(chta) != null){ text = text.replace(/-/,"- 1⃣️ "); }
+	if (text.match(chtb) != null){ text = text.replace(/-/,"- 2⃣️ "); }
+	if (text.match(chtc) != null){ text = text.replace(/-/,"- 3⃣️ "); }
+	if (text.match(chtd) != null){ text = text.replace(/-/,"- 4⃣️ "); }
+	if (text.match(chat) != null){ text = text.replace(/-/,"- 💬️ "); }
 
-if (text.match(tchta) != null){ text = "1⃣️ " + text; text = text.replace(/@due\(tom 18:00\) @context\(5⃣️\)/g,''); text = text.replace(/today/,'tom') }
-if (text.match(tchtb) != null){ text = "2⃣️ " + text; text = text.replace(/@due\(tom 18:00\) @context\(5⃣️\)/g,''); text = text.replace(/today/,'tom') }
-if (text.match(tchtc) != null){ text = "3⃣️ " + text; text = text.replace(/@due\(tom 18:00\) @context\(5⃣️\)/g,''); text = text.replace(/today/,'tom') }
-if (text.match(tchtd) != null){ text = "4⃣️ " + text; text = text.replace(/@due\(tom 18:00\) @context\(5⃣️\)/g,''); text = text.replace(/today/,'tom') }
-if (text.match(tchat) != null){ text = "💬️ " + text; text = text.replace(/@due\(tom 18:00\) @context\(5⃣️\)/g,''); text = text.replace(/today/,'tom') }
+	// 原本要使用十个关键词，但是想了一下可以用上面的这组关键词+tm关键词代替下面的这五个关键词，所以要安排到明天需要两个关键词实现
+	// 例如：输入「某某任务 chta tm」会被文本替换为「某某任务 @context(💬️ Communicate) @due(tom 19:20) @due(tom 20:00)」
+	// 但是由于 OmniFocus 的特性，一行中出现两个 @due 以后面的时间为准
+	var tchta = /@context\(\ud83d[\udcac].*\) @due\(today 19:10\) @due\(tom .*\)/g
+	var tchtb = /@context\(\ud83d[\udcac].*\) @due\(today 19:20\) @due\(tom .*\)/g
+	var tchtc = /@context\(\ud83d[\udcac].*\) @due\(today 19:30\) @due\(tom .*\)/g
+	var tchtd = /@context\(\ud83d[\udcac].*\) @due\(today 19:40\) @due\(tom .*\)/g
+	var tchat = /@context\(\ud83d[\udcac].*\) @due\(today 19:50\) @due\(tom .*\)/g
 
-// 上面两个今日沟通和明日沟通无论那个放在上面都会处理两次，导致加上两个 Emoji，在这里删掉一个
-var text = text.replace(/ 1⃣️| 2⃣️| 3⃣️| 4⃣️| 💬️/,'')
+	if (text.match(tchta) != null){ text = text.replace(/-/,"- 1⃣️ "); text = text.replace(/@due\(tom 18:00\) @context\(5⃣️\)/g,''); text = text.replace(/today/,'tom') }
+	if (text.match(tchtb) != null){ text = text.replace(/-/,"- 2⃣️ "); text = text.replace(/@due\(tom 18:00\) @context\(5⃣️\)/g,''); text = text.replace(/today/,'tom') }
+	if (text.match(tchtc) != null){ text = text.replace(/-/,"- 3⃣️ "); text = text.replace(/@due\(tom 18:00\) @context\(5⃣️\)/g,''); text = text.replace(/today/,'tom') }
+	if (text.match(tchtd) != null){ text = text.replace(/-/,"- 4⃣️ "); text = text.replace(/@due\(tom 18:00\) @context\(5⃣️\)/g,''); text = text.replace(/today/,'tom') }
+	if (text.match(tchat) != null){ text = text.replace(/-/,"- 💬️ "); text = text.replace(/@due\(tom 18:00\) @context\(5⃣️\)/g,''); text = text.replace(/today/,'tom') }
+	// 临时存储处理完的行
+	temp = temp + "\n" + text
+	}
+	// 如果有沟通任务安排到明天会被重复加上一个符号，在此删去一个
+	text = temp.replace(/1⃣️  1⃣️/,'1⃣️')
+	text = text.replace(/2⃣️  2⃣️/,'2⃣️')
+	text = text.replace(/3⃣️  3⃣️/,'3⃣️')
+	text = text.replace(/4⃣️  4⃣️/,'4⃣️')
+	text = text.replace(/💬️  💬️/,'💬️')
+}
+
+// 如果不带任何标签自动分配到今天最不紧要的任务
+if (text.match(/@context\(.*\)/g) == null){ text = text + " @due(Today 08:00) @context(5⃣️)" }
 
 var folderTag = text.match(/@folder\(.+?\)/g);
 if (folderTag != null) {
@@ -53,6 +72,3 @@ if (weblink != null) {
 
 draft.defineTag('text',text);
 draft.defineTag('target',target);
-
-//Open a URL: omnifocus:///paste?content=[[text]]&target=[[target]]&x-success=drafts4://
-
