@@ -1,12 +1,14 @@
 var text = draft.content;
 
 if (text.match(/Communicate/) != null){
+	// 临时变量存储
 	var temp = ''
 	line = text.split("\n")
-	length = line.length
 
 	for (var i = 0; i < line.length; i++) {
 	var text = line[i]
+	// 如果没有横杆给每行加上横杠
+    if (text.match(/^- /) == null){ text = '- ' + text }
 	var chta = /@context\(\ud83d[\udcac].*\) @due\(today 19:10\)/g
 	var chtb = /@context\(\ud83d[\udcac].*\) @due\(today 19:20\)/g
 	var chtc = /@context\(\ud83d[\udcac].*\) @due\(today 19:30\)/g
@@ -36,6 +38,8 @@ if (text.match(/Communicate/) != null){
 	// 临时存储处理完的行
 	temp = temp + "\n" + text
 	}
+	// 删掉首行的临时变量
+    text = text.slice(1)
 	// 如果有沟通任务安排到明天会被重复加上一个符号，在此删去一个
 	text = temp.replace(/1⃣️  1⃣️/,'1⃣️')
 	text = text.replace(/2⃣️  2⃣️/,'2⃣️')
