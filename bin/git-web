@@ -1,1 +1,1 @@
-open `git config --get remote.origin.url`/blob/`git rev-parse --abbrev-ref HEAD`/"$1"
+echo  `git config --get remote.origin.url`/blob/`git rev-parse --abbrev-ref HEAD`/`git rev-parse --show-prefix`"$1"
