@@ -1,0 +1,1 @@
+open `git config --get remote.origin.url`/blob/`git rev-parse --abbrev-ref HEAD`/"$1"
