@@ -4,6 +4,12 @@
 - 支持沟通交流时序安排
 - 支持从剪切板读取任务
 
+## Web Capture Temple
+```
+[[selection]]
+
+[[[title]]]([[url]])
+```
 ## 插件下载
 #### [Alfred](https://drafts4-actions.agiletortoise.com/a/2PS)
 用途：类似 macOS 上的 Alfred，使用关键词+内容启动特定的 URL Scheme，默认动作为 TaskPaper，可根据自己需求进行修改。
