@@ -1,6 +1,6 @@
 <?php 
 
 $str = getenv('POPCLIP_TEXT');
-echo str_replace('**', '::', $str);
-
-php?>
+$str = str_replace('**', '::', $str);
+$str = str_replace('“', '「', $str);
+echo str_replace('”', '」', $str);
