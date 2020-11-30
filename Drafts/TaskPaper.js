@@ -1,7 +1,7 @@
 var text = draft.content;
 
-// 如果不带任何标签自动分配到今天最不紧要的任务
-if (text.match(/@context\(.*\)/g) == null){ text = text + " @due(Today 23:00) @context(5⃣️)" }
+// 如果不带任何标签且单行自动分配到今天最不紧要的任务
+if (text.match(/@context\(.*\)/g) == null && text.split('\n').length == 1){ text = text + " @due(Today 23:00) @context(5⃣️)" }
 
 // 如果包含 pbp 关键词就在下一行追加剪切板内容
 if (text.match(/pbp/g)) { text = text.replace("pbp", "") + "\n"+ getClipboard(); }
