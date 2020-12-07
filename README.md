@@ -13,7 +13,7 @@ Telegram Channel：[James Notes](https://t.me/JamesNotes)
  - [ ] AppleScript URL Scheme 利用
  - [x] [macOS 快速发送文本给 Drafts 4](https://sspai.com/post/57784)
  - [ ] iTerm AppleScript URL Scheme
- - [ ] 重新设计 OmniFocus JavaScript 脚本，解决无响应问题
+~~ - [ ] 重新设计 OmniFocus JavaScript 脚本，解决无响应问题~~
  - [ ] 设计两个 OmniFocus 脚本，新的可以再弹出自定义 context（配合 TextExpander）
  - [x] [Keyboard Maestro + Reminders + Drafts sync](https://github.com/JamesHopbourn/Apple-Automation/blob/master/Python/Clipboard%20to%20Reminders.py)
  
