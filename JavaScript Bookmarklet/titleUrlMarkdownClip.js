@@ -19,7 +19,7 @@ javascript: (function() {
         }
     }
     
-    var markdown = '[' + document.title.replace(/ \/ Twitter/, '').replace(/^【.*】/, '').replace(/(｜.*$|\|.*$)/, '').replace(/^\(.*\)/, '').replace(/-.*$/, '').replace(/(！|？|\?|\!)/g, '').replace(/_.*$/, '').trim() + '](' + window.location.href + ')';
+    var markdown = '[' + document.title.replace(/ \/ Twitter/, '').replace(/^【.*】/, '').replace(/(｜.*$|\|.*$)/, '').replace(/^\(.*\)/, '').replace(/-.*$/, '').replace(/(！|？|\?|\!)/g, '').replace(/_.*$/, '').trim() + '](' + window.location.href + ')  ';
     if (window.getSelection() != '') {markdown = window.getSelection() + "\n\n" + markdown + "\n"}
     copyToClipboard(markdown);
 })();
