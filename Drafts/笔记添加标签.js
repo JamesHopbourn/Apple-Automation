@@ -1,10 +1,7 @@
-#### Prompt
-```
-600 清单|300 学习/350 读书笔记|400 兴趣/410 单车骑行|400 兴趣/405 绘图设计| 500 课余/001 政治体制|500 课余/004 课外知识|010 日记/020 恋爱日记|200 生活/250 恋爱知识|010 日记/011 生活日记|010 日记/013 社会时事|800 语录摘抄
-```
+//// Prompt
+// 600 清单|400 兴趣/470 投资机会|400 兴趣/410 单车骑行|400 兴趣/405 绘图设计| 500 课余/001 政治体制|500 课余/004 课外知识|010 日记/020 恋爱日记|200 生活/250 恋爱知识|010 日记/011 生活日记|010 日记/013 社会时事|800 语录摘抄|900 演讲稿
 
-#### Script
-```
+//// Script
 // 默认内容来自 Drafts
 var head = draft.processTemplate("[[title]]");
 var content = draft.processTemplate("[[body]]");
@@ -31,9 +28,6 @@ content = content.replace(/^ +/gm, '');
 
 draft.defineTag("head", head);
 draft.defineTag("content", content);
-```
 
-#### URL
-```
-bear://x-callback-url/create?title=[[head]]&text=[[content]]&tags=[[prompt_button]]&x-success=drafts4://
-```
+//// URL
+//bear://x-callback-url/create?title=[[head]]&text=[[content]]&tags=[[prompt_button]]&x-success=drafts4://
