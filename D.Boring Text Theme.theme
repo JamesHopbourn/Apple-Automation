@@ -92,6 +92,7 @@
 		<key>value</key>
 		<string>rgba(255, 40, 49, 1.00)</string>
 	</dict>
+	<!-- 地址链接文字颜色 -->
 	<dict>
 		<key>key</key>
 		<string>Map Text Color</string>
@@ -136,6 +137,7 @@
 		<key>value</key>
 		<string>rgba(154,205,230, 1.00)</string>
 	</dict>
+	<!-- 标签选中背景色 -->
 	<dict>
 		<key>key</key>
 		<string>Hashtag Selected Background Color</string>
@@ -144,6 +146,7 @@
 		<key>value</key>
 		<string>rgba(139, 140, 141, 1.00)</string>
 	</dict>
+	<!-- Checkbox 填充色 -->
 	<dict>
 		<key>key</key>
 		<string>Checkbox Fill Color</string>
@@ -152,6 +155,7 @@
 		<key>value</key>
 		<string>rgba(252, 252, 252, 1.00)</string>
 	</dict>
+	<!-- Checkbox 外边框 -->
 	<dict>
 		<key>key</key>
 		<string>Checkbox Stroke Color</string>
@@ -160,6 +164,7 @@
 		<key>value</key>
 		<string>rgba(199, 199, 199, 1.00)</string>
 	</dict>
+	<!-- Checkbox 进度条背景色 -->
 	<dict>
 		<key>key</key>
 		<string>Checkbox Check Color</string>
@@ -195,6 +200,7 @@
 		<key>value</key>
 		<string>rgba(253, 253, 253, 1.00)</string>
 	</dict>
+	<!-- 代码块背景色 -->
 	<dict>
 		<key>key</key>
 		<string>Code Stroke Color</string>
@@ -203,6 +209,7 @@
 		<key>value</key>
 		<string>rgba(199, 199, 199, 1.00)</string>
 	</dict>
+	<!-- 代码文本色 -->
 	<dict>
 		<key>key</key>
 		<string>Code Font Color</string>
