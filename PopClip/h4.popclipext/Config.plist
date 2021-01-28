@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Actions</key>
+	<array>
+		<dict>
+			<key>After</key>
+			<string>paste-result</string>
+			<key>Image File</key>
+			<string>h4.png</string>
+			<key>Shell Script File</key>
+			<string>h4.sh</string>
+			<key>Title</key>
+			<string>H4 title</string>
+		</dict>
+	</array>
+	<key>Extension Description</key>
+	<string>add #### to first line and delete \n</string>
+	<key>Extension Identifier</key>
+	<string>com.james.h4</string>
+	<key>Extension Name</key>
+	<string>H4 title</string>
+</dict>
+</plist>

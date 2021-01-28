@@ -5,8 +5,9 @@ Highlight.popclipextz 是安装包（已打包）
 
 ## 功能介绍
 Highlight ：将 Bear 中的 ** 转换为 :: 高亮标记
-
 trim：删除文段之间多余的回车
+H4：第一行开头添加 Markdown 四级标题标记，其余行合并为一行
+tr：选中行合并为一行
 
 ---
 
