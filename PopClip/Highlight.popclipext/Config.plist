@@ -2,40 +2,24 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>Actions</key>
-    <array>
-        <dict>
-            <key>Image File</key>
-            <string>Highlight.png</string>
-            <key>After</key>
-            <string>paste-result</string>
-            <key>Regular Expression</key>
-            <string>*</string>
-            <key>Script Interpreter</key>
-            <string>/usr/bin/php</string>
-            <key>Shell Script File</key>
-            <string>Highlight.php</string>
-            <key>Title</key>
-            <string>Highlight</string>
-        </dict>
-
-    </array>
-    <key>Extension Description</key>
-    <string>将 Bear 里面的重点转换为高亮</string>
-    <key>Extension Name</key>
-    <string>Highlight</string>
-    <key>Credits</key>
-    <array>
-        <dict>
-            <key>Link</key>
-            <string>mailto:jameshopbourn@gmail.com</string>
-            <key>Name</key>
-            <string>Bear 重点转为高亮</string>
-        </dict>
-    </array>
-    <key>Extension Identifier</key>
-    <string>hust.hopbourn.popclip.extension.highlight</string>
-    <key>Required Software Version</key>
-    <integer>693</integer>
+	<key>Actions</key>
+	<array>
+		<dict>
+			<key>After</key>
+			<string>paste-result</string>
+			<key>Image File</key>
+			<string>Highlight.png</string>
+			<key>Shell Script File</key>
+			<string>Highlight.sh</string>
+			<key>Title</key>
+			<string>Highlight List</string>
+		</dict>
+	</array>
+	<key>Extension Description</key>
+	<string>Highlight Markdown List</string>
+	<key>Extension Identifier</key>
+	<string>com.james.Highlight</string>
+	<key>Extension Name</key>
+	<string>Highlight List</string>
 </dict>
 </plist>
