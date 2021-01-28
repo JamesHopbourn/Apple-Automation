@@ -96,12 +96,6 @@
 他说:「这是一段测试文本！你试试看效果怎么样？」
 ```
   
----  
-
-## 安装说明  
-Highlight.popclipext 是程序包（未打包）  
-Highlight.popclipextz 是安装包（已打包）  
-  
 ## php 学习备注  
 ```  
 获取选择文本  
