@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Actions</key>
+	<array>
+		<dict>
+			<key>After</key>
+			<string>paste-result</string>
+			<key>Image File</key>
+			<string>dot.png</string>
+			<key>Shell Script File</key>
+			<string>dot.sh</string>
+			<key>Title</key>
+			<string>dot convert</string>
+		</dict>
+	</array>
+	<key>Extension Description</key>
+	<string>、to .</string>
+	<key>Extension Identifier</key>
+	<string>com.james.dot</string>
+	<key>Extension Name</key>
+	<string>dot convert</string>
+</dict>
+</plist>
