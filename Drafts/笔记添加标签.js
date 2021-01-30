@@ -20,6 +20,8 @@ if (content.split('\n')[0].length == 0){content = content.slice(1)}
 // 替换中文引号
 content = content.replace(/“/g,"「");
 content = content.replace(/”/g,"」");
+// 替换 \u00A0 空格
+content = content.replace(/[\u00A0]/g,'');
 // 当有两个换行合并为一个
 content = content.replace(/\n{2,}/g, '\n\n');
 // 删除行首行末空格
