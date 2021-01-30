@@ -25,8 +25,7 @@ if(temp[temp.length-1].match(/mp.weixin.qq.com/g)){
    temp = temp.slice(1);
   temp  = head.concat(temp);
 }
-head = temp[0];
-content = temp.slice(1).join("\n");
+head = temp[0];content = temp.slice(1).join("\n");
 
 // 删除行首行末空格
 head = head.trim();
