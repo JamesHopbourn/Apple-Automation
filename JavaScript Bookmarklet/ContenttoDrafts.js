@@ -18,8 +18,7 @@ javascript: (function() {
             }
         }
     }
-    
-    copyToClipboard(document.body.innerText.replace(/(推荐阅读|喜欢此内容的人还喜欢)(.*\n)+/g, "").replace(/[\r\n]{3,}/g, "\n\n") + "\n\n" + '[' + document.title.replace(/ \/ Twitter/, '').replace(/^【.*】/, '').replace(/(｜.*$|\|.*$)/, '').replace(/^\(.*\)/, '').replace(/-.*$/, '').replace(/(！|？|\?|\!)/g, '').replace(/_.*$/, '').trim() + '](' + window.location.href + ')');
+    copyToClipboard(document.body.innerText.replace(/(推荐阅读|喜欢此内容的人还喜欢)(.*\n)+/g, "").replace(/.*阅读原文.*/g,'').replace(/[\r\n]{3,}/g, "\n\n") + "\n" + '[' + document.title.replace(/ \/ Twitter/, '').replace(/^【.*】/, '').replace(/(｜.*$|\|.*$)/, '').replace(/^\(.*\)/, '').replace(/-.*$/, '').replace(/(！|？|\?|\!)/g, '').replace(/_.*$/, '').trim() + '](' + window.location.href + ')');
     url = 'drafts4://x-callback-url/runAction?action=paste';
     window.open(url,'_self');
-})();
+	})();
