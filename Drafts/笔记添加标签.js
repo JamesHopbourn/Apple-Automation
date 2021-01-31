@@ -28,9 +28,8 @@ if(temp[temp.length-1].match(/mp.weixin.qq.com/g)){
 head = temp[0];content = temp.slice(1).join("\n");
 
 // 删除行首行末空格
-head = head.trim();
-content = content.trim();
-// 替换中文引号和空格
+head = head.trim();content = content.trim();
+// 替换中文引号 删除井号空格
 content = content.replace(/#/g,'');
 content = content.replace(/“/g,'「');
 content = content.replace(/”/g,'」');
