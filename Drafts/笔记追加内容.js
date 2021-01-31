@@ -2,20 +2,26 @@
 // 生活日记|生活随记|快进 ⏩：加速日记|日记 ✅：成功日记|日记 📈：微信文章|基金 💵：投资机会|人际 ❤️：恋爱日记|人际 👬：关系日记|学习 💡：课外知识|学习 💬：语录摘抄|分类 🎬：电影记录|分类 😴：梦境日记|分类 📰：时事概括
 
 //// Script
-var content = draft.content;
-if (!content){content = getClipboard()};
+// 默认内容来自文稿 否则从剪切板读取
+if (draft.content){
+  content = draft.content;
+}else{
+  content = getClipboard();
+}
 
 // 标签去掉 emoji 前缀
-var note = draft.getTag("prompt_button") || '';
+note = draft.getTag("prompt_button") || '';
 note = note.replace(/^.*：/,'');
 
-// 替换中文引号
-content = content.replace(/“/g,"「");
-content = content.replace(/”/g,"」");
-// 当有两个换行合并为一个
-content = content.replace(/\n{2,}/g, '\n\n');
 // 删除行首行末空格
-content = content.replace(/^ +/gm, '');
+content = content.trim();
+// 替换中文引号 删除井号空格
+content = content.replace(/#/g,'');
+content = content.replace(/“/g,'「');
+content = content.replace(/”/g,'」');
+content = content.replace(/[\u00A0]/g,'');
+// 当有两个以上换行合并为两个
+content = content.replace(/\n{2,}/g, '\n\n');
 
 if (note == "生活日记"){var id = "86A68159-A43C-4D97-A2EA-4D5382923029-490-0000002615E24E33";}
 if (note == "语录摘抄"){var id = "36AACB82-917A-46CB-ADE0-2985A23DDA32-3372-0000013628367C09";}
