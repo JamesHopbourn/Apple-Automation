@@ -1,2 +1,2 @@
-result=$(echo "$POPCLIP_TEXT"|sed 's/\*\*/::/g ; /^- / s//- ::/ ; /^- ::/ s/$/::/ ; /::/! s/^/::/ ; /^::/ s/$/::/ ; s/::::$/::/g')
+result=$(echo "$POPCLIP_TEXT" | gsed 's/\*\*/::/g ; /^- / s//- ::/ ; /^- ::/ s/$/::/ ; /::/! s/^/::/ ; /^::/ s/$/::/ ; s/::::$/::/g')
 /bin/echo -n "$result"
