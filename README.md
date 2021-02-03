@@ -31,6 +31,3 @@ Telegram Channel：[James Notes](https://t.me/JamesNotes)
 
 @[Platycodon](https://sspai.com/user/714505/updates) 提供批量添加 OmniFocus 动作
 
-# 代码运行环境
-python：brew install python@2
-python3：brew install python3
