@@ -9,6 +9,16 @@ if (draft.content){
   text = getClipboard();
 }
 
+// vim mode
+if(text.match(/t|T/) && text.length == 1){
+  tag = draft.getTag("prompt_button") || '';
+  tag = tag.replace(/#/g,'');
+  draft.defineTag("tag", tag);
+  draft.defineTag("mode", 'open-tag');
+} else {
+  draft.defineTag("mode", 'create');
+}
+
 // 微信公众号文章处理
 temp = text.split("\n");
 if(temp[temp.length-1].match(/mp.weixin.qq.com/g)){
@@ -41,4 +51,4 @@ draft.defineTag("head", head);
 draft.defineTag("content", content);
 
 //// URL
-//bear://x-callback-url/create?title=[[head]]&text=[[content]]&tags=[[prompt_button]]&x-success=drafts4://
+//bear://x-callback-url/[[mode]]?title=[[head]]&text=[[content]]&tags=[[prompt_button]]&x-success=drafts4://

@@ -4,9 +4,9 @@
 //// Script
 // 默认内容来自文稿 否则从剪切板读取
 if (draft.content){
-  content = draft.content;
+  text = draft.content;
 }else{
-  content = getClipboard();
+  text = getClipboard();
 }
 
 // 标签去掉 emoji 前缀
@@ -14,14 +14,14 @@ note = draft.getTag("prompt_button") || '';
 note = note.replace(/^.*：/,'');
 
 // 删除行首行末空格
-content = content.trim();
+text = text.trim();
 // 替换中文引号 删除井号空格
-content = content.replace(/#/g,'');
-content = content.replace(/“/g,'「');
-content = content.replace(/”/g,'」');
-content = content.replace(/[\u00A0]/g,'');
+text = text.replace(/#/g,'');
+text = text.replace(/“/g,'「');
+text = text.replace(/”/g,'」');
+text = text.replace(/[\u00A0]/g,'');
 // 当有两个以上换行合并为两个
-content = content.replace(/\n{2,}/g, '\n\n');
+text = text.replace(/\n{2,}/g, '\n\n');
 
 if (note == "生活日记"){var id = "86A68159-A43C-4D97-A2EA-4D5382923029-490-0000002615E24E33";}
 if (note == "语录摘抄"){var id = "36AACB82-917A-46CB-ADE0-2985A23DDA32-3372-0000013628367C09";}
@@ -38,8 +38,15 @@ if (note == "读书笔记"){var id = "9D627BF5-C615-475E-B040-84B57F58145D-1156-
 if (note == "恋爱日记"){var id = "6C0FF20F-6A95-4988-AD82-B3DB16CD995B-45275-00009A7CC85260FF";}
 if (note == "时事概括"){var id = "A6F19085-6809-4D45-87DD-78B3A0A39EBC-2157-000000C1770EF749";}
 
+// vim mode
+if(text.match(/t|T/) && text.length == 1){
+   draft.defineTag("mode", 'open-note');
+} else {
+   draft.defineTag("mode", 'add-text');
+}
+
 draft.defineTag('id',id);
-draft.defineTag('content', content);
+draft.defineTag('text', text);
 
 //// URL
-// bear://x-callback-url/add-text?id=[[id]]&mode=prepend&text=-%20[[date|%Y-%m-%d %-H:%M %A]]%0A[[content]]%0A&open_note=yes
+// bear://x-callback-url/[[mode]]?id=[[id]]&mode=prepend&text=-%20[[date|%Y-%m-%d %-H:%M %A]]%0A[[text]]%0A&open_note=yes
