@@ -12,7 +12,6 @@ if (draft.content){
 // vim mode
 if(text.match(/t|T/) && text.length == 1){
   tag = draft.getTag("prompt_button") || '';
-  tag = tag.replace(/#/g,'');
   draft.defineTag("tag", tag);
   draft.defineTag("mode", 'open-tag');
 } else {
