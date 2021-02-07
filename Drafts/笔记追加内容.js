@@ -39,7 +39,7 @@ if (note == "恋爱日记"){var id = "6C0FF20F-6A95-4988-AD82-B3DB16CD995B-45275
 if (note == "时事概括"){var id = "A6F19085-6809-4D45-87DD-78B3A0A39EBC-2157-000000C1770EF749";}
 
 // vim mode
-if(text.match(/t|T/) && text.length == 1){
+if(text.length == 1 && text.match(/t|T/)){
    draft.defineTag("action", 'open-note');
 } else {
    draft.defineTag("action", 'add-text');

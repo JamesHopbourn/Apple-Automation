@@ -10,7 +10,7 @@ if (draft.content){
 }
 
 // vim mode
-if(text.match(/t|T/) && text.length == 1){
+if(text.length == 1 && text.match(/t|T/)){
   tag = draft.getTag("prompt_button") || '';
   draft.defineTag("tag", tag);
   draft.defineTag("action", 'open-tag');
