@@ -40,13 +40,13 @@ if (note == "时事概括"){var id = "A6F19085-6809-4D45-87DD-78B3A0A39EBC-2157-
 
 // vim mode
 if(text.match(/t|T/) && text.length == 1){
-   draft.defineTag("mode", 'open-note');
+   draft.defineTag("action", 'open-note');
 } else {
-   draft.defineTag("mode", 'add-text');
+   draft.defineTag("action", 'add-text');
 }
 
 draft.defineTag('id',id);
 draft.defineTag('text', text);
 
 //// URL
-// bear://x-callback-url/[[mode]]?id=[[id]]&mode=prepend&text=-%20[[date|%Y-%m-%d %-H:%M %A]]%0A[[text]]%0A&open_note=yes
+// bear://x-callback-url/[[action]]?id=[[id]]&mode=prepend&text=-%20[[date|%Y-%m-%d %-H:%M %A]]%0A[[text]]%0A&open_note=yes

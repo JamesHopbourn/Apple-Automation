@@ -13,9 +13,9 @@ if (draft.content){
 if(text.match(/t|T/) && text.length == 1){
   tag = draft.getTag("prompt_button") || '';
   draft.defineTag("tag", tag);
-  draft.defineTag("mode", 'open-tag');
+  draft.defineTag("action", 'open-tag');
 } else {
-  draft.defineTag("mode", 'create');
+  draft.defineTag("action", 'create');
 }
 
 // 微信公众号文章处理
@@ -50,4 +50,4 @@ draft.defineTag("head", head);
 draft.defineTag("content", content);
 
 //// URL
-//bear://x-callback-url/[[mode]]?title=[[head]]&text=[[content]]&tags=[[prompt_button]]&x-success=drafts4://
+//bear://x-callback-url/[[action]]?title=[[head]]&text=[[content]]&tags=[[prompt_button]]&x-success=drafts4://
