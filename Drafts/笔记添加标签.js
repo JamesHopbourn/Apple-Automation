@@ -1,5 +1,5 @@
 //// Prompt
-// 600 清单|400 兴趣/470 投资机会|400 兴趣/410 单车骑行|400 兴趣/405 绘图设计| 500 课余/001 政治体制|500 课余/004 课外知识|010 日记/020 恋爱日记|200 生活/250 恋爱知识|010 日记/011 生活日记|010 日记/013 社会时事|800 语录摘抄|900 演讲稿
+// 010 日记/011 生活日记|010 日记/013 社会时事|010 日记/020 恋爱日记|200 生活/250 恋爱知识|300 学习/310 生财有术|300 学习/320 财务知识|300 学习/330 认知提升|300 学习/340 频道存档|400 兴趣/410 单车骑行|400 兴趣/470 投资机会|500 课余/001 政治体制|500 课余/004 课外知识|600 清单列表|800 语录摘抄
 
 //// Script
 // 默认内容来自文稿 否则从剪切板读取
@@ -46,8 +46,14 @@ content = content.replace(/[\u00A0]/g,'');
 // 当有两个以上换行合并为两个
 content = content.replace(/\n{2,}/g, '\n\n');
 
+tag = draft.getTag("prompt_button") || '';
+if (tag == '300 学习/340 频道存档'){
+    draft.defineTag('app', "tg://msg?text="+encodeURI(text));
+}else{
+    draft.defineTag('app', "drafts4://");
+}
 draft.defineTag("head", head);
 draft.defineTag("content", content);
 
 //// URL
-//bear://x-callback-url/[[action]]?title=[[head]]&text=[[content]]&tags=[[prompt_button]]&x-success=drafts4://
+//bear://x-callback-url/[[action]]?title=[[head]]&text=[[content]]&tags=[[prompt_button]]&x-success=[[app]]
