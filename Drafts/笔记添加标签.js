@@ -10,23 +10,23 @@ if (draft.content){
 
 // vim mode
 if(text.length == 1 && text.match(/t|T/)){
-  tag = draft.getTag("prompt_button") || '';
-  draft.defineTag("tag", tag);
-  draft.defineTag("action", 'open-tag');
+  tag = draft.getTag('prompt_button') || '';
+  draft.defineTag('tag', tag);
+  draft.defineTag('action', 'open-tag');
 } else {
-  draft.defineTag("action", 'create');
+  draft.defineTag('action', 'create');
 }
 
 // x-success URL Scheme
-tag = draft.getTag("prompt_button") || '';
+tag = draft.getTag('prompt_button') || '';
 if (tag == '300 学习/340 频道存档'){
-    draft.defineTag('success', "tg://msg?text="+encodeURI(text));
+    draft.defineTag('success', 'tg://msg?text='+encodeURI(text));
 }else{
-    draft.defineTag('success', "drafts4://");
+    draft.defineTag('success', 'drafts4://');
 }
 
 // 微信公众号文章处理
-temp = text.split("\n");
+temp = text.split('\n');
 if(temp[temp.length-1].match(/mp.weixin.qq.com/g)){
   head = temp;
   // 删除发布日期
@@ -40,11 +40,11 @@ if(temp[temp.length-1].match(/mp.weixin.qq.com/g)){
   var today = new Date();
   var cdate = today.getFullYear()+'年'+(today.getMonth()+1)+'月'+today.getDate()+'日';
   cdate = '  [复盘清单](bear://x-callback-url/open-note?id=B39C6145-4F8F-4E4E-935F-7DCF972EFD5A-45275-00009E975B3017E2&header=' + encodeURI(cdate) + ')'
-  draft.defineTag("cdate", cdate);
+  draft.defineTag('cdate', cdate);
 }else{
-  draft.defineTag("cdate", '');
+  draft.defineTag('cdate', '');
 }
-head = temp[0];content = temp.slice(1).join("\n");
+head = temp[0];content = temp.slice(1).join('\n');
 
 // 删除行首行末空格
 head = head.trim();content = content.trim();
@@ -56,8 +56,8 @@ content = content.replace(/[\u00A0]/g,'');
 // 当有两个以上换行合并为两个
 content = content.replace(/\n{2,}/g, '\n\n');
 
-draft.defineTag("head", head);
-draft.defineTag("content", content);
+draft.defineTag('head', head);
+draft.defineTag('content', content);
 
 //// URL
 // bear://x-callback-url/[[action]]?title=[[head]]&text=[[content]][[cdate]]&tags=[[prompt_button]]&name=[[tag]]&x-success=[[success]]

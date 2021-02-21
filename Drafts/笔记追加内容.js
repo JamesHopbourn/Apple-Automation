@@ -5,8 +5,15 @@
 // 默认内容来自文稿 否则从剪切板读取
 if (draft.content){
   text = draft.content;
-}else{
+} else {
   text = getClipboard();
+}
+
+// vim mode
+if(text.length == 1 && text.match(/t|T/)){
+   draft.defineTag('action', 'open-note');
+} else {
+   draft.defineTag('action', 'add-text');
 }
 
 // 删除行首行末空格
@@ -38,17 +45,12 @@ noteTitle = {
 }
 
 // 标签去掉 emoji 前缀
-note = draft.getTag("prompt_button") || '';
+note = draft.getTag('prompt_button') || '';
 note = note.replace(/^.*：/,'');
 if (note == '推特存档'){
-    draft.defineTag('success', "tweetbot://JamesHopbourn/post?text="+encodeURI(text));
-}
-
-// vim mode
-if(text.length == 1 && text.match(/t|T/)){
-   draft.defineTag("action", 'open-note');
+  draft.defineTag('success', 'tweetbot://JamesHopbourn/post?text='+encodeURI(text));
 } else {
-   draft.defineTag("action", 'add-text');
+  draft.defineTag('success', 'draft4://');
 }
 
 draft.defineTag('text', text);
