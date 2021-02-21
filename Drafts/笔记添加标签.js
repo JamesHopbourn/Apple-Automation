@@ -33,6 +33,12 @@ if(temp[temp.length-1].match(/mp.weixin.qq.com/g)){
   if (temp[0].length == 0)
    temp = temp.slice(1);
   temp  = head.concat(temp);
+  var today = new Date();
+  var cdate = today.getFullYear()+'年'+(today.getMonth()+1)+'月'+today.getDate()+'日';
+  cdate = '  [复盘清单](bear://x-callback-url/open-note?id=B39C6145-4F8F-4E4E-935F-7DCF972EFD5A-45275-00009E975B3017E2&header=' + encodeURI(cdate) + ')'
+  draft.defineTag("cdate", cdate);
+}else{
+  draft.defineTag("cdate", '');
 }
 head = temp[0];content = temp.slice(1).join("\n");
 
@@ -56,4 +62,4 @@ draft.defineTag("head", head);
 draft.defineTag("content", content);
 
 //// URL
-//bear://x-callback-url/[[action]]?title=[[head]]&text=[[content]]&tags=[[prompt_button]]&x-success=[[app]]
+// bear://x-callback-url/[[action]]?title=[[head]]&text=[[content]][[cdate]]&tags=[[prompt_button]]&name=[[tag]]&x-success=[[app]]
