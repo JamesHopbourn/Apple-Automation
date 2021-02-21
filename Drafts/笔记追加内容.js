@@ -57,4 +57,4 @@ draft.defineTag('text', text);
 draft.defineTag('title',noteTitle[note]);
 
 //// URL
-// bear://x-callback-url/[[action]]?title=[[ID]]&mode=prepend&text=-%20[[date|%Y-%m-%d %-H:%M %A]]%0A[[text]]%0A&open_note=yes&x-success=[[success]]
+// bear://x-callback-url/[[action]]?title=[[title]]&mode=prepend&text=-%20[[date|%Y-%m-%d %-H:%M %A]]%0A[[text]]%0A&open_note=yes&x-success=[[success]]
