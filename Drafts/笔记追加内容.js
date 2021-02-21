@@ -41,7 +41,7 @@ noteID = {
 note = draft.getTag("prompt_button") || '';
 note = note.replace(/^.*：/,'');
 if (note == '推特存档'){
-    draft.defineTag('app', "tweetbot://JamesHopbourn/post?text="+encodeURI(text));
+    draft.defineTag('success', "tweetbot://JamesHopbourn/post?text="+encodeURI(text));
 }
 
 // vim mode
@@ -55,4 +55,4 @@ draft.defineTag('text', text);
 draft.defineTag('ID',noteID[note]);
 
 //// URL
-// bear://x-callback-url/[[action]]?id=[[ID]]&mode=prepend&text=-%20[[date|%Y-%m-%d %-H:%M %A]]%0A[[text]]%0A&open_note=yes&x-success=[[app]]
+// bear://x-callback-url/[[action]]?id=[[ID]]&mode=prepend&text=-%20[[date|%Y-%m-%d %-H:%M %A]]%0A[[text]]%0A&open_note=yes&x-success=[[success]]
