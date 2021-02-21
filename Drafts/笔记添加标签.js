@@ -1,7 +1,3 @@
-//// Prompt
-// 010 日记/011 生活日记|010 日记/013 社会时事|010 日记/020 恋爱日记|200 生活/250 恋爱知识|300 学习/310 生财有术|300 学习/320 财务知识|300 学习/330 认知提升|300 学习/340 频道存档|400 兴趣/410 单车骑行|400 兴趣/470 投资机会|500 课余/001 政治体制|500 课余/004 课外知识|600 清单列表|800 语录摘抄
-
-//// Script
 // 默认内容来自文稿 否则从剪切板读取
 if (draft.content){
   text = draft.content;
@@ -25,14 +21,11 @@ if(temp[temp.length-1].match(/mp.weixin.qq.com/g)){
   // 删除发布日期
   head = head.slice(0,1);
   temp = temp.slice(3);
-  if (temp[0].length == 0)
-   temp = temp.slice(1);
+  if (temp[0].length == 0)  temp = temp.slice(1);
   // 删除收录分类
-  if (temp[0].match(/收录/))
-   temp = temp.slice(3);
-  if (temp[0].length == 0)
-   temp = temp.slice(1);
-  temp  = head.concat(temp);
+  if (temp[0].match(/收录/)) temp = temp.slice(3);
+  if (temp[0].length == 0)  temp = temp.slice(1);
+  temp = head.concat(temp);
   var today = new Date();
   var cdate = today.getFullYear()+'年'+(today.getMonth()+1)+'月'+today.getDate()+'日';
   cdate = '  [复盘清单](bear://x-callback-url/open-note?id=B39C6145-4F8F-4E4E-935F-7DCF972EFD5A-45275-00009E975B3017E2&header=' + encodeURI(cdate) + ')'
@@ -58,8 +51,6 @@ if (tag == '300 学习/340 频道存档'){
 }else{
     draft.defineTag('app', "drafts4://");
 }
+
 draft.defineTag("head", head);
 draft.defineTag("content", content);
-
-//// URL
-// bear://x-callback-url/[[action]]?title=[[head]]&text=[[content]][[cdate]]&tags=[[prompt_button]]&name=[[tag]]&x-success=[[app]]
