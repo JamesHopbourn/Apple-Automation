@@ -10,6 +10,25 @@
 
 [[[title]]]([[url]])
 ```
+
+## 笔记追加内容
+```
+Prompt
+生活日记|生活随记|体重管理|推特存档|快进 ⏩：加速日记|日记 ✅：成功日记|基金 💵：投资机会|人际 ❤️：恋爱日记|人际 👬：关系日记|学习 💡：课外知识|学习 💬：语录摘抄|分类 🎬：电影记录|分类 😴：梦境日记|分类 📰：时事概括
+
+URL
+bear://x-callback-url/[[action]]?title=[[title]]&mode=prepend&text=-%20[[date|%Y-%m-%d %-H:%M %A]]%0A[[text]]%0A&open_note=yes&x-success=[[success]]
+```
+
+### 笔记追加标签
+```
+Prompt
+010 日记/011 生活日记|010 日记/013 社会时事|010 日记/020 恋爱日记|200 生活/250 恋爱知识|300 学习/310 生财有术|300 学习/320 财务知识|300 学习/330 认知提升|300 学习/340 频道存档|400 兴趣/410 单车骑行|400 兴趣/470 投资机会|500 课余/001 政治体制|500 课余/004 课外知识|600 清单列表|800 语录摘抄
+
+URL
+bear://x-callback-url/[[action]]?title=[[head]]&text=[[content]][[cdate]]&tags=[[prompt_button]]&name=[[tag]]&x-success=[[success]]
+```
+
 ## 插件下载
 #### [Alfred](https://drafts4-actions.agiletortoise.com/a/2PS)
 用途：类似 macOS 上的 Alfred，使用关键词+内容启动特定的 URL Scheme，默认动作为 TaskPaper，可根据自己需求进行修改。
@@ -20,14 +39,8 @@
 #### [TaskPaper](https://drafts4-actions.agiletortoise.com/a/2PT)
 用途：根据 OmniFocus 的 TaskPaper 语法批量添加任务到 OmniFocus 中，配合 TextExpander 进行文本替换。
 
-#### [Fantastical Events](https://drafts4-actions.agiletortoise.com/a/2PU)
-用途：批量添加事件到 Fantastical 中，支持自然语言识别。
-
 ## 致谢名单
-[YuktimH](https://sspai.com/user/47944/updates) 的[神奇搜索](https://sspai.com/post/35377)是 Alfred 的原型。
-
-[Soff Chen](https://github.com/soffchen) 为 Alfred 优化了代码，取消了区分大小写与标识符判断。
-
-[Platycodon](https://sspai.com/user/714505/updates) 为批量添加 OmniFocus 任务提供了动作支持，参见[《用 Drafts 实现 OmniFocus 批量添加任务》](https://sspai.com/post/38809)。
-
-[cpaconnelly](https://twitter.com/cpaconnelly) 设计的 [paste on omnifocus](https://drafts4-actions.agiletortoise.com/a/1xa) 为 TaskPaper 的原型。
+[YuktimH](https://sspai.com/user/47944/updates) 的[神奇搜索](https://sspai.com/post/35377)是 Alfred 的原型。  
+[Soff Chen](https://github.com/soffchen) 为 Alfred 优化了代码，取消了区分大小写与标识符判断。  
+[Platycodon](https://sspai.com/user/714505/updates) 为批量添加 OmniFocus 任务提供了动作支持，参见[《用 Drafts 实现 OmniFocus 批量添加任务》](https://sspai.com/post/38809)。  
+[cpaconnelly](https://twitter.com/cpaconnelly) 设计的 [paste on omnifocus](https://drafts4-actions.agiletortoise.com/a/1xa) 为 TaskPaper 的原型。  
