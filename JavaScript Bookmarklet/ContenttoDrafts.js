@@ -23,8 +23,8 @@ javascript: (function() {
     content = content.split('\n');
     content[0] = content[0] + ' ' + document.getElementsByTagName("META")[8].content;
     for (var i = content.length - 5; i < content.length; i++) {
-      content[i] = content[i].replace(/-*(end|END|)-*/, '');
-      content[i] = content[i].replace(/·*(end|END|)·*/, '');
+      content[i] = content[i].replace(/^-*(end|END|)-*/, '');
+      content[i] = content[i].replace(/^·*(end|END|)·*/, '');
     }
     content = content.join('\n');
     }
