@@ -1,13 +1,13 @@
 // 默认内容来自文稿 否则从剪切板读取
-if (draft.content){
+if(draft.content){
   text = draft.content;
-}else{
+} else {
   text = getClipboard();
 }
 
 // vim mode
+tag = draft.getTag('prompt_button') || '';
 if(text.length == 1 && text.match(/t|T/)){
-  tag = draft.getTag('prompt_button') || '';
   draft.defineTag('tag', tag);
   draft.defineTag('action', 'open-tag');
   draft.defineTag('success', '');
@@ -17,7 +17,6 @@ if(text.length == 1 && text.match(/t|T/)){
 }
 
 // x-success URL Scheme
-tag = draft.getTag('prompt_button') || '';
 if (tag == '300 学习/340 频道存档'){
     draft.defineTag('success', 'tg://msg?text='+encodeURI(text));
 }
@@ -38,7 +37,7 @@ if(temp[temp.length-1].match(/mp.weixin.qq.com/g)){
   var cdate = today.getFullYear()+'年'+(today.getMonth()+1)+'月'+today.getDate()+'日';
   cdate = '  [复盘清单](bear://x-callback-url/open-note?id=B39C6145-4F8F-4E4E-935F-7DCF972EFD5A-45275-00009E975B3017E2&header=' + encodeURI(cdate) + ')'
   draft.defineTag('cdate', cdate);
-}else{
+} else {
   draft.defineTag('cdate', '');
 }
 head = temp[0];content = temp.slice(1).join('\n');

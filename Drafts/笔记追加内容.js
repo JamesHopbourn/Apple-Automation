@@ -12,7 +12,6 @@ if(text.length == 1 && text.match(/t|T/)){
 } else {
   draft.defineTag('action', 'add-text');
   draft.defineTag('success', 'drafts4://');
-
 }
 
 // 删除行首行末空格
