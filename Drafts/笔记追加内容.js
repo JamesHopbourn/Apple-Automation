@@ -1,12 +1,12 @@
 // 默认内容来自文稿 否则从剪切板读取
-if (draft.content){
+if (draft.content) {
   text = draft.content;
 } else {
   text = getClipboard();
 }
 
 // vim mode
-if(text.length == 1 && text.match(/t|T/)){
+if (text.length == 1 && text.match(/t|T/)) {
   draft.defineTag('action', 'open-note');
   draft.defineTag('success', '');
 } else {
@@ -45,7 +45,7 @@ noteTitle = {
 // 标签去掉 emoji 前缀
 note = draft.getTag('prompt_button') || '';
 note = note.replace(/^.*：/,'');
-if (note == '推特存档'){
+if (note == '推特存档') {
   draft.defineTag('success', 'tweetbot://JamesHopbourn/post?text='+encodeURI(text));
 }
 

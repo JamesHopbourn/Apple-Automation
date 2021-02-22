@@ -19,6 +19,11 @@ Prompt
 URL
 bear://x-callback-url/[[action]]?title=[[title]]&mode=prepend&text=-%20[[date|%Y-%m-%d %-H:%M %A]]%0A[[text]]%0A&open_note=yes&x-success=[[success]]
 ```
+- 草稿只含字母 t/T 打开指定日记
+- 选择笔记之后将草稿内容追加到笔记顶部
+- 可以根据标题指定追加文章只要修改字典键值即可
+- 可以自定义追加内容的时间 `[[date|%Y-%m-%d %-H:%M %A]]`
+- 可以根据选择的笔记不同在追加笔记之后执行不同的 x-success
 
 ### 笔记追加标签
 ```
@@ -28,6 +33,10 @@ Prompt
 URL
 bear://x-callback-url/[[action]]?title=[[head]]&text=[[content]][[cdate]]&tags=[[prompt_button]]&name=[[tag]]&x-success=[[success]]
 ```
+- 草稿只含字母 t/T 打开指定标签
+- 草稿内的符号和换行会被预处理替换
+- 如果是微信文章会在底部加上「复盘清单」的双向链接
+- 可以根据选择的标签不同在追加笔记之后执行不同的 x-success
 
 ## 插件下载
 #### [Alfred](https://drafts4-actions.agiletortoise.com/a/2PS)
