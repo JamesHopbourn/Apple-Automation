@@ -32,8 +32,6 @@ if (tag == '300 学习/340 频道存档') {
 // create date
 var today = new Date();
 var cdate = today.getFullYear()+'年'+(today.getMonth()+1)+'月'+today.getDate()+'日';
-cdate = '  [复盘清单](bear://x-callback-url/open-note?id=B39C6145-4F8F-4E4E-935F-7DCF972EFD5A-45275-00009E975B3017E2&header=' + encodeURI(cdate) + ')'
-draft.defineTag('cdate', cdate);
 
 // 微信公众号文章处理
 temp = text.split('\n');
@@ -47,6 +45,9 @@ if (temp[temp.length-1].match(/mp.weixin.qq.com/g)) {
   if (temp[0].match(/收录/)) temp = temp.slice(3);
   if (temp[0].length == 0)  temp = temp.slice(1);
   temp = head.concat(temp);
+  cdate = '  [复盘清单](bear://x-callback-url/open-note?id=B39C6145-4F8F-4E4E-935F-7DCF972EFD5A-45275-00009E975B3017E2&header=' + encodeURI(cdate) + ')'
+} else {
+  cdate = '\n\n[复盘清单](bear://x-callback-url/open-note?id=B39C6145-4F8F-4E4E-935F-7DCF972EFD5A-45275-00009E975B3017E2&header=' + encodeURI(cdate) + ')'
 }
 head = temp[0].trim();
 content = temp.slice(1).join('\n');
@@ -54,4 +55,5 @@ content = temp.slice(1).join('\n');
 content = content.replace(/\n{2,}/g, '\n\n');
 
 draft.defineTag('head', head);
+draft.defineTag('cdate', cdate);
 draft.defineTag('content', content);
