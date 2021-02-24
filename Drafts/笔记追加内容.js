@@ -33,7 +33,6 @@ noteTitle = {
   "生活随记": "生活随记",
   "成功日记": "成功日记",
   "关系日记": "关系日记",
-  "投资机会": "投资机会",
   "电影记录": "电影日记",
   "梦境日记": "梦境日记",
   "读书笔记": "读书笔记",
@@ -49,5 +48,7 @@ if (note == '推特存档') {
   draft.defineTag('success', 'tweetbot://JamesHopbourn/post?text='+encodeURI(text));
 }
 
+// define tag
+if (noteTitle[note] == null) {noteTitle[note] = note;}
 draft.defineTag('text', text);
 draft.defineTag('title',noteTitle[note]);
