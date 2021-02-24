@@ -22,6 +22,7 @@ bear://x-callback-url/[[action]]?title=[[title]]&mode=prepend&text=-%20[[date|%Y
 - 草稿只含字母 t/T 打开指定日记
 - 选择笔记之后将草稿内容追加到笔记顶部
 - 可以根据标题指定追加文章只要修改字典键值即可
+- 如果字典内不含 Prompt 键值则取 Prompt 值为标题
 - 可以自定义追加内容的时间 `[[date|%Y-%m-%d %-H:%M %A]]`
 - 可以根据选择的笔记不同在追加笔记之后执行不同的 x-success
 

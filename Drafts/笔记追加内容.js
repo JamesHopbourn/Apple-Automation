@@ -6,7 +6,7 @@ if (draft.content) {
 }
 
 // vim mode
-if (text.length == 1 && text.match(/t|T/)) {
+if (text == 't' || text == 'T') {
   draft.defineTag('action', 'open-note');
   draft.defineTag('success', '');
 } else {
