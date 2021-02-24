@@ -1,3 +1,5 @@
+var ID = 'B39C6145-4F8F-4E4E-935F-7DCF972EFD5A-45275-00009E975B3017E2'
+
 // 默认内容来自文稿 否则从剪切板读取
 if (draft.content) {
   text = draft.content;
@@ -45,9 +47,11 @@ if (temp[temp.length-1].match(/mp.weixin.qq.com/g)) {
   if (temp[0].match(/收录/)) temp = temp.slice(3);
   if (temp[0].length == 0)  temp = temp.slice(1);
   temp = head.concat(temp);
-  cdate = '  [复盘清单](bear://x-callback-url/open-note?id=B39C6145-4F8F-4E4E-935F-7DCF972EFD5A-45275-00009E975B3017E2&header=' + encodeURI(cdate) + ')'
+  cdate = '   [复盘清单](bear://x-callback-url/open-note?id=' + ID + '&header=' + encodeURI(cdate) + ')'
+} else if (temp[temp.length-1].match(/http/g)){
+  cdate = '   [复盘清单](bear://x-callback-url/open-note?id=' + ID + '&header=' + encodeURI(cdate) + ')'
 } else {
-  cdate = '\n\n[复盘清单](bear://x-callback-url/open-note?id=B39C6145-4F8F-4E4E-935F-7DCF972EFD5A-45275-00009E975B3017E2&header=' + encodeURI(cdate) + ')'
+  cdate = '\n\n[复盘清单](bear://x-callback-url/open-note?id=' + ID + '&header=' + encodeURI(cdate) + ')'
 }
 head = temp[0].trim();
 content = temp.slice(1).join('\n');
