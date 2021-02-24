@@ -5,6 +5,14 @@ if (draft.content) {
   text = getClipboard();
 }
 
+// 文本符号替换删除
+text = text.replace(/‘/g,'');
+text = text.replace(/’/g,'');
+text = text.replace(/#/g,'');
+text = text.replace(/“/g,'「');
+text = text.replace(/”/g,'」');
+text = text.replace(/[\u00A0]/g,'');
+
 // vim mode
 tag = draft.getTag('prompt_button') || '';
 if (text.length == 1 && text.match(/t|T/)) {
@@ -40,24 +48,8 @@ if (temp[temp.length-1].match(/mp.weixin.qq.com/g)) {
   if (temp[0].length == 0)  temp = temp.slice(1);
   temp = head.concat(temp);
 }
-head = temp[0];content = temp.slice(1).join('\n');
-
-// 标题文本符号替换删除
-head = head.trim();
-head = head.replace(/‘/g,'');
-head = head.replace(/’/g,'');
-head = head.replace(/#/g,'');
-head = head.replace(/“/g,'「');
-head = head.replace(/”/g,'」');
-head = head.replace(/[\u00A0]/g,'');
-// 内容文本符号替换删除
-content = content.trim();
-content = content.replace(/‘/g,'');
-content = content.replace(/’/g,'');
-content = content.replace(/#/g,'');
-content = content.replace(/“/g,'「');
-content = content.replace(/”/g,'」');
-content = content.replace(/[\u00A0]/g,'');
+head = temp[0].trim();
+content = temp.slice(1).join('\n');
 // 当有两个以上换行合并为两个
 content = content.replace(/\n{2,}/g, '\n\n');
 
