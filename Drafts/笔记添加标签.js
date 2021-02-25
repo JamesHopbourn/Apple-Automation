@@ -13,6 +13,8 @@ text = text.replace(/’/g,'');
 text = text.replace(/#/g,'');
 text = text.replace(/“/g,'「');
 text = text.replace(/”/g,'」');
+text = text.replace(/， /g,'，');
+text = text.replace(/。 /g,'。');
 text = text.replace(/[\u00A0]/g,'');
 
 // vim mode
