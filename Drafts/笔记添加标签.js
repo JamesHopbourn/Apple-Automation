@@ -19,7 +19,8 @@ text = text.replace(/[\u00A0]/g,'');
 
 // vim mode
 tag = draft.getTag('prompt_button') || '';
-if (text.length == 1 && text.match(/t|T/)) {
+if (text.split(' ')[0] == 't' ||
+    text.split(' ')[0] == 'T') {
   draft.defineTag('tag', tag);
   draft.defineTag('action', 'open-tag');
   draft.defineTag('success', '');
