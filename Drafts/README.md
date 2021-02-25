@@ -19,7 +19,8 @@ Prompt
 URL
 bear://x-callback-url/[[action]]?title=[[title]]&mode=prepend&text=-%20[[date|%Y-%m-%d %-H:%M %A]]%0A[[text]]%0A&open_note=yes&x-success=[[success]]
 ```
-- 草稿只含字母 t/T 打开指定日记
+- 草稿只含字母 t/T 打开 Prompt 指定日记
+- t/T 之后可以带标题参数打开其他指定笔记
 - 选择笔记之后将草稿内容追加到笔记顶部
 - 可以根据标题指定追加文章只要修改字典键值即可
 - 如果字典内不含 Prompt 键值则取 Prompt 值为标题

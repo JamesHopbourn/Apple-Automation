@@ -5,15 +5,6 @@ if (draft.content) {
   text = getClipboard();
 }
 
-// vim mode
-if (text == 't' || text == 'T') {
-  draft.defineTag('action', 'open-note');
-  draft.defineTag('success', '');
-} else {
-  draft.defineTag('action', 'add-text');
-  draft.defineTag('success', 'drafts4://');
-}
-
 // 删除行首行末空格
 text = text.trim();
 // 替换中文引号 删除井号空格
@@ -41,14 +32,30 @@ noteTitle = {
   "时事概括": "时事概括"
 }
 
-// 标签去掉 emoji 前缀
+// 下面可以自定义 x-success URL Scheme
 note = draft.getTag('prompt_button') || '';
 note = note.replace(/^.*：/,'');
 if (note == '推特存档') {
   draft.defineTag('success', 'tweetbot://JamesHopbourn/post?text='+encodeURI(text));
 }
 
+// vim mode with argument
+if (text.split(' ')[0] == 't' ||
+    text.split(' ')[0] == 'T') {
+  draft.defineTag('action', 'open-note');
+  draft.defineTag('success', '');
+  //// t/T 之后可以带笔记标题参数
+  if (text.split(' ')[1] != null)
+    noteTitle[note] = text.split(' ')[1];
+} else {
+  draft.defineTag('action', 'add-text');
+  //// 下面可以自定义追加文本之后是否返回 drafts
+  //// 如果不需要跳回 drafts 请删除 drafts4://
+  draft.defineTag('success', 'drafts4://');
+}
+
 // define tag
-if (noteTitle[note] == null) {noteTitle[note] = note;}
+if (noteTitle[note] == null)
+  noteTitle[note] = note;
 draft.defineTag('text', text);
 draft.defineTag('title',noteTitle[note]);
