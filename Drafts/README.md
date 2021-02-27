@@ -10,7 +10,15 @@
 
 [[[title]]]([[url]])
 ```
+## Moze
+```
+Prompt  
+葡萄糖|可乐|鸡排
 
+URL
+moze://x-callback-url/expense?amount=[[price]]&account={{钱包}}&subcategory=[[category]]&name=[[name]]&x-success=drafts4://
+```
+  
 ## 笔记追加内容
 ```
 Prompt
