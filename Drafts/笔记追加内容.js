@@ -29,7 +29,7 @@ noteTitle = {
   "读书笔记": "读书笔记",
   "恋爱日记": "恋爱日记",
   "推特存档": "推特存档",
-  "时事概括": "时事概括"
+  "时事概括": "社会时事"
 }
 
 note = draft.getTag('prompt_button');
@@ -40,7 +40,8 @@ if (text.split(' ')[0] == 't' ||
     text.split(' ')[0] == 'T') {
   draft.defineTag('action', 'open-note');
   draft.defineTag('success', '');
-  //// t/T 之后可以带笔记标题参数
+  //// t/T 之后可以选择带笔记标题参数打开笔记
+  //// 例如「t 叹云兮」打开标题是叹云兮的笔记
   if (text.split(' ')[1] != null)
     noteTitle[note] = text.split(' ')[1];
 } else {
