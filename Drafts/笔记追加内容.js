@@ -51,7 +51,7 @@ if (text.split(' ')[0] == 't' ||
   draft.defineTag('success', 'drafts4://');
 }
 
-// 下面可以自定义 x-success URL Scheme
+// custom x-success URL Scheme
 if (note == '推特存档') {
   draft.defineTag('success', 'tweetbot://JamesHopbourn/post?text='+encodeURI(text));
 }
