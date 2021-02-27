@@ -32,12 +32,8 @@ noteTitle = {
   "时事概括": "时事概括"
 }
 
-// 下面可以自定义 x-success URL Scheme
-note = draft.getTag('prompt_button') || '';
+note = draft.getTag('prompt_button');
 note = note.replace(/^.*：/,'');
-if (note == '推特存档') {
-  draft.defineTag('success', 'tweetbot://JamesHopbourn/post?text='+encodeURI(text));
-}
 
 // vim mode with argument
 if (text.split(' ')[0] == 't' ||
@@ -52,6 +48,11 @@ if (text.split(' ')[0] == 't' ||
   //// 下面可以自定义追加文本之后是否返回 drafts
   //// 如果不需要跳回 drafts 请删除 drafts4://
   draft.defineTag('success', 'drafts4://');
+}
+
+// 下面可以自定义 x-success URL Scheme
+if (note == '推特存档') {
+  draft.defineTag('success', 'tweetbot://JamesHopbourn/post?text='+encodeURI(text));
 }
 
 // define tag
