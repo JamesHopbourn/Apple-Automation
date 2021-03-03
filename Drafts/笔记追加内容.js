@@ -36,13 +36,13 @@ note = draft.getTag('prompt_button');
 note = note.replace(/^.*：/,'');
 
 // vim mode with argument
-if (text.split(' ')[0] == 't' ||
-    text.split(' ')[0] == 'T') {
+if (text.split(' ')[0] === 't' ||
+    text.split(' ')[0] === 'T') {
   draft.defineTag('action', 'open-note');
   draft.defineTag('success', '');
   //// t/T 之后可以选择带笔记标题参数打开笔记
   //// 例如「t 叹云兮」打开标题是叹云兮的笔记
-  if (text.split(' ')[1] != null)
+  if (text.split(' ')[1])
     noteTitle[note] = text.split(' ')[1];
 } else {
   draft.defineTag('action', 'add-text');
@@ -52,12 +52,12 @@ if (text.split(' ')[0] == 't' ||
 }
 
 // custom x-success URL Scheme
-if (note == '推特存档') {
+if (note === '推特存档') {
   draft.defineTag('success', 'tweetbot://JamesHopbourn/post?text='+encodeURI(text));
 }
 
 // define tag
-if (noteTitle[note] == null)
+if (noteTitle[note] === null)
   noteTitle[note] = note;
 draft.defineTag('text', text);
 draft.defineTag('title',noteTitle[note]);
