@@ -8,11 +8,13 @@ if (draft.content) {
 }
 
 // 文本符号替换删除
+text = text.replace(/#/g,'');
 text = text.replace(/‘/g,'');
 text = text.replace(/’/g,'');
-text = text.replace(/#/g,'');
 text = text.replace(/“/g,'「');
 text = text.replace(/”/g,'」');
+text = text.replace(/•/g,'- ');
+text = text.replace(/·/g,'- ');
 text = text.replace(/， /g,'，');
 text = text.replace(/。 /g,'。');
 text = text.replace(/[\u00A0]/g,'');
