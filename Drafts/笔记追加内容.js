@@ -15,6 +15,18 @@ text = text.replace(/[\u00A0]/g,'');
 // 当有两个以上换行合并为两个
 text = text.replace(/\n{2,}/g, '\n\n');
 
+// 句号添加
+text = text.split('\n');
+for (var i = 0; i < text.length; i++){
+  if (text[i].length != 0 && text[i].charAt(text[i].length-1).match(/\.|。$|！$|？$/) == null) {
+    if (text[i].charAt(text[i].length-1).match(/[a-zA-Z]/))
+      text[i] += '.';
+    else
+      text[i] += '。';
+  }
+}
+text = text.join('\n');
+
 noteTitle = {
   "体重管理": "体重管理",
   "生活日记": "生活日记",
