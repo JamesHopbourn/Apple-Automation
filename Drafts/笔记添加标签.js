@@ -26,7 +26,7 @@ text = text.split('\n');
 for (var i = 0; i < text.length; i++)
   if (text[i].match(/^[0-9]./) && text[i].match(/^[0-9]. /) === null)
     text[i] = text[i].replace(/\./, '. ');
-// 公众号名片删除
+// 公众号的名片删除
 for(var i = 1; i < text.length + 20; i++){
   if (typeof(text[i]) !== 'undefined' &&
     text[i].match(/篇原创内容/)) {
