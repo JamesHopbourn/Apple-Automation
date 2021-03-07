@@ -16,7 +16,7 @@ text = text.replace(/[\u00A0]/g,'');
 // 当有两个以上换行合并为两个
 text = text.replace(/\n{2,}/g, '\n\n');
 
-// 行末自动补全句号
+// 行末自动补全中西文句号
 text = text.split('\n');
 for (var i = 0; i < text.length; i++){
   if (text[i].length != 0 && text[i].charAt(text[i].length-1).match(/(\.|!|\?|;|。|！|？|；)$/) === null) {
