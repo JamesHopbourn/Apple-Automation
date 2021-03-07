@@ -9,6 +9,7 @@ if (draft.content) {
 text = text.trim();
 // 替换中文引号 删除井号空格
 text = text.replace(/#/g,'');
+text = text.replace(/"/g,'');
 text = text.replace(/“/g,'「');
 text = text.replace(/”/g,'」');
 text = text.replace(/[\u00A0]/g,'');
