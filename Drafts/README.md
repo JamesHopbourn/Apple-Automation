@@ -46,6 +46,7 @@ bear://x-callback-url/[[action]]?title=[[head]]&text=[[content]][[cdate]]&tags=[
 ```
 - 草稿只含字母 t/T 打开指定标签
 - 草稿内的符号和换行会被预处理替换
+- Markdown 列表格式缺少空格自动补全
 - 如果是微信文章会在底部加上「复盘清单」的双向链接
 - 可以根据选择的标签不同在追加笔记之后执行不同的 x-success
 
