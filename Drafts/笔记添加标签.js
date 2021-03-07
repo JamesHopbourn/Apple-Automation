@@ -31,8 +31,8 @@ for(var i = 1; i < text.length + 20; i++){
   if (typeof(text[i]) !== 'undefined' &&
     text[i].match(/篇原创内容/)) {
     body = text.slice(i + 3);
-    temp = text.slice(0,i - 2);
-    text = temp.concat(body);
+    head = text.slice(0,i - 2);
+    text = head.concat(body);
   }
 }
 // 文章分割段落删除
