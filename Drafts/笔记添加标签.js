@@ -26,6 +26,15 @@ text = text.split('\n');
 for (var i = 0; i < text.length; i++)
   if (text[i].match(/^[0-9]./) && text[i].match(/^[0-9]. /) === null)
     text[i] = text[i].replace(/\./, '. ');
+// 公众号名片删除
+for(var i = 1; i < text.length + 20; i++){
+  if (typeof(text[i]) !== 'undefined' &&
+    text[i].match(/篇原创内容/)) {
+    body = text.slice(i+3);
+    temp = text.slice(0,i-2);
+    text = temp.concat(body);
+  }
+}
 // 文章分割段落删除
 for (var i = text.length - 30; i < text.length - 2; i++){
   if (typeof(text[i]) !== 'undefined' && 
@@ -82,9 +91,6 @@ if (temp[temp.length-1].match(/mp.weixin.qq.com/g)) {
 }
 head = temp[0].trim();
 content = temp.slice(1);
-// 内容首行如果为空就删除首行
-if (content[0] === null)
-  content = content.slice(1);
 content = content.join('\n');
 // 当有两个以上换行合并为两个
 content = content.replace(/\n{2,}/g, '\n\n');
