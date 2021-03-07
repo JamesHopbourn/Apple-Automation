@@ -20,12 +20,23 @@ text = text.replace(/， /g,'，');
 text = text.replace(/。 /g,'。');
 text = text.replace(/[\u00A0]/g,'');
 
-// 列表自动添加空格
+// 开始循环处理
 text = text.split('\n');
+// 列表自动添加空格
 for (var i = 0; i < text.length; i++)
-  if (text[i].match(/^[0-9]./) && text[i].match(/^[0-9]. /) == null)
+  if (text[i].match(/^[0-9]./) && text[i].match(/^[0-9]. /) === null)
     text[i] = text[i].replace(/\./, '. ');
+// 文章分割段落删除
+for (var i = text.length - 30; i < text.length - 2; i++){
+  if (typeof(text[i]) !== 'undefined' && 
+    text[i].match(/(end|END|作者|更多文章|收录于话题|二维码)/)){
+    link = text.slice(-2);
+    text = text.slice(0,i);
+    text = text.concat(link);
+  }
+}
 text = text.join('\n');
+// 结束循环处理
 
 // vim mode
 tag = draft.getTag('prompt_button') || '';
@@ -57,10 +68,10 @@ if (temp[temp.length-1].match(/mp.weixin.qq.com/g)) {
   temp = temp.slice(3);
   if (temp[0].length === 0)  temp = temp.slice(1);
   // 删除收录分类
-  if (temp[0].match(/收录/)) temp = temp.slice(3);
+  if (temp[0].match(/收录/))  temp = temp.slice(3);
   if (temp[0].length === 0)  temp = temp.slice(1);
   // 删除文章来源
-  if (temp[0].match(/文章来源/))temp = temp.slice(4);
+  if (temp[0].match(/来源/))  temp = temp.slice(4);
   if (temp[0].length === 0)  temp = temp.slice(1);
   temp = head.concat(temp);
   cdate = '   [复盘清单](bear://x-callback-url/open-note?id=' + ID + '&header=' + encodeURI(cdate) + ')'
@@ -70,7 +81,11 @@ if (temp[temp.length-1].match(/mp.weixin.qq.com/g)) {
   cdate = '\n\n[复盘清单](bear://x-callback-url/open-note?id=' + ID + '&header=' + encodeURI(cdate) + ')'
 }
 head = temp[0].trim();
-content = temp.slice(1).join('\n');
+content = temp.slice(1);
+// 内容首行如果为空就删除首行
+if (content[0] === null)
+  content = content.slice(1);
+content = content.join('\n');
 // 当有两个以上换行合并为两个
 content = content.replace(/\n{2,}/g, '\n\n');
 
