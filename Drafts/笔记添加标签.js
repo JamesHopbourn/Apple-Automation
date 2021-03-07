@@ -30,8 +30,8 @@ for (var i = 0; i < text.length; i++)
 for(var i = 1; i < text.length + 20; i++){
   if (typeof(text[i]) !== 'undefined' &&
     text[i].match(/篇原创内容/)) {
-    body = text.slice(i+3);
-    temp = text.slice(0,i-2);
+    body = text.slice(i + 3);
+    temp = text.slice(0,i - 2);
     text = temp.concat(body);
   }
 }
@@ -40,7 +40,7 @@ for (var i = text.length - 30; i < text.length - 2; i++){
   if (typeof(text[i]) !== 'undefined' && 
     text[i].match(/(end|END|作者|更多文章|收录于话题|二维码)/)){
     link = text.slice(-2);
-    text = text.slice(0,i);
+    text = text.slice(0, i);
     text = text.concat(link);
   }
 }
@@ -70,10 +70,10 @@ var cdate = today.getFullYear()+'年'+(today.getMonth()+1)+'月'+today.getDate()
 
 // 微信公众号文章处理
 temp = text.split('\n');
-if (temp[temp.length-1].match(/mp.weixin.qq.com/g)) {
+if (temp[temp.length - 1].match(/mp.weixin.qq.com/g)) {
   head = temp;
   // 删除发布日期
-  head = head.slice(0,1);
+  head = head.slice(0, 1);
   temp = temp.slice(3);
   if (temp[0].length === 0)  temp = temp.slice(1);
   // 删除收录分类
@@ -84,7 +84,7 @@ if (temp[temp.length-1].match(/mp.weixin.qq.com/g)) {
   if (temp[0].length === 0)  temp = temp.slice(1);
   temp = head.concat(temp);
   cdate = '   [复盘清单](bear://x-callback-url/open-note?id=' + ID + '&header=' + encodeURI(cdate) + ')'
-} else if (temp[temp.length-1].match(/http/g)){
+} else if (temp[temp.length - 1].match(/http/g)){
   cdate = '   [复盘清单](bear://x-callback-url/open-note?id=' + ID + '&header=' + encodeURI(cdate) + ')'
 } else {
   cdate = '\n\n[复盘清单](bear://x-callback-url/open-note?id=' + ID + '&header=' + encodeURI(cdate) + ')'
