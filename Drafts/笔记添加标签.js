@@ -32,7 +32,7 @@ if (text.split(' ')[0] === 't' ||
 }
 
 // x-success URL Scheme
-if (tag == '300 学习/340 频道存档') {
+if (tag === '300 学习/340 频道存档') {
   draft.defineTag('success', 'tg://msg?text='+encodeURI(text));
 }
 
@@ -47,13 +47,13 @@ if (temp[temp.length-1].match(/mp.weixin.qq.com/g)) {
   // 删除发布日期
   head = head.slice(0,1);
   temp = temp.slice(3);
-  if (temp[0].length == 0)  temp = temp.slice(1);
+  if (temp[0].length === 0)  temp = temp.slice(1);
   // 删除收录分类
   if (temp[0].match(/收录/)) temp = temp.slice(3);
-  if (temp[0].length == 0)  temp = temp.slice(1);
+  if (temp[0].length === 0)  temp = temp.slice(1);
   // 删除文章来源
   if (temp[0].match(/文章来源/))temp = temp.slice(4);
-  if (temp[0].length == 0)  temp = temp.slice(1);
+  if (temp[0].length === 0)  temp = temp.slice(1);
   temp = head.concat(temp);
   cdate = '   [复盘清单](bear://x-callback-url/open-note?id=' + ID + '&header=' + encodeURI(cdate) + ')'
 } else if (temp[temp.length-1].match(/http/g)){
