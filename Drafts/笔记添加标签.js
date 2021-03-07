@@ -20,6 +20,14 @@ text = text.replace(/， /g,'，');
 text = text.replace(/。 /g,'。');
 text = text.replace(/[\u00A0]/g,'');
 
+// 列表自动添加空格
+text = text.split('\n');
+for (var i = 0; i < text.length; i++){
+  if (text[i].match(/^[0-9]./) && text[i].match(/^[0-9]. /) == null)
+    text[i] = text[i].replace(/\./, '. ');
+}
+text = text.join('\n');
+
 // vim mode
 tag = draft.getTag('prompt_button') || '';
 if (text.split(' ')[0] === 't' ||
