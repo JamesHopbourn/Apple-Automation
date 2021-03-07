@@ -19,7 +19,7 @@ text = text.replace(/\n{2,}/g, '\n\n');
 // 行末自动补全句号
 text = text.split('\n');
 for (var i = 0; i < text.length; i++){
-  if (text[i].length != 0 && text[i].charAt(text[i].length-1).match(/\.$|。$|！$|？$/) === null) {
+  if (text[i].length != 0 && text[i].charAt(text[i].length-1).match(/(\.|!|?|;|。|！|？|；)$/) === null) {
     if (text[i].charAt(text[i].length-1).match(/[a-zA-Z]/))
       text[i] += '.';
     else
