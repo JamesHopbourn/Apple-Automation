@@ -83,7 +83,7 @@ if (body[body.length - 1].match(/mp.weixin.qq.com/g)) {
 
   // body 首行为空删除
   for (var i = 1; i < 3 ; i++) {
-    if (body[i].length == 0) {
+    if (body[i].length === 0) {
       body = body.slice(1);
       break;
     }
