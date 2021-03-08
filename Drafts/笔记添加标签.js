@@ -50,7 +50,7 @@ if (body[body.length - 1].match(/mp.weixin.qq.com/g)) {
   // 删除发布时间
   body = text.slice(3);
 
-  // 删除收入标签
+  // 删除收录标签
   if (body[0].match(/收录/))  body = body.slice(3);
   if (body[0].length === 0)  body = body.slice(1);
 
