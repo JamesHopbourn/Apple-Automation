@@ -42,7 +42,7 @@ Prompt
 010 日记/011 生活日记|010 日记/013 社会时事|010 日记/020 恋爱日记|200 生活/250 恋爱知识|300 学习/310 生财有术|300 学习/320 财务知识|300 学习/330 认知提升|300 学习/340 频道存档|400 兴趣/410 单车骑行|400 兴趣/470 投资机会|500 课余/001 政治体制|500 课余/004 课外知识|600 清单列表|800 语录摘抄
 
 URL
-bear://x-callback-url/[[action]]?title=[[head]]&text=[[content]][[cdate]]&tags=[[prompt_button]]&name=[[tag]]&x-success=[[success]]
+bear://x-callback-url/[[action]]?title=[[head]]&text=[[body]][[cdate]]&tags=[[prompt_button]]&name=[[tag]]&x-success=[[success]]
 ```
 - 草稿只含字母 t/T 打开指定标签
 - 草稿内的符号和换行会被预处理替换
