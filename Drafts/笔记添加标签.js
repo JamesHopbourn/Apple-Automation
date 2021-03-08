@@ -40,6 +40,7 @@ if (tag === '300 学习/340 频道存档') {
 // create date
 var today = new Date();
 var cdate = today.getFullYear()+'年'+(today.getMonth()+1)+'月'+today.getDate()+'日';
+cdate = '@@[复盘清单](bear://x-callback-url/open-note?id=' + ID + '&header=' + encodeURI(cdate) + ')'
 
 // 微信公众号文章处理
 text = text.split('\n');
@@ -86,13 +87,12 @@ if (body[body.length - 1].match(/mp.weixin.qq.com/g)) {
       body = body.slice(1);
       break;
     }
-  }
-
-  cdate = '   [复盘清单](bear://x-callback-url/open-note?id=' + ID + '&header=' + encodeURI(cdate) + ')'
+  } 
+  cdate = cdate.replace(/@@/,'   ');
 } else if (body[body.length - 1].match(/http/g)){
-  cdate = '   [复盘清单](bear://x-callback-url/open-note?id=' + ID + '&header=' + encodeURI(cdate) + ')'
+  cdate = cdate.replace(/@@/,'   ');
 } else {
-  cdate = '\n\n[复盘清单](bear://x-callback-url/open-note?id=' + ID + '&header=' + encodeURI(cdate) + ')'
+  cdate = cdate.replace(/@@/,'\n\n');
 }
 body = body.join('\n');
 body = body.replace(/\n{2,}/g, '\n\n');
