@@ -81,20 +81,24 @@ if (body[body.length - 1].match(/mp.weixin.qq.com/g)) {
     }
   }
 
-  // body 首行为空删除
-  for (var i = 1; i < 3 ; i++) {
-    if (body[i].length === 0) {
-      body = body.slice(1);
-      break;
-    }
-  }
-
   date = date.replace(/@@/,'   ');
 } else if (body[body.length - 1].match(/http/g)) {
+  body = body.slice(1);
   date = date.replace(/@@/,'   ');
 } else {
+  body = body.slice(1);
   date = date.replace(/@@/,'\n\n');
 }
+
+// body 首行为空删除
+for (var i = 1; i < 3 ; i++) {
+  if (typeof(body[i]) !== 'undefined' && 
+    body[i].length === 0) {
+    body = body.slice(1);
+    break;
+  }
+}
+
 body = body.join('\n');
 body = body.replace(/\n{2,}/g, '\n\n');
 

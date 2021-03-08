@@ -44,6 +44,8 @@ Prompt
 URL
 bear://x-callback-url/[[action]]?title=[[head]]&text=[[body]][[date]]&tags=[[prompt_button]]&name=[[tag]]&x-success=[[success]]
 ```
+- 如果内容首行为空行则删除
+- 两个以上的换行会被替换为两个
 - 草稿只含字母 t/T 打开指定标签
 - 草稿内的符号和换行会被预处理替换
 - Markdown 列表格式缺少空格自动补全
