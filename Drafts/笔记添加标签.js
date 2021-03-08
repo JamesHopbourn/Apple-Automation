@@ -87,7 +87,8 @@ if (body[body.length - 1].match(/mp.weixin.qq.com/g)) {
       body = body.slice(1);
       break;
     }
-  } 
+  }
+
   date = date.replace(/@@/,'   ');
 } else if (body[body.length - 1].match(/http/g)){
   date = date.replace(/@@/,'   ');
