@@ -59,7 +59,7 @@ if (body[body.length - 1].match(/mp.weixin.qq.com/g)) {
   if (body[0].length === 0)  body = body.slice(1);
 
   // 公众号的名片删除
-  for (var i = 1; i < body.length + 20; i++){
+  for (var i = 1; i < body.length + 20; i++) {
     if (typeof(body[i]) !== 'undefined' &&
       body[i].match(/篇原创内容/)) {
       body = body.slice(4);
@@ -72,9 +72,9 @@ if (body[body.length - 1].match(/mp.weixin.qq.com/g)) {
       text[i] = text[i].replace(/\./, '. ');
 
   // 文章分割段落删除
-  for (var i = body.length - 30; i < body.length - 2; i++){
+  for (var i = body.length - 30; i < body.length - 2; i++) {
     if (typeof(body[i]) !== 'undefined' && 
-      body[i].match(/(end|END|作者|更多文章|收录于话题|二维码)/)){
+      body[i].match(/(end|END|作者|更多文章|收录于话题|二维码)/)) {
       link = body.slice(-2);
       body = body.slice(0, i);
       body = body.concat(link);
@@ -82,7 +82,7 @@ if (body[body.length - 1].match(/mp.weixin.qq.com/g)) {
   }
 
   // body 首行为空删除
-  for (var i = 1; i < 3 ; i++){
+  for (var i = 1; i < 3 ; i++) {
     if (body[i].length == 0) {
       body = body.slice(1);
       break;
@@ -90,7 +90,7 @@ if (body[body.length - 1].match(/mp.weixin.qq.com/g)) {
   }
 
   date = date.replace(/@@/,'   ');
-} else if (body[body.length - 1].match(/http/g)){
+} else if (body[body.length - 1].match(/http/g)) {
   date = date.replace(/@@/,'   ');
 } else {
   date = date.replace(/@@/,'\n\n');
