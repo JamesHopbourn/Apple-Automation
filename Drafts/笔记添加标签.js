@@ -68,8 +68,8 @@ if (body[body.length - 1].match(/mp.weixin.qq.com/g)) {
 
   // 列表自动添加空格
   for (var i = 0; i < text.length; i++)
-    if (text[i].match(/^[0-9]./) && text[i].match(/^[0-9]. /) === null)
-      text[i] = text[i].replace(/\./, '. ');
+    if (text[i].match(/^([0-9][0-9][0-9]|[0-9][0-9]|[0-9])(\.|、| )/) && text[i].match(/^([0-9][0-9][0-9]|[0-9][0-9]|[0-9])(\.|、| ) /) === null)
+      text[i] = text[i].replace(/(\.|、| )/, '. ');
 
   // 文章分割段落删除
   for (var i = body.length - 30; i < body.length - 2; i++) {
