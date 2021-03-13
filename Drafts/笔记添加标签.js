@@ -7,7 +7,7 @@ if (draft.content) {
   text = getClipboard();
 }
 
-// 文本符号替换删除
+// 文本符号替换删除 
 text = text.replace(/#/g,'');
 text = text.replace(/"/g,'');
 text = text.replace(/‘/g,'');
@@ -68,7 +68,9 @@ if (body[body.length - 1].match(/mp.weixin.qq.com/g)) {
 
   // 列表自动添加空格
   for (var i = 0; i < body.length; i++)
-    if (body[i].match(/^([0-9][0-9][0-9]|[0-9][0-9]|[0-9])(\.|、| )/) && body[i].match(/^([0-9][0-9][0-9]|[0-9][0-9]|[0-9])(\.|、| ) /) === null)
+    if (body[i].match(/^([0-9][0-9][0-9]|[0-9][0-9]|[0-9])(\.|、| )/) && 
+      body[i].match(/^([0-9][0-9][0-9]|[0-9][0-9]|[0-9])(\.|、| ) /) === null && 
+      body[i].match(/^([0-9]|[0-9][0-9])(月| 月)/) === null)
       body[i] = body[i].replace(/(\.|、| )/, '. ');
 
   // 文章分割段落删除
