@@ -43,8 +43,7 @@ if (text.split(' ')[0] === 't' ||
   draft.defineTag('success', '');
   //// t/T 之后可以选择带笔记标题参数打开笔记
   //// 例如「t 叹云兮」打开标题是叹云兮的笔记
-  if (text.split(' ')[1])
-    noteTitle[note] = text.split(' ')[1];
+  noteTitle[note] = text.split(' ')[1];
 } else {
   draft.defineTag('action', 'add-text');
   //// 下面可以自定义追加文本之后是否返回 drafts
