@@ -69,7 +69,7 @@ if (note === '推特存档') {
 }
 
 // define tag
-if (noteTitle[note] === null)
+if (noteTitle[note] === (null || undefined))
   noteTitle[note] = note;
 draft.defineTag('text', text);
 draft.defineTag('title',noteTitle[note]);
