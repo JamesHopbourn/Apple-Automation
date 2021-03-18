@@ -21,7 +21,7 @@ javascript: (function() {
     content = document.body.innerText.replace(/(推荐阅读|喜欢此内容的人还喜欢)(.*\n)+/g, "").replace(/.*阅读原文.*/g,'').replace(/[\r\n]{3,}/g, "\n\n");
     if (window.location.host = 'mp.weixin.qq.com'){
     content = content.split('\n');
-    content[0] = content[0] + ' ' + document.getElementsByTagName("META")[8].content;
+    content[0] = content[0] + ' ' + document.getElementsByTagName("META")[8].content + nickname;
     for (var i = content.length - 5; i < content.length; i++) {
       content[i] = content[i].replace(/^-*(end|END|)-*/, '');
       content[i] = content[i].replace(/^·*(end|END|)·*/, '');
