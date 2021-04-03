@@ -74,9 +74,9 @@ if (body[body.length - 1].match(/mp.weixin.qq.com/g)) {
       body[i] = body[i].replace(/(\.|、| )/, '. ');
 
   // 文章分割段落删除
-  for (var i = body.length - 30; i < body.length - 2; i++) {
+  for (var i = body.length - 50; i < body.length - 2; i++) {
     if (typeof(body[i]) !== 'undefined' && 
-      body[i].match(/(end|END|作者|更多文章|收录于话题|二维码)/)) {
+      body[i].match(/(end|END|作者|更多文章|往期文章|收录于话题|二维码)/)) {
       link = body.slice(-2);
       body = body.slice(0, i);
       body = body.concat(link);
