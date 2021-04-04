@@ -70,7 +70,7 @@ if (body[body.length - 1].match(/mp.weixin.qq.com/g)) {
   for (var i = 0; i < body.length; i++)
     if (body[i].match(/^([0-9][0-9][0-9]|[0-9][0-9]|[0-9])(\.|、| )/) && 
       body[i].match(/^([0-9][0-9][0-9]|[0-9][0-9]|[0-9])(\.|、| ) /) === null && 
-      body[i].match(/^([0-9]|[0-9][0-9])(月| 月)/) === null)
+      body[i].match(/^([0-9]|[0-9][0-9])(月| 月|年| 年|万| 万)/) === null)
       body[i] = body[i].replace(/(\.|、| )/, '. ');
 
   // 文章分割段落删除
