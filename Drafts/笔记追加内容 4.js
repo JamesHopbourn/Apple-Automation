@@ -39,6 +39,7 @@ note = note.replace(/^.*：/,'');
 if (text.split(' ')[0] === 't' ||
     text.split(' ')[0] === 'T') {
   draft.defineTag('action', 'open-note');
+  //// 即使参数值为空也要定义
   draft.defineTag('success', '');
   //// t/T 之后可以选择带笔记标题参数打开笔记
   //// 例如「t 叹云兮」打开标题是叹云兮的笔记
