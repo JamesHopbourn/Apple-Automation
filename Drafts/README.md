@@ -1,9 +1,3 @@
-## 功能特点
-- 默认任务安排到今日
-- 支持 Web Capture 自动转为任务
-- 支持沟通交流时序安排
-- 支持从剪切板读取任务
-
 ## Web Capture Temple
 ```
 [[selection]]
