@@ -31,3 +31,6 @@ Telegram Channel：[James Notes](https://t.me/JamesNotes)
   
 @[Platycodon](https://sspai.com/user/714505/updates) 提供批量添加 OmniFocus 动作  
   
+## 打赏
+如果该项目对你的效率提升有所帮助，欢迎 start，如果能够打赏一下就更好了~  
+![](./media/pay.jpeg)
