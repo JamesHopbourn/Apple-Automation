@@ -20,10 +20,6 @@ javascript: (function() {
     if (window.location.host = 'mp.weixin.qq.com'){
     content = content.split('\n');
     content[0] = content[0] + ' ' + document.getElementsByTagName("META")[8].content + ' ' + nickname;
-    for (var i = content.length - 30; i < content.length; i++) {
-      content[i] = content[i].replace(/^-*(end|END|)-*/, '');
-      content[i] = content[i].replace(/^·*(end|END|)·*/, '');
-    }
     content = content.join('\n');
     }
     copyToClipboard(content + "\n" + '[' + document.title.replace(/ \/ Twitter/, '').replace(/^【.*】/, '').replace(/(｜.*$|\|.*$)/, '').replace(/^\(.*\)/, '').replace(/-.*$/, '').replace(/(！|？|\?|\!)/g, '').replace(/_.*$/, '').trim() + '](' + window.location.href + ')');
