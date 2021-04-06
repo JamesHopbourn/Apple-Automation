@@ -16,7 +16,7 @@ javascript: (function() {
             }
         }
     }
-    if (window.location.host = 'mp.weixin.qq.com'){
+    if (window.location.host == 'mp.weixin.qq.com'){
         content = document.body.innerText.replace(/(推荐阅读|喜欢此内容的人还喜欢)(.*\n)+/g, '').replace(/.*阅读原文.*/g,'').replace(/[\r\n]{3,}/g, '\n\n');
         content = content.split('\n');
         content[0] = content[0] + ' ' + document.getElementsByTagName('META')[8].content + ' ' + nickname;
