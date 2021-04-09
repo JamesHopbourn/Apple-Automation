@@ -36,8 +36,7 @@ note = draft.getTag('prompt_button');
 note = note.replace(/^.*：/,'');
 
 // vim mode with argument
-if (text.split(' ')[0] === 't' ||
-    text.split(' ')[0] === 'T') {
+if (text.split(' ')[0].match(/^(t|T)$/)) {
   draft.defineTag('action', 'open-note');
   //// 即使参数值为空也要定义
   draft.defineTag('success', '');
