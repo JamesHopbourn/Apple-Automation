@@ -80,7 +80,7 @@ if (body[body.length - 1].match(/mp.weixin.qq.com/g)) {
   // 文章分割段落删除
   for (var i = body.length - 50; i < body.length - 2; i++) {
     if (typeof(body[i]) !== 'undefined' && 
-      body[i].match(/(end|END|更多文章|往期文章|收录于话题|必看文章|二维码|公众号|作者简介|转载本文|你或许还想看)/)) {
+      body[i].match(/(end|END|更多文章|往期文章|收录于话题|必看文章|二维码|作者简介|转载本文|你或许还想看)/)) {
       link = body.slice(-2);
       body = body.slice(0, i);
       body = body.concat(link);
