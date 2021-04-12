@@ -9,7 +9,7 @@ if (draft.content) {
 }
 
 text = text.split('\n');
-
+name = text[0];
 
 for (var i = 0; i < text.length; i++) {
   if (text[i].length == 0) {
@@ -19,10 +19,8 @@ for (var i = 0; i < text.length; i++) {
   }
 }
 
-keyword = draft.getTag('prompt_text');
-keyword = '^' + keyword;
 for (var i = 0; i < text.length; i++) {
-  if (!text[i].match(keyword)) {
+  if (!text[i].match(name)) {
     body[j] = text[i];
     j++;
   }
