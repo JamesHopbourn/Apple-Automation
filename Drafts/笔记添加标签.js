@@ -68,10 +68,10 @@ if (body[body.length - 1].match(/mp.weixin.qq.com/g)) {
 
   // 列表自动添加空格
   for (var i = 0; i < body.length; i++)
-    if (body[i].match(/^([0-9][0-9][0-9]|[0-9][0-9]|[0-9])(\.|、| )/) && 
-      body[i].match(/^([0-9][0-9][0-9]|[0-9][0-9]|[0-9])(\.|、| ) /) === null && 
+    if (body[i].match(/^([0-9][0-9][0-9]|[0-9][0-9]|[0-9])(\.|、|，| )/) && 
+      body[i].match(/^([0-9][0-9][0-9]|[0-9][0-9]|[0-9])(\.|、|，| ) /) === null && 
       body[i].match(/^([0-9]|[0-9][0-9])(月| 月|年| 年|万| 万)/) === null)
-      body[i] = body[i].replace(/(\.|、| )/, '. ');
+      body[i] = body[i].replace(/(\.|、|，| )/, '. ');
 
   // / 符号替换为三级标题
   for (var i = 0; i < body.length; i++)
