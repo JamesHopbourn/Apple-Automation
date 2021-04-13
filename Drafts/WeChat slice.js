@@ -9,7 +9,6 @@ if (draft.content) {
 }
 
 text = text.split('\n');
-name = text[0];
 
 for (var i = 0; i < text.length; i++) {
   if (text[i].length == 0) {
@@ -20,7 +19,7 @@ for (var i = 0; i < text.length; i++) {
 }
 
 for (var i = 0; i < text.length; i++) {
-  if (!text[i].match(name)) {
+  if (!text[i].match(/: $/)) {
     body[j] = text[i];
     j++;
   }
