@@ -1,6 +1,6 @@
 var p = Prompt.create(); // 创建一个列表弹窗
 p.title = "选择笔记";     // 设置列表弹窗标题
-p.addButton("体重管理")   // 增加选择按钮
+p.addButton("读书记录")   // 增加选择按钮
 p.addButton("推特存档")   // 增加选择按钮
 p.addButton("灵感清单")   // 增加选择按钮
 p.addButton("生活日记")   // 增加选择按钮
@@ -22,38 +22,6 @@ if (draft.content) {
   text = app.getClipboard();
 }
 
-// vim mode with argument
-if (text.split(' ')[0].match(/^(t|T)$/)) {
-  draft.setTemplateTag('action', 'open-note');
-  //// 即使参数值为空也要定义
-  draft.setTemplateTag('success', '');
-  //// t/T 之后可以选择带笔记标题参数打开笔记
-  //// 例如「t 叹云兮」打开标题是叹云兮的笔记
-  note = text.split(' ').slice(1).join(' ');
-} else {
-  //// 显示列表选择弹窗获取笔记标题
-  p.show();
-  note = p.buttonPressed.replace(/^.*：/,'');
-  draft.setTemplateTag('action', 'add-text');
-  //// 下面可以自定义追加文本之后是否返回 drafts
-  //// 如果不需要跳回 drafts 请删除 drafts4://
-  draft.setTemplateTag('success', 'drafts4://');
-  // 行末自动补全中西文句号
-  text = text.split('\n');
-  for (var i = 0; i < text.length; i++) {
-    if (text[i].length != 0 && 
-       !text[i].charAt(text[i].length-1).match(/(\)|\.|!|\?|;|。|！|？|；)$/)) {
-      if (text[i].charAt(text[i].length-1).match(/[0-9]/))
-        continue;
-      else if (text[i].charAt(text[i].length-1).match(/[a-zA-Z]/))
-        text[i] += '.';
-      else
-        text[i] += '。';
-    }
-  }
-  text = text.join('\n');
-}
-
 // 首尾空格删除
 text = text.trim();
 
@@ -64,6 +32,49 @@ text = text.replace(/“/g,'「');
 text = text.replace(/”/g,'」');
 text = text.replace(/[\u00A0]/g,'');
 
-// 定义标签
+// vim mode with argument
+if (text.split(' ')[0].match(/^(t|T)$/)) {
+  //// 如果含有参数就用参数
+  if (text.split(' ')[1]) {
+    note = text.split(' ').slice(1).join(' ');
+  } else {
+    //// 不含参数就进行选择
+    p.show();
+    note = p.buttonPressed.replace(/^.*：/,'');
+  }
+  draft.setTemplateTag("title", note);
+  draft.setTemplateTag('action', 'open-note');
+  //// 注意区分两种不同匹配方式
+} else if (text.split(' ')[0].toLowerCase().match(/bs/)) {
+  draft.setTemplateTag('action', 'search');
+  //// 搜索一定是有参数的
+  term = text.split(' ').slice(1).join(' ');
+  draft.setTemplateTag('term', term);
+} else {
+  //// 谈论 p.show() 好处
+  p.show();
+  note = p.buttonPressed.replace(/^.*：/,'');
+  draft.setTemplateTag("title", note);
+  draft.setTemplateTag('action', 'add-text');
+  draft.setTemplateTag('success', 'drafts4://');
+
+}
+
+if (note == '读书记录')
+  text = '《' + text + '》'
+
+text = text.split('\n');
+for (var i = 0; i < text.length; i++) {
+  if (text[i].length != 0 && 
+     !text[i].charAt(text[i].length-1).match(/(\)|》|\.|!|\?|;|。|！|？|；)$/)) {
+    if (text[i].charAt(text[i].length-1).match(/[0-9]/))
+      continue;
+    else if (text[i].charAt(text[i].length-4-1).match(/[a-zA-Z]/))
+      text[i] += '.';
+    else
+      text[i] += '。';
+  }
+}
+text = text.join('\n');
+
 draft.setTemplateTag("text", text);
-draft.setTemplateTag("title", note);
