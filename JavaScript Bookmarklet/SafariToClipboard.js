@@ -18,6 +18,5 @@ javascript: (function() {
             }
         }
     }
-    var timestamp = '- ' + new Date().toLocaleString("zh-CN", {timeZone: "Asia/Shanghai", hour12: false}).replace(/\//g,'-') + ' ' + ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"][new Date().getDay()] + '\n';
-    copyToClipboard(timestamp + window.getSelection());
+    copyToClipboard(window.getSelection());
 })();
