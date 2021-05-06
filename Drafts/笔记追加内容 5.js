@@ -66,7 +66,7 @@ if (note == '读书记录')
 text = text.split('\n');
 for (var i = 0; i < text.length; i++) {
   if (text[i].length != 0 && 
-     !text[i].charAt(text[i].length-1).match(/(\)|》|\.|!|\?|;|。|！|？|；)$/)) {
+     !text[i].charAt(text[i].length-1).match(/(》|\)|\.|。|!|！|\?|？|;|；)$/)) {
     if (text[i].charAt(text[i].length-1).match(/[0-9]/))
       continue;
     else if (text[i].match(/^(-|✅|\d+.) /))
