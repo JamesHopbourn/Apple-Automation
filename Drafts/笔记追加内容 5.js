@@ -69,7 +69,9 @@ for (var i = 0; i < text.length; i++) {
      !text[i].charAt(text[i].length-1).match(/(\)|》|\.|!|\?|;|。|！|？|；)$/)) {
     if (text[i].charAt(text[i].length-1).match(/[0-9]/))
       continue;
-    else if (text[i].charAt(text[i].length-4-1).match(/[a-zA-Z]/))
+    else if (text[i].charAt(text[i].length[0]).match(/-/))
+      continue;
+    else if (text[i].charAt(text[i].length-1).match(/[a-zA-Z]/))
       text[i] += '.';
     else
       text[i] += '。';
