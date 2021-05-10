@@ -56,7 +56,7 @@ if (text.split(' ')[0].match(/^(t|T)$/)) {
   note = p.buttonPressed.replace(/^.*：/,'');
   draft.setTemplateTag("title", note);
   draft.setTemplateTag('action', 'add-text');
-  draft.setTemplateTag('success', 'drafts4://');
+  draft.setTemplateTag('success', 'drafts5://');
 }
 
 if (note == '读书记录')
