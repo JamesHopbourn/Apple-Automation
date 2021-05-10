@@ -42,14 +42,15 @@ if (text.split(' ')[0].match(/^(t|T)$/)) {
     p.show();
     note = p.buttonPressed.replace(/^.*：/,'');
   }
+  //// 给两个变量设置标签
   draft.setTemplateTag("title", note);
   draft.setTemplateTag('action', 'open-note');
   //// 注意区分两种不同匹配方式
 } else if (text.split(' ')[0].toLowerCase().match(/bs/)) {
-  draft.setTemplateTag('action', 'search');
   //// 搜索一定是有参数的
   term = text.split(' ').slice(1).join(' ');
   draft.setTemplateTag('term', term);
+  draft.setTemplateTag('action', 'search');
 } else {
   //// 谈论 p.show() 好处
   p.show();
@@ -58,9 +59,6 @@ if (text.split(' ')[0].match(/^(t|T)$/)) {
   draft.setTemplateTag('action', 'add-text');
   draft.setTemplateTag('success', 'drafts5://');
 }
-
-if (note == '读书记录')
-  text = '《' + text + '》'
 
 text = text.split('\n');
 for (var i = 0; i < text.length; i++) {
@@ -77,5 +75,8 @@ for (var i = 0; i < text.length; i++) {
   }
 }
 text = text.join('\n');
+
+if (note == '读书记录')
+  text = '《' + text + '》'
 
 draft.setTemplateTag("text", text);
