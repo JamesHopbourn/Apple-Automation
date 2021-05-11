@@ -68,7 +68,7 @@ for (var i = 0; i < text.length; i++) {
       continue;
     else if (text[i].match(/^(-|✅|\d+.) /))
       continue;
-    else if (text[i].charAt(text[i].length - 1).match(/[a-zA-Z]/))
+    else if (text[i].charAt(text[i].length-1).match(/[a-zA-Z]/))
       text[i] += '.';
     else
       text[i] += '。';
