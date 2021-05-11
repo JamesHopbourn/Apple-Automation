@@ -76,10 +76,10 @@ for (var i = 0; i < text.length; i++) {
 }
 text = text.join('\n');
 
-if (note == '读书记录')
-  text = '《' + text + '》'
+if (p.buttonPressed && p.buttonPressed.match(/推特存档/))
+  draft.defineTag('success', 'tweetbot://JamesHopbourn/post?text='+encodeURI(text));
 
-if (p.buttonPressed.match(/(学习)/))
+if (p.buttonPressed && p.buttonPressed.match(/(^学习)/))
   draft.setTemplateTag('success', 'weixin://');
 
 draft.setTemplateTag("text", text);
