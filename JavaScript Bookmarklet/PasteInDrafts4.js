@@ -21,8 +21,13 @@ javascript: (function() {
         content = content.split('\n');
         content[0] = content[0] + ' ' + document.querySelector('meta[name=author]').content + ' ' + nickname;
         content = content.join('\n');
+        copyToClipboard(content + "\n" + '[' + document.title.replace(/ \/ Twitter/, '').replace(/^【.*】/, '').replace(/(｜.*$|\|.*$)/, '').replace(/^\(.*\)/, '').replace(/-.*$/, '').replace(/(！|？|\?|\!)/g, '').replace(/_.*$/, '').trim() + '](' + window.location.href + ')');
     }
-    copyToClipboard(content + "\n" + '[' + document.title.replace(/ \/ Twitter/, '').replace(/^【.*】/, '').replace(/(｜.*$|\|.*$)/, '').replace(/^\(.*\)/, '').replace(/-.*$/, '').replace(/(！|？|\?|\!)/g, '').replace(/_.*$/, '').trim() + '](' + window.location.href + ')');
+    if (window.location.host == 'www.zhihu.com'){
+        copyToClipboard(document.title.replace(/ -(.*) 的回答 - 知乎/,'$1') + '\n' 
+    + document.getElementsByClassName("RichContent-inner")[0].innerText.replace(/[\r\n]{3,}/g, '\n\n') + 
+    '[' + document.title + '](' + window.location.href + ')');
+    }
     url = 'drafts4://x-callback-url/runAction?action=paste';
     window.open(url,'_self');
 })();
