@@ -83,12 +83,16 @@ imeituan://www.meituan.com/bike/scan?lc-callback=imeituan://www.meituan.com/bike
 dianping://searchshoplist?keyword=[prompt:商品名称]
 ```
 
+### 欧陆词典
+```
+eudic://dict/[prompt:生词]
+```
+
 ### 什么值得买
 搜索商品
 ```
 smzdm://search?json={"channelName":"home","search_type":"1","keyWord":"[prompt:商品名称]"}
 ```
-
 
 ### 知乎
 搜索问题
@@ -150,7 +154,6 @@ pinduoduo://com.xunmeng.pinduoduo/search_result.html?search_key=[prompt:商品�
 ```
 weixin://scanqrcode
 ```
-
 
 ### 支付宝
 付款码
