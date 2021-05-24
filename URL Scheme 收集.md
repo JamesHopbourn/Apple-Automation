@@ -148,7 +148,7 @@ itms-apps://search.itunes.apple.com/WebObjects/MZSearch.woa/wa/search?media=soft
 ### 京东
 搜索商品
 ```
-openapp.jdmobile://virtual?params={"des":"productList","keyWord":"[prompt:商品名称]","from":"search","category":"jump"}
+openjd://virtual?params={"des":"productList","keyWord":"[prompt:商品名称]","from":"search","category":"jump"}
 ```
 
 ### 拼多多
