@@ -51,7 +51,7 @@ imeituan://www.meituan.com/hotel/search?q=[prompt:酒店名称]
 imeituan://www.meituan.com/scanQRCode
 ```
 
-共享单车扫码，该 URL Scheme 有且仅有配合 Launch Center Pro 的 lc-callback 协议方能正常使用。
+共享单车扫码，该 URL Scheme 有且仅有配合 Launch Center Pro 的 `lc-callback` 协议方能正常使用。
 ```
 imeituan://www.meituan.com/bike/scan?lc-callback=imeituan://www.meituan.com/bike/inscan
 ```
