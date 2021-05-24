@@ -115,7 +115,7 @@ zhihu://www.zhihu.com/search?q=[prompt]
 ### 哔哩哔哩
 搜索视频
 ```
-bilibili://search?keyword=[prompt]
+bilibili://search?keyword=[prompt:视频名称]
 ```
 
 扫一扫
@@ -136,13 +136,13 @@ bilibili://main/favorite
 ### YouTube
 搜索视频，此处的 URL 在 Universal Link 的作用下会直接跳转 YouTube 客户端，如果没有安装客户端则直接打开网页搜索。
 ```
-https://m.youtube.com/results?q=[prompt]
+https://m.youtube.com/results?q=[prompt:视频名称]
 ```
 
 ### App Store
 搜索软件
 ```
-itms-apps://search.itunes.apple.com/WebObjects/MZSearch.woa/wa/search?media=software&term=[prompt]
+itms-apps://search.itunes.apple.com/WebObjects/MZSearch.woa/wa/search?media=software&term=[prompt:软件名称]
 ```
 
 ### 京东
