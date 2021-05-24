@@ -104,7 +104,8 @@ smzdm://search?json={"channelName":"home","search_type":"1","keyWord":"[prompt:�
 搜索问题
 ```
 zhihu://search?q=[prompt]
-
+```
+```
 zhihu://zhihu.com/search?q=[prompt]
 
 zhihu://www.zhihu.com/search?q=[prompt]
