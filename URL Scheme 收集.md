@@ -21,7 +21,7 @@ taobao://shopsearch.taobao.com/search?app=shopsearch&q=[prompt:店铺名称]
 
 跳转指定淘宝店铺
 ```
-taobao://shop.m.taobao.com/shop/shop_index.htm?shopId=[prompt:店铺 ID
+taobao://shop.m.taobao.com/shop/shop_index.htm?shopId=[prompt:店铺 ID]
 ```
 
 ### 天猫
@@ -152,7 +152,7 @@ alipay://platformapi/startapp?appId=200011235
 
 launch://x-callback-url/clipboard?text={{}}&x-success={{alipay://platformapi/startapp?appId=200011235}}
 ```
-其他支付宝相关的小程序跳转的 URL Scheme 请参照《URL Scheme 查询指南》支付宝段落自行查询，此处不再一一列举。
+其他支付宝相关的小程序跳转的 URL Scheme 请参照[《URL Scheme 查询指南》](https://sspai.com/post/66334)支付宝段落自行查询，此处不再一一列举。
 
 ### 菜鸟
 打开身份码
@@ -168,4 +168,11 @@ launch://x-callback-url/clipboard?text={{}}&x-success={{cainiao://desktop/statio
 prefs:root=SCREEN_TIME&path=SCREEN_TIME_SUMMARY#DAY/com.apple.shortcuts
 
 prefs:root=SCREEN_TIME&path=SCREEN_TIME_SUMMARY#WEEK/com.apple.shortcuts
+
+App-prefs:SCREEN_TIME&path=SCREEN_TIME_SUMMARY#DAY/com.apple.shortcuts
+
+App-prefs:SCREEN_TIME&path=SCREEN_TIME_SUMMARY#WEEK/com.apple.shortcuts
 ```
+
+### 参考文章
+[iOS 快捷指令 Shortcut 频繁弹出通知 及 关闭通知的 URL Scheme](https://www.v2ex.com/t/775905)
