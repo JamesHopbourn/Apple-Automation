@@ -112,13 +112,13 @@ smzdm://search?json={"channelName":"home","search_type":"1","keyWord":"[prompt:�
 ### 知乎
 搜索问题
 ```
-zhihu://search?q=[prompt]
+zhihu://search?q=[prompt:问题]
 ```
 ```
-zhihu://zhihu.com/search?q=[prompt]
+zhihu://zhihu.com/search?q=[prompt:问题]
 ```
 ```
-zhihu://www.zhihu.com/search?q=[prompt]
+zhihu://www.zhihu.com/search?q=[prompt:问题]
 ```
 
 ### 哔哩哔哩
