@@ -1,3 +1,12 @@
+### URL Scheme 数据清洗命令
+```
+perl -ne 'print if /<data android:host=/'|
+perl -pe 's/^.*<data android:host="(.*?)" android:path="(.*?)" android:scheme="(.*?)"\/>/\3:\/\/\1\2/'|
+perl -pe 's/^.*<data android:host="(.*?)" android:pathPattern="(.*?)" android:scheme="(.*)"\/>/\3:\/\/\1\2/'|
+perl -pe 's/^.*<data android:host="(.*?)" android:pathPrefix="(.*?)" android:scheme="(.*)"\/>/\3:\/\/\1\2/'|
+perl -pe 's/^.*<data android:host="(.*?)" android:scheme="(.*?)"\/>/\2:\/\/\1/'
+```
+
 ### 淘宝
 相机拍照搜索
 ```
