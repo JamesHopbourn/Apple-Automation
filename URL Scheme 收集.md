@@ -152,7 +152,7 @@ alipay://platformapi/startapp?appId=200011235
 
 launch://x-callback-url/clipboard?text={{}}&x-success={{alipay://platformapi/startapp?appId=200011235}}
 ```
-其他支付宝相关的小程序跳转的 URL Scheme 请参照[《URL Scheme 查询指南》](https://sspai.com/post/66334)支付宝段落自行查询，此处不再一一列举。
+其他支付宝相关的小程序的 URL Scheme 请参照[《URL Scheme 查询指南》](https://sspai.com/post/66334)支付宝段落自行查询，此处不再一一列举。
 
 ### 菜鸟
 打开身份码
