@@ -223,4 +223,4 @@ App-prefs:SCREEN_TIME&path=SCREEN_TIME_SUMMARY#WEEK/com.apple.shortcuts
 ```
 
 ### 参考文章
-[iOS 快捷指令 Shortcut 频繁弹出通知 及 关闭通知的 URL Scheme](https://www.v2ex.com/t/775905)
+[iOS 快捷指令 Shortcut 频繁弹出通知及关闭通知的 URL Scheme](https://www.v2ex.com/t/775905)
