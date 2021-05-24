@@ -56,6 +56,12 @@ sinaweibo://share?content=[prompt:微博内容]
 sinaweibo://userinfo?uid=[uid]
 ```
 
+### 小红书
+搜索页面
+```
+xhsdiscover://search/recommend
+```
+
 ### 美团
 全局搜索
 ```
