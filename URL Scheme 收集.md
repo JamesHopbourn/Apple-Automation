@@ -35,6 +35,28 @@ tmall://page.tm/search?q=[prompt:商品名称]
 douban:///search?q=[prompt:搜索内容]
 ```
 
+### 新浪微博
+微博搜索
+```
+sinaweibo://searchall?q=[prompt]
+```
+
+扫一扫
+```
+sinaweibo://qrcode
+```
+
+发微博
+```
+sinaweibo://share?content=[prompt:微博内容]
+
+```
+
+指定用户个人资料页
+```
+sinaweibo://userinfo?uid=[uid]
+```
+
 ### 美团
 全局搜索
 ```
