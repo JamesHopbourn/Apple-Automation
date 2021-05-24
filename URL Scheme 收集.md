@@ -107,7 +107,8 @@ zhihu://search?q=[prompt]
 ```
 ```
 zhihu://zhihu.com/search?q=[prompt]
-
+```
+```
 zhihu://www.zhihu.com/search?q=[prompt]
 ```
 
@@ -166,21 +167,24 @@ weixin://scanqrcode
 付款码
 ```
 alipay://platformapi/startapp?appId=20000056
-
+```
+```
 launch://x-callback-url/clipboard?text={{}}&x-success={{alipay://platformapi/startapp?appId=20000056}}
 ```
 
 扫一扫
 ```
 alipay://platformapi/startapp?appId=10000007
-
+```
+```
 launch://x-callback-url/clipboard?text={{}}&x-success={{alipay://platformapi/startapp?appId=10000007}}
 ```
 
 乘车码
 ```
 alipay://platformapi/startapp?appId=200011235
-
+```
+```
 launch://x-callback-url/clipboard?text={{}}&x-success={{alipay://platformapi/startapp?appId=200011235}}
 ```
 其他支付宝相关的小程序的 URL Scheme 请参照[《URL Scheme 查询指南》](https://sspai.com/post/66334)支付宝段落自行查询，此处不再一一列举。
@@ -189,7 +193,8 @@ launch://x-callback-url/clipboard?text={{}}&x-success={{alipay://platformapi/sta
 打开身份码
 ```
 cainiao://desktop/station_code
-
+```
+```
 launch://x-callback-url/clipboard?text={{}}&x-success={{cainiao://desktop/station_code}}
 ```
 
@@ -197,11 +202,14 @@ launch://x-callback-url/clipboard?text={{}}&x-success={{cainiao://desktop/statio
 捷径屏幕使用时间通知
 ```
 prefs:root=SCREEN_TIME&path=SCREEN_TIME_SUMMARY#DAY/com.apple.shortcuts
-
+```
+```
 prefs:root=SCREEN_TIME&path=SCREEN_TIME_SUMMARY#WEEK/com.apple.shortcuts
-
+```
+```
 App-prefs:SCREEN_TIME&path=SCREEN_TIME_SUMMARY#DAY/com.apple.shortcuts
-
+```
+```
 App-prefs:SCREEN_TIME&path=SCREEN_TIME_SUMMARY#WEEK/com.apple.shortcuts
 ```
 
