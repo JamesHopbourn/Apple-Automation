@@ -49,7 +49,6 @@ sinaweibo://qrcode
 发微博
 ```
 sinaweibo://share?content=[prompt:微博内容]
-
 ```
 
 指定用户个人资料页
