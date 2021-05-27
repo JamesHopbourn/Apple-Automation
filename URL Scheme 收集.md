@@ -216,7 +216,9 @@ URL Scheme 需要全编码
 
 ➜ python -c "import clipboard
 from urllib import parse
-clipboard.copy(parse.quote(clipboard.paste()))"
+urls = parse.quote(clipboard.paste())
+name = input('\n输入动作名称：')
+print('launch://x-callback-url/import?title=' + parse.quote(name) + '&url=' + urls)"
 ```
 
 ### 设置
