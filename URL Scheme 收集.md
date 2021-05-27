@@ -214,9 +214,9 @@ launch://x-callback-url/import?title=【标题】&url=【URL Scheme】
 ```
 URL Scheme 需要全编码
 
-➜ python -c import clipboard
+➜ python -c "import clipboard
 from urllib import parse
-clipboard.copy(parse.quote(clipboard.paste()))
+clipboard.copy(parse.quote(clipboard.paste()))"
 ```
 
 ### 设置
