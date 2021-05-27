@@ -207,6 +207,17 @@ cainiao://desktop/station_code
 launch://x-callback-url/clipboard?text={{}}&x-success={{cainiao://desktop/station_code}}
 ```
 
+### Launch Center Pro
+```
+launch://x-callback-url/import?title=【标题】&url=【URL Scheme】
+```
+```
+URL Scheme scheme 头之后的内容需要全编码
+python -c import clipboard
+from urllib import parse
+clipboard.copy(parse.quote(clipboard.paste()))
+```
+
 ### 设置
 捷径屏幕使用时间通知
 ```
