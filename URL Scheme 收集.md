@@ -213,7 +213,8 @@ launch://x-callback-url/import?title=【标题】&url=【URL Scheme】
 ```
 ```
 URL Scheme scheme 头之后的内容需要全编码
-python -c import clipboard
+
+➜ python -c import clipboard
 from urllib import parse
 clipboard.copy(parse.quote(clipboard.paste()))
 ```
