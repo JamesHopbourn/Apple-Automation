@@ -212,7 +212,7 @@ launch://x-callback-url/clipboard?text={{}}&x-success={{cainiao://desktop/statio
 launch://x-callback-url/import?title=【标题】&url=【URL Scheme】
 ```
 ```
-URL Scheme 的内容需要全编码
+URL Scheme 需要全编码
 
 ➜ python -c import clipboard
 from urllib import parse
