@@ -1,4 +1,4 @@
 javascript: (function() {
-    url = 'obsidian://new?vault=Notes&name=' + document.title.replace(/( |)-.*$/,'').concat('.md') + '&content=' + document.body.innerText.replace(/\n/g, '%0A').replace(/ /g, '%20');
+    url = 'obsidian://new?vault=Notes&name=' + encodeURIComponent(document.title.replace(/( |)-.*$/,'').concat('.md')) + '&content=' + encodeURIComponent(document.body.innerText);
     window.open(url,'_self');
 })();
