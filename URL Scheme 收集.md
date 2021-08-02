@@ -15,39 +15,39 @@ taobao://tb.cn/n/scancode
 
 搜索指定物品
 ```
-taobao://s.taobao.com?q=[prompt:商品名称]
+taobao://s.taobao.com?q=%@
 ```
 
 使用天猫搜索
 ```
-taobao://list.tmall.com/search_product.htm?q=[prompt:商品名称]
+taobao://list.tmall.com/search_product.htm?q=%@
 ```
 
 搜索指定店铺
 ```
-taobao://shopsearch.taobao.com/search?app=shopsearch&q=[prompt:店铺名称]
+taobao://shopsearch.taobao.com/search?app=shopsearch&q=%@
 ```
 
 跳转指定淘宝店铺
 ```
-taobao://shop.m.taobao.com/shop/shop_index.htm?shopId=[prompt:店铺 ID]
+taobao://shop.m.taobao.com/shop/shop_index.htm?shopId=%@
 ```
 
 ### 天猫
 ```
-tmall://page.tm/search?q=[prompt:商品名称]
+tmall://page.tm/search?q=%@
 ```
 
 ### 豆瓣
 搜索内容
 ```
-douban:///search?q=[prompt:搜索内容]
+douban:///search?q=%@
 ```
 
 ### 新浪微博
 微博搜索
 ```
-sinaweibo://searchall?q=[prompt]
+sinaweibo://searchall?q=%@
 ```
 
 扫一扫
@@ -57,7 +57,7 @@ sinaweibo://qrcode
 
 发微博
 ```
-sinaweibo://share?content=[prompt:微博内容]
+sinaweibo://share?content=%@
 ```
 
 指定用户个人资料页
@@ -74,12 +74,12 @@ xhsdiscover://search/recommend
 ### 美团
 全局搜索
 ```
-imeituan://www.meituan.com/search?q=[prompt:商品名称]
+imeituan://www.meituan.com/search?q=%@
 ```
 
 酒店搜索
 ```
-imeituan://www.meituan.com/hotel/search?q=[prompt:酒店名称]
+imeituan://www.meituan.com/hotel/search?q=%@
 ```
 
 普通扫码页面
@@ -95,36 +95,36 @@ imeituan://www.meituan.com/bike/scan?lc-callback=imeituan://www.meituan.com/bike
 ### 大众点评
 搜索商品
 ```
-dianping://searchshoplist?keyword=[prompt:商品名称]
+dianping://searchshoplist?keyword=%@
 ```
 
 ### 欧陆词典
 ```
-eudic://dict/[prompt:生词]
+eudic://dict/%@
 ```
 
 ### 什么值得买
 搜索商品
 ```
-smzdm://search?json={"channelName":"home","search_type":"1","keyWord":"[prompt:商品名称]"}
+smzdm://search?json={"channelName":"home","search_type":"1","keyWord":"%@"}
 ```
 
 ### 知乎
 搜索问题
 ```
-zhihu://search?q=[prompt:问题]
+zhihu://search?q=%@
 ```
 ```
-zhihu://zhihu.com/search?q=[prompt:问题]
+zhihu://zhihu.com/search?q=%@
 ```
 ```
-zhihu://www.zhihu.com/search?q=[prompt:问题]
+zhihu://www.zhihu.com/search?q=%@
 ```
 
 ### 哔哩哔哩
 搜索视频
 ```
-bilibili://search?keyword=[prompt:视频名称]
+bilibili://search?keyword=%@
 ```
 
 扫一扫
@@ -145,25 +145,25 @@ bilibili://main/favorite
 ### YouTube
 搜索视频，此处的 URL 在 Universal Link 的作用下会直接跳转 YouTube 客户端，如果没有安装客户端则直接打开网页搜索。
 ```
-https://m.youtube.com/results?q=[prompt:视频名称]
+https://m.youtube.com/results?q=%@
 ```
 
 ### App Store
 搜索软件
 ```
-itms-apps://search.itunes.apple.com/WebObjects/MZSearch.woa/wa/search?media=software&term=[prompt:软件名称]
+itms-apps://search.itunes.apple.com/WebObjects/MZSearch.woa/wa/search?media=software&term=%@
 ```
 
 ### 京东
 搜索商品
 ```
-openjd://virtual?params={"des":"productList","keyWord":"[prompt:商品名称]","from":"search","category":"jump"}
+openjd://virtual?params={"des":"productList","keyWord":"%@","from":"search","category":"jump"}
 ```
 
 ### 拼多多
 搜索商品
 ```
-pinduoduo://com.xunmeng.pinduoduo/search_result.html?search_key=[prompt:商品名称]
+pinduoduo://com.xunmeng.pinduoduo/search_result.html?search_key=%@
 ```
 
 ### 微信
