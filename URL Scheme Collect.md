@@ -44,11 +44,6 @@ tmall://page.tm/search?q=%@
 douban:///search?q=%@
 ```
 
-### 美团外卖
-```
-meituanwaimai://waimai.meituan.com/search?query=%@
-```
-
 ### 新浪微博
 微博搜索
 ```
@@ -74,6 +69,11 @@ sinaweibo://userinfo?uid=[uid]
 搜索页面
 ```
 xhsdiscover://search/recommend
+```
+
+### 美团外卖
+```
+meituanwaimai://waimai.meituan.com/search?query=%@
 ```
 
 ### 美团
