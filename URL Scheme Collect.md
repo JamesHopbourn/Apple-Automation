@@ -125,6 +125,10 @@ zhihu://zhihu.com/search?q=%@
 ```
 zhihu://www.zhihu.com/search?q=%@
 ```
+扫一扫
+```
+zhihu://codereader
+```
 
 ### 哔哩哔哩
 搜索视频
