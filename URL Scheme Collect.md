@@ -114,6 +114,20 @@ eudic://dict/%@
 smzdm://search?json={"channelName":"home","search_type":"1","keyWord":"%@"}
 ```
 
+### 云支付
+付款
+```
+upwallet://pay
+```
+乘车码
+```
+upwallet://rn/rnshcarcode
+```
+小程序
+```
+upwallet://applet?toLink=【小程序 URL 地址】&encryptAppId=【小程序 ID】
+```
+
 ### 知乎
 搜索问题
 ```
