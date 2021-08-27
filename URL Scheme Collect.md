@@ -33,6 +33,11 @@ taobao://shopsearch.taobao.com/search?app=shopsearch&q=%@
 taobao://shop.m.taobao.com/shop/shop_index.htm?shopId=%@
 ```
 
+身份码
+```
+tbopen://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fmarket.m.taobao.com%2Fapp%2Fcn-yz%2Fmulti-activity%2FauthCode.html
+```
+
 ### 天猫
 ```
 tmall://page.tm/search?q=%@
@@ -87,14 +92,9 @@ imeituan://www.meituan.com/search?q=%@
 imeituan://www.meituan.com/hotel/search?q=%@
 ```
 
-普通扫码页面
+扫一扫/共享单车
 ```
 imeituan://www.meituan.com/scanQRCode
-```
-
-共享单车扫码，该 URL Scheme 有且仅有配合 Launch Center Pro 的 `lc-callback` 协议方能正常使用。
-```
-imeituan://www.meituan.com/bike/scan?lc-callback=imeituan://www.meituan.com/bike/inscan
 ```
 
 ### 大众点评
