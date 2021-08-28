@@ -1,0 +1,1 @@
+javascript:window.location=window.location.toString().replace('shortcuts','shortcuts/api/records').replace('https',%20'http://jsonviewer.stack.hu/#http://https');
