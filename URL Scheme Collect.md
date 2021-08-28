@@ -7,6 +7,13 @@ perl -pe 's/^.*<data android:host="(.*?)" android:pathPrefix="(.*?)" android:sch
 perl -pe 's/^.*<data android:host="(.*?)" android:pathPattern="(.*?)" android:scheme="(.*)"\/>/\3:\/\/\1\2/' > ' URL Scheme.txt'
 ```
 
+### 微信
+小程序
+```
+weixin://app/wx5aa333606550dfd5/jumpWxa/?userName=【账号原始 ID】&path=【页面路径】
+```
+
+
 ### 淘宝
 相机拍照搜索
 ```
@@ -119,10 +126,22 @@ smzdm://search?json={"channelName":"home","search_type":"1","keyWord":"%@"}
 ```
 upwallet://pay
 ```
+
 乘车码
 ```
 upwallet://rn/rnshcarcode
 ```
+
+转账
+```
+upwallet://rn/rntransfer
+```
+
+上海公交乘车码
+```
+upwallet://rn/rnshcarcode
+```
+
 小程序
 ```
 upwallet://applet?toLink=【小程序 URL 地址】&encryptAppId=【小程序 ID】
@@ -196,6 +215,11 @@ weixin://scanqrcode
 ```
 
 ### 支付宝
+小程序
+```
+alipays://platformapi/startapp?appId=【小程序 ID】&page=【页面路径】
+```
+
 付款码
 ```
 alipay://platformapi/startapp?appId=20000056
