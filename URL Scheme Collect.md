@@ -196,6 +196,12 @@ https://m.youtube.com/results?q=%@
 itms-apps://search.itunes.apple.com/WebObjects/MZSearch.woa/wa/search?media=software&term=%@
 ```
 
+### Shortcuts
+下载捷径
+```
+shortcuts://import-workflow?url=/path/to/filename.shortcut&name=ShortcutsFileName
+```
+
 ### 京东
 搜索商品
 ```
