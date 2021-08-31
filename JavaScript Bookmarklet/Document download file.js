@@ -1,1 +1,1 @@
-javascript:window.location=window.location.toString().replace('http','rhttp');
+javascript:location.href = "r" + location.href;
