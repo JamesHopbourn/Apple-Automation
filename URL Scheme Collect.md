@@ -42,7 +42,7 @@ taobao://shop.m.taobao.com/shop/shop_index.htm?shopId=%@
 
 身份码
 ```
-tbopen://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fmarket.m.taobao.com%2Fapp%2Fcn-yz%2Fmulti-activity%2FauthCode.html
+tbopen://m.taobao.com/tbopen/index.html?h5Url=https://market.m.taobao.com/app/cn-yz/multi-activity/authCode.html
 ```
 
 ### 天猫
