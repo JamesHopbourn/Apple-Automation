@@ -29,6 +29,6 @@ javascript: (function() {
         document.querySelector('[name=flag]').remove();
     }
     if (window.getSelection() != '')
-        markdown = window.getSelection() + '\n\n' + markdown + '\n';
+        markdown = markdown + '\n' + window.getSelection() + '\n';
     copyToClipboard(markdown);
 })();
