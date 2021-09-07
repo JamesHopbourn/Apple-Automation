@@ -10,6 +10,7 @@ var action_list = [
     ["gg", "https://www.google.com/search?q=-baidu%20"],
     ["wx", "http://weixin.sogou.com/weixinwap?query=", 1],
     ["wolf", "http://m.wolframalpha.com/input/?i="],
+    ["wb", "weixin://app/wx58164a91f1821369/jumpWxa/?userName=gh_5f1a249e0ced&path=pages/Discover/Discover.html?searchValue=%@&needResult=true"],
     
 //网上购物
     ["tb", "taobao://s.taobao.com/?q="],
@@ -54,7 +55,7 @@ var action_list = [
 ]
 
 for (i = 0; i < action_list.length; i++) {
-	      key_list.push(action_list[i][0]);
+	key_list.push(action_list[i][0]);
 }
 
 if (key_list.indexOf(input.split(' ').shift().toLowerCase()) != -1) {
@@ -91,6 +92,11 @@ if (content.trim().length === 0) {
 	if (uri.endsWith('//') || uri.endsWith('=')) {
 		content = getClipboard().trim();
 	}
+}
+
+if (uri.match(/%@/)) {
+    uri = uri.replace(/%@/, encodeURI(content));
+    content = "";
 }
 
 if (draft.selectionLength > 0) {
