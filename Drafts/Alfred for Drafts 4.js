@@ -21,7 +21,7 @@ var action_list = [
     
     // 网上购物
     ["tb", "taobao://s.taobao.com/?q="],
-    ["tm" , "tmall://page.tm/search?q="],
+    ["tm", "tmall://page.tm/search?q="],
     ["mt", "meituanwaimai://waimai.meituan.com/search?query="],
     ["book", "http://search.m.dangdang.com/search.php?keyword=", 1],
     ["pdd", "pinduoduo://com.xunmeng.pinduoduo/search_result.html?search_key="],
@@ -38,7 +38,7 @@ var action_list = [
     ["pin", "https://www.pinterest.com/search/pins/?q="],
     ["gh", "https://github.com/search?&q="],
     ["ytb", "https://m.youtube.com/results?q="],
-    ["blbl","bilibili://search?keyword="],
+    ["blbl", "bilibili://search?keyword="],
     ["as", "itms-apps://search.itunes.apple.com/WebObjects/MZSearch.woa/wa/search?media=software&term="],
 
     //实用工具
