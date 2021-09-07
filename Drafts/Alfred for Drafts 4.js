@@ -11,12 +11,12 @@ var action_list = [
     ["gg", "x-web-search://?"],
     ["vt", "x-web-search://?site:v2ex.com%20"],
     ["ssp", "x-web-search://?site:sspai.com%20"],
-    ["zh", "zhihu://search?type=content&q="],
-    ["wx", "https://weixin.sogou.com/weixinwap?type=2&query=", 1],
-    ["wolf", "https://m.wolframalpha.com/input/?i="],
+    ["zh", "zhihu://search?&q="],
     ["db", "douban:///search?q="],
     ["mrmad", "https://mrmad.com.tw/?s="],
     ["medium", "https://medium.com/search?q="],
+    ["wolf", "https://m.wolframalpha.com/input/?i="],
+    ["wx", "https://weixin.sogou.com/weixinwap?type=2&query=", 1],
     ["wb", "weixin://app/wx58164a91f1821369/jumpWxa/?userName=gh_5f1a249e0ced&path=pages/Discover/Discover.html?searchValue=%@&needResult=true"],
     
     // 网上购物
@@ -136,7 +136,7 @@ if (action == 'decode') {
 if (action == 'bmi') {
     temp = content.split(' ');
     height = temp[0],weight = temp[1];
-    bmi = (weight/(height*height)).toFixed(2)
+    bmi = (weight/(height*height)).toFixed(2);
     uri = "drafts4://create?text=";
     content = '体重 '+weight+'\nBMI '+bmi;
 }
