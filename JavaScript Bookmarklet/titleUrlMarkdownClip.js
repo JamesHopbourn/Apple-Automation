@@ -18,16 +18,16 @@ javascript: (function() {
             }
         }
     }
+
     document.head.innerHTML += '<meta name="flag" content="">';
     if (document.querySelector('meta[name=flag]').content == '') {
-        var markdown = '[' + document.title.replace(/ \/ Twitter/, '').replace(/^【.*】/, '').replace(/(｜.*$|\|.*$)/, '').replace(/^\(.*\)/, '').replace(/-.*$/, '').replace(/(！|？|\?|\!)/g, '').replace(/_.*$/, '').trim() + '](' + window.location.href + ')  ';
-        if (window.getSelection() != '')
-            markdown = window.getSelection() + '\n\n' + markdown + '\n';
-        copyToClipboard(markdown);
+        markdown = '[' + document.title + '](' + window.location.href + ')  ';
         document.querySelector('meta[name=flag]').content = "1";
     } else {
-        copyToClipboard();
+        markdown = '- [' + document.title + '](' + window.location.href + ')  ';
         document.querySelector('[name=flag]').remove();
     }
+    if (window.getSelection() != '')
+        markdown = window.getSelection() + '\n\n' + markdown + '\n';
+    copyToClipboard(markdown);
 })();
-
