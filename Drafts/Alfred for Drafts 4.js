@@ -1,38 +1,45 @@
 var key_list = [];
 var input = draft.content;
-var default_action = 'task';
+var default_action = 'gg';
 var action, content, uri, arr;
 
 var action_list = [
 //OmniFocus
     ["task", "drafts4://x-callback-url/runAction?action=TaskPaper&text="],
 //搜索引擎
-    ["gg", "https://www.google.com/search?q=-baidu%20"],
+    ["gg", "x-web-search://?"],
+    ["vt", "x-web-search://?site:v2ex.com%20"],
+    ["ssp", "x-web-search://?q=site:sspai.com+"],
+    ["zh", "zhihu://search?type=content&q="],
     ["wx", "http://weixin.sogou.com/weixinwap?query=", 1],
     ["wolf", "http://m.wolframalpha.com/input/?i="],
+    ["db", "douban:///search?q="],
+    ["mrmad", "https://mrmad.com.tw/?s="],
+    ["medium", "https://medium.com/search?q="],
     ["wb", "weixin://app/wx58164a91f1821369/jumpWxa/?userName=gh_5f1a249e0ced&path=pages/Discover/Discover.html?searchValue=%@&needResult=true"],
     
 //网上购物
     ["tb", "taobao://s.taobao.com/?q="],
-    ["jd", "https://so.m.jd.com/ware/search.action?keyword=", 1],
+    ["tm" , "tmall://page.tm/search?q="],
+    ["mt", "meituanwaimai://waimai.meituan.com/search?query="],
     ["book", "http://search.m.dangdang.com/search.php?keyword=", 1],
-    ["xianyu", "https://s.2.taobao.com/list/list.htm?search_type=item&q=", 1],
-    
-//文章查询
-    ["ssp", "https://www.google.co.jp/search?q=site:sspai.com+"],
-    ["mrmad", "https://mrmad.com.tw/?s="],
-    ["medium", "https://medium.com/search?q="],
+    ["pdd", "pinduoduo://com.xunmeng.pinduoduo/search_result.html?search_key="],
+    ["jd", "openjd://virtual?params=%7B%22des%22:%22productList%22,%22keyWord%22:%22%@%22,%22from%22:%22search%22,%22category%22:%22jump%22%7D"],
+    ["smz", "smzdm://search?json=%7B%22channelName%22%3A%22home%22%2C%22search_type%22%3A%221%22%2C%22keyWord%22%3A%22%@%22%7D"],
 
 //信息查询
+    ["sp", "spotify:search:"],
+    ["edic", "eudic://dict/"],
+    ["aro", "dictionary2://define-"],
+    ["bs", "bear://x-callback-url/search?term="],
     ["say", "launch://x-callback-url/speak?x-success=drafts4://create&text="],
-    ["music", "spotify:search:"],
     ["wiki", "https://zh.m.wikipedia.org/wiki/"],
-    ["zhihu", "http://www.zhihu.com/search?q="],
     ["ip", "http://ip.cn/index.php?ip=", 1],
     ["pin", "https://www.pinterest.com/search/pins/?q="],
     ["gh", "https://github.com/search?&q="],
-    ["youtube", "https://m.youtube.com/results?q="],
+    ["ytb", "https://m.youtube.com/results?q="],
     ["blbl","bilibili://search?keyword="],
+    ["as", "itms-apps://search.itunes.apple.com/WebObjects/MZSearch.woa/wa/search?media=software&term="],
 
 //实用工具
     ["test", ""],
@@ -127,6 +134,14 @@ if (action == 'decode') {
     setClipboard((decodeURI(content)));
     uri = "drafts4://create";
     content = "";
+}
+
+if (action == 'bmi') {
+    temp = content.split(' ');
+    height = temp[0],weight = temp[1];
+    bmi = (weight/(height*height)).toFixed(2)
+    uri = "drafts4://create?text=";
+    content = '体重 '+weight+'\nBMI '+bmi;
 }
 
 draft.defineTag("uri", uri);
