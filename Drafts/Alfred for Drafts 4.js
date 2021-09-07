@@ -4,61 +4,62 @@ var default_action = 'gg';
 var action, content, uri, arr;
 
 var action_list = [
-//OmniFocus
+    // OmniFocus
     ["task", "drafts4://x-callback-url/runAction?action=TaskPaper&text="],
-//搜索引擎
+
+    // 搜索引擎
     ["gg", "x-web-search://?"],
     ["vt", "x-web-search://?site:v2ex.com%20"],
-    ["ssp", "x-web-search://?q=site:sspai.com+"],
+    ["ssp", "x-web-search://?site:sspai.com%20"],
     ["zh", "zhihu://search?type=content&q="],
-    ["wx", "http://weixin.sogou.com/weixinwap?query=", 1],
-    ["wolf", "http://m.wolframalpha.com/input/?i="],
+    ["wx", "https://weixin.sogou.com/weixinwap?type=2&query=", 1],
+    ["wolf", "https://m.wolframalpha.com/input/?i="],
     ["db", "douban:///search?q="],
     ["mrmad", "https://mrmad.com.tw/?s="],
     ["medium", "https://medium.com/search?q="],
     ["wb", "weixin://app/wx58164a91f1821369/jumpWxa/?userName=gh_5f1a249e0ced&path=pages/Discover/Discover.html?searchValue=%@&needResult=true"],
     
-//网上购物
+    // 网上购物
     ["tb", "taobao://s.taobao.com/?q="],
     ["tm" , "tmall://page.tm/search?q="],
     ["mt", "meituanwaimai://waimai.meituan.com/search?query="],
     ["book", "http://search.m.dangdang.com/search.php?keyword=", 1],
     ["pdd", "pinduoduo://com.xunmeng.pinduoduo/search_result.html?search_key="],
-    ["jd", "openjd://virtual?params=%7B%22des%22:%22productList%22,%22keyWord%22:%22%@%22,%22from%22:%22search%22,%22category%22:%22jump%22%7D"],
     ["smz", "smzdm://search?json=%7B%22channelName%22%3A%22home%22%2C%22search_type%22%3A%221%22%2C%22keyWord%22%3A%22%@%22%7D"],
+    ["jd", "openjd://virtual?params=%7B%22des%22:%22productList%22,%22keyWord%22:%22%@%22,%22from%22:%22search%22,%22category%22:%22jump%22%7D"],
 
-//信息查询
+    // 信息查询
     ["sp", "spotify:search:"],
     ["edic", "eudic://dict/"],
     ["aro", "dictionary2://define-"],
     ["bs", "bear://x-callback-url/search?term="],
-    ["say", "launch://x-callback-url/speak?x-success=drafts4://create&text="],
     ["wiki", "https://zh.m.wikipedia.org/wiki/"],
-    ["ip", "http://ip.cn/index.php?ip=", 1],
+    ["ip", "https://ip.tool.chinaz.com/", 1],
     ["pin", "https://www.pinterest.com/search/pins/?q="],
     ["gh", "https://github.com/search?&q="],
     ["ytb", "https://m.youtube.com/results?q="],
     ["blbl","bilibili://search?keyword="],
+    ["say", "launch://x-callback-url/speak?x-success=drafts4://create&text="],
     ["as", "itms-apps://search.itunes.apple.com/WebObjects/MZSearch.woa/wa/search?media=software&term="],
 
-//实用工具
-    ["test", ""],
+    //实用工具
+    ["bmi", ""],
     ["encode", ""],
     ["decode", ""],
-    ["redeem", "https://buy.itunes.apple.com/WebObjects/MZFinance.woa/wa/freeProductCodeWizard?mt=8&code="],
     ["tran", "https://translate.google.cn/m/translate#auto/zh-CN/", 1],
+    ["redeem", "https://buy.itunes.apple.com/WebObjects/MZFinance.woa/wa/freeProductCodeWizard?mt=8&code="],
     
-//社交软件
-    ["ins", "instagram://user?username="],
+    // 社交软件
     ["tw", "tweetbot:///post?text="],
     ["twuser", "tweetbot:///follow/"],
+    ["ins", "instagram://user?username="],
     
-//谷歌高级搜索
-    ["site", "https://www.google.com/search?q=-baidu%20site:"],
-    ["doc", "https://www.google.com/search?q=-baidu%20filetype:doc+"],
-    ["ppt", "https://www.google.com/search?q=-baidu%20filetype:ppt+"],
-    ["pdf", "https://www.google.com/search?q=-baidu%20filetype:pdf+"],
-    ["xls", "https://www.google.com/search?q=-baidu%20filetype:xls+"],
+    // 高级搜索
+    ["site", "x-web-search://?site:"],
+    ["doc", "x-web-search://?filetype:doc%20"],
+    ["ppt", "x-web-search://?filetype:ppt%20"],
+    ["pdf", "x-web-search://?filetype:pdf%20"],
+    ["xls", "x-web-search://?filetype:xls%20"],
 ]
 
 for (i = 0; i < action_list.length; i++) {
@@ -119,11 +120,6 @@ if (uri.startsWith('http')) {
 	}
 }
 
-if (action == 'test') {
-    uri = encodeURI(content);
-    content = "";
-}
-
 if (action == 'encode') {
     setClipboard((encodeURI(content)));
     uri = "drafts4://create";
@@ -131,7 +127,8 @@ if (action == 'encode') {
 }
 
 if (action == 'decode') {
-    setClipboard((decodeURI(content)));
+    setClipboard(decodeURIComponent(content));
+    setClipboard(decodeURIComponent(getClipboard()));
     uri = "drafts4://create";
     content = "";
 }
