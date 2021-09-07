@@ -39,7 +39,6 @@ var action_list = [
     ["gh", "https://github.com/search?&q="],
     ["ytb", "https://m.youtube.com/results?q="],
     ["blbl","bilibili://search?keyword="],
-    ["say", "launch://x-callback-url/speak?x-success=drafts4://create&text="],
     ["as", "itms-apps://search.itunes.apple.com/WebObjects/MZSearch.woa/wa/search?media=software&term="],
 
     //实用工具
