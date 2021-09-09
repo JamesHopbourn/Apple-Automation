@@ -17,7 +17,7 @@ var action_list = [
     ["medium", "https://medium.com/search?q="],
     ["wolf", "https://m.wolframalpha.com/input/?i="],
     ["wx", "https://weixin.sogou.com/weixinwap?type=2&query=", 1],
-    ["wb", "weixin://app/wx58164a91f1821369/jumpWxa/?userName=gh_5f1a249e0ced&path=pages/Discover/Discover.html?searchValue=%@&needResult=true"],
+    ["wb", "sinaweibo://searchall?q="],
     
     // 网上购物
     ["tb", "taobao://s.taobao.com/?q="],
