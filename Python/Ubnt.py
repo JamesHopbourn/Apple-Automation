@@ -32,7 +32,7 @@ with open('last_seen.txt', 'w') as file_object:
     file_object.close()
 print(last_seen)
 
-day  = datetime.fromtimestamp(data).strftime('%Y-%m-%d')
+date = datetime.fromtimestamp(data).strftime('%Y-%m-%d')
 time = datetime.fromtimestamp(data).strftime('%H:%M:%S')
 conn = mysql.connector.connect(user='root', password='password', host='localhost', database='Ubnt')
 cursor = conn.cursor()
@@ -40,6 +40,6 @@ cursor.execute("""CREATE TABLE IF NOT EXISTS last_seen (
   id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
   day date NULL DEFAULT '0000-00-00',
   time time NULL DEFAULT '00:00:00');""")
-cursor.execute("INSERT INTO last_seen (id,day,time) VALUES (%s, %s, %s)", (None, day, time,))
+cursor.execute("INSERT INTO last_seen (id, date, time) VALUES (%s, %s, %s)", (None, date, time,))
 conn.commit()
 cursor.close()
