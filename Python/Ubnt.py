@@ -25,15 +25,17 @@ r = requests.get(url_address + "/api/s/default/stat/user/" + mac_address,
     verify=False
 )
 
-last_seen = r.json()['data'][0]['last_seen']
-last_seen = datetime.fromtimestamp(last_seen).strftime('%Y-%m-%d %H:%M:%S')
+data = r.json()['data'][0]['last_seen']
+last_seen = datetime.fromtimestamp(data).strftime('%Y-%m-%d %H:%M:%S')
 with open('last_seen.txt', 'w') as file_object:
     file_object.write(last_seen)
     file_object.close()
 print(last_seen)
 
+day  = datetime.fromtimestamp(data).strftime('%Y-%m-%d')
+time = datetime.fromtimestamp(data).strftime('%H:%M:%S')
 conn = mysql.connector.connect(user='root', password='password', host='localhost', database='Ubnt')
 cursor = conn.cursor()
-cursor.execute("INSERT INTO Brother (id,time) VALUES (%s, %s)", (None, last_seen,))
+cursor.execute("INSERT INTO Brother (id,day,time) VALUES (%s, %s, %s)", (None, day, time,))
 conn.commit()
 cursor.close()
