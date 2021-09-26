@@ -2,6 +2,7 @@ import re
 import json
 import urllib3
 import requests
+import mysql.connector
 from datetime import datetime
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -25,7 +26,14 @@ r = requests.get(url_address + "/api/s/default/stat/user/" + mac_address,
 )
 
 last_seen = r.json()['data'][0]['last_seen']
-last_seen = datetime.fromtimestamp(last_seen).strftime('%Y/%m/%d %H:%M:%S')
+last_seen = datetime.fromtimestamp(last_seen).strftime('%Y-%m-%d %H:%M:%S')
 with open('last_seen.txt', 'w') as file_object:
     file_object.write(last_seen)
+    file_object.close()
 print(last_seen)
+
+conn = mysql.connector.connect(user='root', password='password', host='localhost', database='Ubnt')
+cursor = conn.cursor()
+cursor.execute("INSERT INTO Brother (id,time) VALUES (%s, %s)", (None, last_seen,))
+conn.commit()
+cursor.close()
