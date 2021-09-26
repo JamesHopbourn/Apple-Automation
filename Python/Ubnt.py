@@ -40,6 +40,6 @@ cursor.execute("""CREATE TABLE IF NOT EXISTS last_seen (
   id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
   day date NULL DEFAULT '0000-00-00',
   time time NULL DEFAULT '00:00:00');""")
-cursor.execute("INSERT INTO Brother (id,day,time) VALUES (%s, %s, %s)", (None, day, time,))
+cursor.execute("INSERT INTO last_seen (id,day,time) VALUES (%s, %s, %s)", (None, day, time,))
 conn.commit()
 cursor.close()
