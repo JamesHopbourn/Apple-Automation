@@ -36,6 +36,10 @@ day  = datetime.fromtimestamp(data).strftime('%Y-%m-%d')
 time = datetime.fromtimestamp(data).strftime('%H:%M:%S')
 conn = mysql.connector.connect(user='root', password='password', host='localhost', database='Ubnt')
 cursor = conn.cursor()
+cursor.execute("""CREATE TABLE IF NOT EXISTS Brother (
+  id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  day date NULL DEFAULT '0000-00-00',
+  time time NULL DEFAULT '00:00:00');""")
 cursor.execute("INSERT INTO Brother (id,day,time) VALUES (%s, %s, %s)", (None, day, time,))
 conn.commit()
 cursor.close()
