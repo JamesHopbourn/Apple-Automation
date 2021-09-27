@@ -11,27 +11,21 @@ password = ''
 mac_address = ''
 url_address = 'https://raspberrypi.local:8443'
 
-r = requests.post(url_address + "/api/login",
+resp = requests.post(url_address + "/api/login",
     data=json.dumps({"username": username,"password": password}),
     verify=False
 )
 
-token = r.headers['Set-Cookie']
+token = resp.headers['Set-Cookie']
 unifises = re.findall('unifises=[0-9a-zA-Z]+', token)[0].replace('unifises=', '')
 csrf_token = re.findall('csrf_token=[0-9a-zA-Z]+', token)[0].replace('csrf_token=', '')
 
-r = requests.get(url_address + "/api/s/default/stat/user/" + mac_address,
+resp = requests.get(url_address + "/api/s/default/stat/user/" + mac_address,
     cookies={"unifises": unifises,"csrf_token": csrf_token},
     verify=False
 )
 
-data = r.json()['data'][0]['last_seen']
-last_seen = datetime.fromtimestamp(data).strftime('%Y-%m-%d %H:%M:%S')
-with open('last_seen.txt', 'w') as file_object:
-    file_object.write(last_seen)
-    file_object.close()
-print(last_seen)
-
+data = resp.json()['data'][0]['last_seen']
 date = datetime.fromtimestamp(data).strftime('%Y-%m-%d')
 time = datetime.fromtimestamp(data).strftime('%H:%M:%S')
 conn = mysql.connector.connect(user='root', password='password', host='localhost', database='Ubnt')
