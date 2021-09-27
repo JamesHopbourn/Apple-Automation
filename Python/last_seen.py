@@ -4,7 +4,7 @@ from flask import Flask
 app = Flask(__name__)
 @app.route('/')
 def last_seen():
-    conn = mysql.connector.connect(user='root', password='manager', host='localhost', database='Ubnt')
+    conn = mysql.connector.connect(user='root', password='password', host='localhost', database='Ubnt')
     cursor = conn.cursor()
     cursor.execute("select date,time from last_seen order by id DESC limit 1")
     data = cursor.fetchone()
