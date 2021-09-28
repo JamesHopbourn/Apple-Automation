@@ -12,7 +12,7 @@ mac_address = ''
 url_address = 'https://raspberrypi.local:8443'
 
 resp = requests.post(url_address + "/api/login",
-    data=json.dumps({"username": username,"password": password}),
+    data=json.dumps({"username":username, "password":password}),
     verify=False
 )
 
@@ -21,7 +21,7 @@ unifises = re.findall('unifises=[0-9a-zA-Z]+', token)[0].replace('unifises=', ''
 csrf_token = re.findall('csrf_token=[0-9a-zA-Z]+', token)[0].replace('csrf_token=', '')
 
 resp = requests.get(url_address + "/api/s/default/stat/user/" + mac_address,
-    cookies={"unifises": unifises,"csrf_token": csrf_token},
+    cookies={"unifises":unifises, "csrf_token":csrf_token},
     verify=False
 )
 
