@@ -5,6 +5,7 @@ import requests
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 token = ''
+bot = telegram.Bot(token=token)
 
 # 设置代理
 proxies = {
@@ -13,7 +14,6 @@ proxies = {
 }
 
 # Telegram 消息处理
-bot = telegram.Bot(token=token)
 url = 'https://api.telegram.org/bot' + token + '/getUpdates'
 resp = requests.post(url, proxies=proxies, verify=False).json()
 chat_id = resp['result'][-1]['message']['chat']['id']
