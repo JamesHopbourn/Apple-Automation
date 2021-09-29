@@ -1,3 +1,4 @@
+import uvicorn
 import mysql.connector
 from fastapi import FastAPI
 
@@ -35,5 +36,4 @@ def query(date):
     return {"last_seen": data}
 
 if __name__ == '__main__':
-    import uvicorn
     uvicorn.run(app,host="0.0.0.0",port=80)
