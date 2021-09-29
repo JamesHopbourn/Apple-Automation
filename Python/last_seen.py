@@ -32,7 +32,7 @@ def query(date):
     if data:
         data = str(data[0]) + ' ' + str(data[1])
     else:
-        data = '未查询到相关信息'
+        data = '未查询到相关记录'
     return {"last_seen": data}
 
 if __name__ == '__main__':
