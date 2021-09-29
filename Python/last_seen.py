@@ -5,10 +5,10 @@ app = FastAPI()
 
 config = {
     'user': 'root', 
-    'password': 'manager', 
-    'host': 'localhost', 
+    'password': '', 
+    'host': '', 
     'port': 3306, 
-    'database': 'Ubnt'
+    'database': ''
 }
 
 @app.get('/')
@@ -21,11 +21,11 @@ def query():
     data = str(data[0]) + ' ' + str(data[1])
     return {"last_seen": data}
 
-@app.get("/query/{item_id}")
-def query(item_id):
+@app.get("/query/{date}")
+def query(date):
     conn = mysql.connector.connect(**config)
     cursor = conn.cursor()
-    cursor.execute('select date,time from last_seen where date = (%s)', (f'{item_id}',))
+    cursor.execute('select date,time from last_seen where date = (%s)', (f'{date}',))
     data = cursor.fetchone()
     cursor.close()
     if data:
