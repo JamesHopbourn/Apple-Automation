@@ -30,5 +30,14 @@ def query(date):
     cursor.close()
     return {"last_seen": str(data[0])}
 
+@app.get("/info")
+def query():
+    conn = mysql.connector.connect(**config)
+    cursor = conn.cursor()
+    cursor.execute("SELECT CONCAT(date,' ',time) FROM last_seen")
+    data = cursor.fetchall()
+    cursor.close()
+    return {"last_seen": str(data)}
+
 if __name__ == '__main__':
     uvicorn.run(app,host="0.0.0.0",port=80)
