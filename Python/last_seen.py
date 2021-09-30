@@ -16,21 +16,20 @@ config = {
 def query():
     conn = mysql.connector.connect(**config)
     cursor = conn.cursor()
-    cursor.execute('select date,time from last_seen order by id DESC limit 1')
+    cursor.execute("select concat(date,' ', time) from last_seen order by id DESC limit 1")
     data = cursor.fetchone()
     cursor.close()
-    data = str(data[0]) + ' ' + str(data[1])
-    return {"last_seen": data}
+    return {"last_seen": str(data[0])}
 
 @app.get("/query/{date}")
 def query(date):
     conn = mysql.connector.connect(**config)
     cursor = conn.cursor()
-    cursor.execute('select date,time from last_seen where date = (%s)', (f'{date}',))
+    cursor.execute("select concat(date,' ',time) from last_seen where date = (%s)", (f'{date}',))
     data = cursor.fetchone()
     cursor.close()
     if data:
-        data = str(data[0]) + ' ' + str(data[1])
+        data = str(data[0])
     else:
         data = '未查询到相关记录'
     return {"last_seen": data}
