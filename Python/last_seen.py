@@ -16,7 +16,7 @@ config = {
 def query():
     conn = mysql.connector.connect(**config)
     cursor = conn.cursor()
-    cursor.execute("select concat(date,' ',time) from last_seen order by id DESC limit 1")
+    cursor.execute("SELECT CONCAT(date,' ',time) FROM last_seen ORDER BY id DESC limit 1")
     data = cursor.fetchone()
     cursor.close()
     return {"last_seen": str(data[0])}
