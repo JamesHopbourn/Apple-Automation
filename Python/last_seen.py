@@ -25,7 +25,7 @@ def query():
 def query(date):
     conn = mysql.connector.connect(**config)
     cursor = conn.cursor()
-    cursor.execute("SELECT IFNULL((SELECT CONCAT(date,' ',time) FROM last_seen WHERE date = (%s)) ,'未查询到相关记录')", (f'{date}',))
+    cursor.execute("SELECT IFNULL((SELECT CONCAT(date,' ',time) FROM last_seen WHERE date = (%s)) ,'Not Found')", (f'{date}',))
     data = cursor.fetchone()
     cursor.close()
     return {"last_seen": str(data[0])}
