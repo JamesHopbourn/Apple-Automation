@@ -34,6 +34,7 @@ cursor.execute("""CREATE TABLE IF NOT EXISTS last_seen (
   id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
   date date NULL DEFAULT '0000-00-00',
   time time NULL DEFAULT '00:00:00')""")
+cursor.execute("ALTER TABLE last_seen AUTO_INCREMENT = 1")
 cursor.execute("INSERT INTO last_seen (id, date, time) VALUES (%s, %s, %s)", (None, date, time,))
 conn.commit()
 cursor.close()
