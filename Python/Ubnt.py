@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 import re
 import json
 import urllib3
@@ -25,16 +26,27 @@ resp = requests.get(url_address + "/api/s/default/stat/user/" + mac_address,
     verify=False
 )
 
+days = {
+  0: '星期一',
+  1: '星期二',
+  2: '星期三',
+  3: '星期四',
+  4: '星期五',
+  5: '星期六',
+  6: '星期天'
+}
+
 data = resp.json()['data'][0]['last_seen']
+week = datetime.fromtimestamp(data).weekday()
 date = datetime.fromtimestamp(data).strftime('%Y-%m-%d')
 time = datetime.fromtimestamp(data).strftime('%H:%M:%S')
-conn = mysql.connector.connect(user='root', password='password', host='localhost', database='Ubnt')
+conn = mysql.connector.connect(user='root', password='password', host='localhost', database='Ubnt', port=3306)
 cursor = conn.cursor()
 cursor.execute("""CREATE TABLE IF NOT EXISTS last_seen (
   id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
   date date NULL DEFAULT '0000-00-00',
   time time NULL DEFAULT '00:00:00')""")
 cursor.execute("ALTER TABLE last_seen AUTO_INCREMENT = 1")
-cursor.execute("INSERT INTO last_seen (id, date, time) VALUES (%s, %s, %s)", (None, date, time,))
+cursor.execute("INSERT INTO last_seen (id, date, time, week) VALUES (%s, %s, %s, %s)", (None, date, time, days[week],))
 conn.commit()
 cursor.close()
