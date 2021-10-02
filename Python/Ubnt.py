@@ -45,7 +45,8 @@ cursor = conn.cursor()
 cursor.execute("""CREATE TABLE IF NOT EXISTS last_seen (
   id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
   date date NULL DEFAULT '0000-00-00',
-  time time NULL DEFAULT '00:00:00')""")
+  time time NULL DEFAULT '00:00:00',
+  week varchar(20) NOT NULL)""")
 cursor.execute("ALTER TABLE last_seen AUTO_INCREMENT = 1")
 cursor.execute("INSERT INTO last_seen (id, date, time, week) VALUES (%s, %s, %s, %s)", (None, date, time, days[week],))
 conn.commit()
