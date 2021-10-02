@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN"
+    "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.hopbourn.chrome</string>
+    <key>ServiceDescription</key>
+    <string>Chrome</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/local/anaconda3/bin/python3</string>
+        <string>/Users/james/Desktop/full.py</string>
+    </array>
+    <key>StandardErrorPath</key>
+    <string>/var/log/python_script.error</string>
+    <key>RunAtLoad</key>
+    <true/>
+</dict>
+</plist>
