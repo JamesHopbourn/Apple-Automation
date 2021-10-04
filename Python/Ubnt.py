@@ -10,7 +10,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 username = ''
 password = ''
 mac_address = ''
-url_address = 'https://raspberrypi.local:8443'
+url_address = 'https://localhost:8443'
 
 resp = requests.post(url_address + "/api/login",
     data=json.dumps({"username":username, "password":password}),
