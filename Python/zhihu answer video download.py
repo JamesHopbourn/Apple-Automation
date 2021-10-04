@@ -15,5 +15,5 @@ for x in range(len(list)):
     content = json.loads(dict.text)
     downurl = content['playlist']['hd']['play_url']
     video = requests.get(downurl, allow_redirects=True)
-    filename = str(uuid.uuid4())[:9] + os.path.basename(url) + '.mp4'
+    filename = os.path.basename(url) + str(uuid.uuid4())[-13:] + '.mp4'
     open(filename, 'wb').write(video.content)
