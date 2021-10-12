@@ -5,5 +5,5 @@ chmod +x /Users/james/Downloads/Restore\ Create\ Date.sh
 ```
 使用脚本文件名 + 视频文件路径恢复全部日期，例如
 ```
-/Users/james/Downloads/Restore\ Create\ Date.sh /Users/james/Downloads/测试视频文 件
+/Users/james/Downloads/Restore\ Create\ Date.sh /Users/james/Downloads/测试视频文件
 ```
