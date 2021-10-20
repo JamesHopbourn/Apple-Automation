@@ -1,1 +1,1 @@
-open `git config --get remote.origin.url`/blob/`git rev-parse --abbrev-ref HEAD`/$(git rev-parse --show-prefix | tr -d '\n' | xxd -plain | sed 's/.\{2\}/%&/g')"$1"
+open `git config --get remote.origin.url|perl -pe 's/ssh:\/\/.*?\//https:\/\/github.com\//'`/blob/`git rev-parse --abbrev-ref HEAD`/$(git rev-parse --show-prefix)"$1"
