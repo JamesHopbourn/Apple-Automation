@@ -19,16 +19,6 @@ javascript: (function() {
         }
     }
 
-    document.head.innerHTML += '<meta name="flag" content="">';
-    title = document.title.replace(/ \/ Twitter/, '').replace(/^【.*】/, '').replace(/(｜.*$|\|.*$)/, '').replace(/^\(.*\)/, '').replace(/-.*$/, '').replace(/(！|？|\?|\!)/g, '').replace(/_.*$/, '').trim();
-    if (document.querySelector('meta[name=flag]').content == '') {
-        markdown = '[' + title + '](' + window.location.href + ')  ';
-        document.querySelector('meta[name=flag]').content = "1";
-    } else {
-        markdown = '- [' + title + '](' + window.location.href + ')  ';
-        document.querySelector('[name=flag]').remove();
-    }
-    if (window.getSelection() != '')
-        markdown = markdown + '\n' + window.getSelection() + '\n';
+    markdown = '[' + document.title+ '](' + window.location.href + ')  ';
     copyToClipboard(markdown);
 })();
