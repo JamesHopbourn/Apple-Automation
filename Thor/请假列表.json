@@ -1,0 +1,35 @@
+{
+  "code": "0",
+  "message": "success",
+  "datas": {
+    "totalSize": 1,
+    "pageSize": 20,
+    "pageNumber": 1,
+    "allowApply": 1,
+    "allowPcApply": 0,
+    "rows": [
+      {
+        "id": "${历史ID}",
+        "leaveType": "${请假类型}",
+        "createTime": "${开始时间}",
+        "startTime": "${开始时间}",
+        "endTime": "${结束时间}",
+        "totalDay": 1,
+        "status": "2",
+        "expireDay": null,
+        "isExtend": "0",
+        "applyTime": "",
+        "out": "1",
+        "leaveTime": "${外出时长}",
+        "startTimePC": "",
+        "endTimePC": "",
+        "leaveReason": "",
+        "shutDown": false,
+        "actEndTime": "",
+        "actEndTimeDesc": "",
+        "actStatus": "6",
+        "isEarlyEnd": ""
+      }
+    ]
+  }
+}
