@@ -4,5 +4,5 @@ cat 今日校园.json|sed 's/^[[:space:]]*// ; s/"/\\"/g ; 1s/^/^@rsp.bodyText "
 
 cat 请假列表.json|sed 's/^[[:space:]]*// ; s/"/\\"/g ; 1s/^/^@rsp.bodyText ".*endTimePC.*" "/ ; $s/$/"/'|tr -d '\n'|tee >(pbcopy)
 
-pbpaste|sed 's/\\//g'|jq|pbcopy
+pbpaste|sed 's/\\//g'|jq|tee >(pbcopy)
 ```

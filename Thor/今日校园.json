@@ -123,10 +123,10 @@
       "userId": "${学号}",
       "userName": "${名字}",
       "gender": 1,
-      "grade": "入学年份",
-      "dept": "所属院系",
-      "major": "就读专业",
-      "cls": "就读班级"
+      "grade": "${入学年份}",
+      "dept": "${所属院系}",
+      "major": "${就读专业}",
+      "cls": "${就读班级}"
     },
     "recordStatus": "6",
     "nowTime": ""
