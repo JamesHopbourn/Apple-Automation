@@ -20,7 +20,7 @@
         "isExtend": "0",
         "applyTime": "",
         "out": "1",
-        "leaveTime": "${外出时长}",
+        "leaveTime": "${请假时长}",
         "startTimePC": "",
         "endTimePC": "",
         "leaveReason": "",
