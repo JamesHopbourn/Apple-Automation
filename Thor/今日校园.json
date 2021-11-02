@@ -70,8 +70,8 @@
           "status": "3",
           "handled": true,
           "createTime": "${过审时间}",
-          "delayStatus": true,
-          "approveOption": "",
+          "delayStatus": false,
+          "approveOption": "${审批意见}",
           "approver": {
             "userName": "${辅导员名字}"
           },
@@ -84,7 +84,7 @@
               "approverName": "${辅导员名字}",
               "status": "3",
               "approveOption": "",
-              "delayStatus": true,
+              "delayStatus": false,
               "createTime": "",
               "approvers": [
                 {
