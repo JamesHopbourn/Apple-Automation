@@ -30,8 +30,6 @@
       "leaveReason": "${请假原因}",
       "status": "2",
       "approverOpinion": "",
-      "applyAttach": [],
-      "reportAttach": [],
       "createTime": "",
       "isOverdue": true,
       "dstStatus": "6",
