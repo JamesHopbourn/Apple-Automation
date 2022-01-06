@@ -26,15 +26,7 @@ resp = requests.get(url_address + "/api/s/default/stat/user/" + mac_address,
     verify=False
 )
 
-days = {
-  0: '星期一',
-  1: '星期二',
-  2: '星期三',
-  3: '星期四',
-  4: '星期五',
-  5: '星期六',
-  6: '星期天'
-}
+days = [[0, '星期一'], [1, '星期二'], [2, '星期三'], [3, '星期四'], [4, '星期五'], [5, '星期六'], [6, '星期天']]
 
 data = resp.json()['data'][0]['last_seen']
 week = datetime.fromtimestamp(data).weekday()
@@ -48,6 +40,6 @@ cursor.execute("""CREATE TABLE IF NOT EXISTS last_seen (
   time time NULL DEFAULT '00:00:00',
   week varchar(20) NOT NULL)""")
 cursor.execute("ALTER TABLE last_seen AUTO_INCREMENT = 1")
-cursor.execute("INSERT INTO last_seen (id, date, time, week) VALUES (%s, %s, %s, %s)", (None, date, time, days[week],))
+cursor.execute("INSERT INTO last_seen (id, date, time, week) VALUES (%s, %s, %s, %s)", (None, date, time, days[week][1],))
 conn.commit()
 cursor.close()
