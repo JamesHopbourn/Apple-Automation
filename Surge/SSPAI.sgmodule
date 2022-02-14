@@ -1,9 +1,0 @@
-#!name= 少数派显示稿费
-#!desc= 在少数派的个人信息页面显示本月稿费
-
-[Script]
-少数派显示稿费 = type=http-response,pattern=https://sspai.com/api/v1/user/slug/info/get\?slug=.*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/JamesHopbourn/Apple-Automation/master/Surge/sspai%20fee.js,script-update-interval=0
-少数派存储token = type=http-request,pattern=https://sspai.com/api/v1/user/slug/info/get\?slug=.*,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/JamesHopbourn/Apple-Automation/master/Surge/sspai%20token.js,script-update-interval=0
-
-[MITM]
-hostname = %APPEND% sspai.com
