@@ -21,8 +21,8 @@ function modify() {
 
 		body = JSON.parse($response.body);
 		temp = body.data.followed_count;
-		text = temp + " · 本月稿费 " + count;
-		body.data.followed_count = text;
+		temp += " · 本月稿费 " + count;
+		body.data.followed_count = temp;
 		body = JSON.stringify(body);
 		$done({body});
 	});
@@ -38,7 +38,8 @@ let check = {
 }
 
 $httpClient.get(check, function(error, response, data) {
-	name = $request.url.match(/slug=\w+/)[0].replace('slug=', '');
+	name = $request.url.match(/slug=\w+/);
+	name = name[0].replace('slug=', '');
 	nickname = JSON.parse(data)["data"]["nickname"];
 	if (name == nickname)
 		modify()
