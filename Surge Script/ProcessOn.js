@@ -5,7 +5,7 @@ data = JSON.parse(data);
 
 var text = '';
 function dfs(node, n) {
-    if (!node || !node.children) {
+    if (!node || !node.children){
         return;
     }
     text += "\t".repeat(n) + "- " + node.title + "\n";
@@ -14,12 +14,11 @@ function dfs(node, n) {
     });
     text = text.replace('<br>', '');
     text = text.replace(/&nbsp/g, '');
-
     return text;
 }
 
 let customURL = {
-    "url": "drafts://create?text=" + encodeURIComponent(dfs(data, 0))
+    "url": "drafts4://create?text=" + encodeURIComponent(dfs(data, 0))
 }
-$notification.post("", "点击添加到 Drafts", "", customURL);
+$notification.post(data.title, "点击添加到 Drafts", "", customURL);
 $done({});
