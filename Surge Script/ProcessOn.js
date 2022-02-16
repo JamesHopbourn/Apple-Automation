@@ -18,7 +18,7 @@ function dfs(node, n) {
 }
 
 let customURL = {
-    "url": "drafts4://create?text=" + encodeURIComponent(dfs(data, 0))
+    "url": "drafts5://create?text=" + encodeURIComponent(dfs(data, 0))
 }
 $notification.post(data.title, "点击添加到 Drafts", "", customURL);
 $done({});
