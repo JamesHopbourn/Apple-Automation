@@ -1,4 +1,4 @@
-### URL Scheme 数据清洗命令
+#### URL Scheme 数据清洗命令
 ```
 cat AndroidManifest.xml|perl -ne 'print if /<data android:host=/'|
 perl -pe 's/^.*<data android:host="(.*?)" android:path="(.*?)" android:scheme="(.*?)"\/>/\3:\/\/\1\2/'|
@@ -7,14 +7,13 @@ perl -pe 's/^.*<data android:host="(.*?)" android:pathPrefix="(.*?)" android:sch
 perl -pe 's/^.*<data android:host="(.*?)" android:pathPattern="(.*?)" android:scheme="(.*)"\/>/\3:\/\/\1\2/' > ' URL Scheme.txt'
 ```
 
-### 微信
+#### 微信
 小程序
 ```
 weixin://app/wx5aa333606550dfd5/jumpWxa/?userName=【账号原始 ID】&path=【页面路径】
 ```
 
-
-### 淘宝
+#### 淘宝
 相机拍照搜索
 ```
 taobao://tb.cn/n/scancode
@@ -45,18 +44,18 @@ taobao://shop.m.taobao.com/shop/shop_index.htm?shopId=%@
 tbopen://m.taobao.com/tbopen/index.html?h5Url=https://market.m.taobao.com/app/cn-yz/multi-activity/authCode.html
 ```
 
-### 天猫
+#### 天猫
 ```
 tmall://page.tm/search?q=%@
 ```
 
-### 豆瓣
+#### 豆瓣
 搜索内容
 ```
 douban:///search?q=%@
 ```
 
-### 新浪微博
+#### 新浪微博
 微博搜索
 ```
 sinaweibo://searchall?q=%@
@@ -77,18 +76,18 @@ sinaweibo://share?content=%@
 sinaweibo://userinfo?uid=[uid]
 ```
 
-### 小红书
+#### 小红书
 搜索页面
 ```
 xhsdiscover://search/recommend
 ```
 
-### 美团外卖
+#### 美团外卖
 ```
 meituanwaimai://waimai.meituan.com/search?query=%@
 ```
 
-### 美团
+#### 美团
 全局搜索
 ```
 imeituan://www.meituan.com/search?q=%@
@@ -104,24 +103,24 @@ imeituan://www.meituan.com/hotel/search?q=%@
 imeituan://www.meituan.com/scanQRCode
 ```
 
-### 大众点评
+#### 大众点评
 搜索商品
 ```
 dianping://searchshoplist?keyword=%@
 ```
 
-### 欧陆词典
+#### 欧陆词典
 ```
 eudic://dict/%@
 ```
 
-### 什么值得买
+#### 什么值得买
 搜索商品
 ```
 smzdm://search?json={"channelName":"home","search_type":"1","keyWord":"%@"}
 ```
 
-### 云支付
+#### 云支付
 付款
 ```
 upwallet://pay
@@ -147,7 +146,7 @@ upwallet://rn/rnshcarcode
 upwallet://applet?toLink=【小程序 URL 地址】&encryptAppId=【小程序 ID】
 ```
 
-### 知乎
+#### 知乎
 搜索问题
 ```
 zhihu://search?q=%@
@@ -163,7 +162,7 @@ zhihu://www.zhihu.com/search?q=%@
 zhihu://codereader
 ```
 
-### 哔哩哔哩
+#### 哔哩哔哩
 搜索视频
 ```
 bilibili://search?keyword=%@
@@ -184,43 +183,49 @@ bilibili://user_center
 bilibili://main/favorite
 ```
 
-### YouTube
+#### YouTube
 搜索视频，此处的 URL 在 Universal Link 的作用下会直接跳转 YouTube 客户端，如果没有安装客户端则直接打开网页搜索。
 ```
 https://m.youtube.com/results?q=%@
 ```
 
-### App Store
+#### App Store
 搜索软件
 ```
 itms-apps://search.itunes.apple.com/WebObjects/MZSearch.woa/wa/search?media=software&term=%@
 ```
 
-### Shortcuts
+#### Shortcuts
 下载捷径
 ```
 shortcuts://import-workflow?url=/path/to/filename.shortcut&name=ShortcutsFileName
 ```
 
-### 京东
+#### Surge
+Surge refresh Mock data and jump to target App
+```
+surge://x-callback-url/start?x-success=sa1efd978c://
+```
+
+#### 京东
 搜索商品
 ```
 openjd://virtual?params={"des":"productList","keyWord":"%@","from":"search","category":"jump"}
 ```
 
-### 拼多多
+#### 拼多多
 搜索商品
 ```
 pinduoduo://com.xunmeng.pinduoduo/search_result.html?search_key=%@
 ```
 
-### 微信
+#### 微信
 扫一扫
 ```
 weixin://scanqrcode
 ```
 
-### 支付宝
+#### 支付宝
 小程序
 ```
 alipays://platformapi/startapp?appId=【小程序 ID】&page=【页面路径】
@@ -251,7 +256,7 @@ launch://x-callback-url/clipboard?text={{}}&x-success={{alipay://platformapi/sta
 ```
 其他支付宝相关的小程序的 URL Scheme 请参照[《URL Scheme 查询指南》](https://sspai.com/post/66334)支付宝段落自行查询，此处不再一一列举。
 
-### 菜鸟
+#### 菜鸟
 打开身份码
 ```
 cainiao://desktop/station_code
@@ -260,7 +265,7 @@ cainiao://desktop/station_code
 launch://x-callback-url/clipboard?text={{}}&x-success={{cainiao://desktop/station_code}}
 ```
 
-### Launch Center Pro
+#### Launch Center Pro
 ```
 launch://x-callback-url/import?title=【标题】&url=【URL Scheme】
 ```
@@ -274,7 +279,7 @@ name = input('\n输入动作名称：')
 print('launch://x-callback-url/import?title=' + parse.quote(name) + '&url=' + urls)"
 ```
 
-### 设置
+#### 设置
 捷径屏幕使用时间通知
 ```
 prefs:root=SCREEN_TIME&path=SCREEN_TIME_SUMMARY#DAY/com.apple.shortcuts
@@ -289,5 +294,5 @@ App-prefs:SCREEN_TIME&path=SCREEN_TIME_SUMMARY#DAY/com.apple.shortcuts
 App-prefs:SCREEN_TIME&path=SCREEN_TIME_SUMMARY#WEEK/com.apple.shortcuts
 ```
 
-### 参考文章
+#### 参考文章
 [iOS 快捷指令 Shortcut 频繁弹出通知及关闭通知的 URL Scheme](https://www.v2ex.com/t/775905)
