@@ -18,7 +18,7 @@ javascript: (function() {
             }
         }
     }
-    title = document.title.replace(/^\(\d+\)/g, '');
+    title = document.title.replace(/(^\(\d+\)|- YouTube)/g, '').trim();
     markdown = '[' + title + '](' + window.location.href + ')  ';
     copyToClipboard(markdown);
 })();
