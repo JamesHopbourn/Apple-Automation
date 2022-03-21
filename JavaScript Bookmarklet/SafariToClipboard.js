@@ -18,7 +18,7 @@ javascript: (function() {
             }
         }
     }
-    title = document.title.replace(/(^\(\d+\)|- YouTube)/g, '').trim();
+    title = document.title.replace(/(^\(\d+\)|- (YouTube|知乎))/g, '').trim();
     markdown = '[' + title + '](' + window.location.href + ')  ';
     copyToClipboard(markdown);
 })();
