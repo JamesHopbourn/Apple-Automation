@@ -10,13 +10,15 @@ javascript: (function() {
             textarea.select();
             try {
                 return document.execCommand("copy");
-            } catch(ex) {
-                console.warn("Copy to clipboar failed.", ex);
+            } catch (ex) {
+                console.warn("Copy to clipboard failed.", ex);
                 return false;
             } finally {
                 document.body.removeChild(textarea);
             }
         }
     }
-    copyToClipboard(window.getSelection());
+    title = document.title.replace(/^\(\d+\)/g, '');
+    markdown = '[' + title + '](' + window.location.href + ')  ';
+    copyToClipboard(markdown);
 })();
