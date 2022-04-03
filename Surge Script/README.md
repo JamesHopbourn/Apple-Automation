@@ -1,6 +1,4 @@
-#### ProcessOn
+#### 今日校园
 ```
-ProcessOn = type=http-response,pattern=https://www.processon.com/(view/link|embed).*,requires-body=1,script-path=processon.js,max-size=0
-
-hostname = www.processon.com
+下载签到图片 = type=http-request,pattern=https://wecres.campusphere.net/counselor/attendance/\d+/attachment/[a-zA-Z0-9]+.png,requires-body=0,max-size=0,script-path=下载签到图片.js
 ```
