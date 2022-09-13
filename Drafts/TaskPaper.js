@@ -1,32 +1,37 @@
 var text = draft.content;
 
-// 如果不带任何标签且单行自动分配到今天最不紧要的任务
-if (text.match(/@context\(.*\)/g) == null && text.split('\n').length == 1){ text = text + " @due(Today 23:00) @context(5⃣️)" }
-
-// 如果包含 pbp 关键词就在下一行追加剪切板内容
-if (text.match(/pbp/g)) { text = text.replace("pbp", "") + "\n"+ getClipboard(); }
-
-var folderTag = text.match(/@folder\(.+?\)/g);
-if (folderTag != null) {
-	var target = '/folder/' + folderTag[0].slice(8,-1);
-} else {
-
-var projectTag = text.match(/@project\(.+?\)/g);
-	if (projectTag != null) {
-		var target = '/task/' + projectTag[0].slice(9,-1);
-	} else {
-		var target = 'inbox';
-	}
+tags = {
+  "td": "@estimate(01 min) @flagged @due(Today 22:00) @tags(1️⃣)",
+  "tm": "@estimate(01 min) @flagged @due(Tomorrow 12:00) @tags(1️⃣)",
+  "myc": "@tags(💭 James Notes)",
+  "buy": "@tags(🛒🛒 购物清单)",
+  "fea": "@tags(👨🏻‍💻👨🏻‍💻 功能开发)",
+  "mov": "@tags(🎬🎬 电影视频 : 清单)",
+  "tks": "👋 @tags(👋👋 物品拿取) @due(Sunday 18:00) ",
+  "tkh": "🏠 @tags(👋👋 物品拿取) @due(Saturday 18:00) ",
+  "omin": "@tags(1⃣️)",
+  "fmin": "@tags(5⃣️)",
+  "qmin": "@tags(1⃣️5⃣️)",
+  "hmin": "@tags(3⃣️0⃣️)",
+  "defaultTag": "@tags(5⃣️)"
 }
 
-// 处理来自 Web Capture Extension 的链接
-if (text.match(/\[.*\]\(.*\)/g)) {
-   text = text.match(/\[.*\]/g);
-   //text = text.replace(/\[/gi, "")
-   link = text.match(/\(http.*\)/g);
-   text = title+" @estimate(05 min) @context(📖📖 阅读列表)"+"\n"+link
-   target = 'inbox';
-}
+text = text.split('\n');
+keys = Object.keys(tags);
+const regExp = new RegExp('(@tags\\(.*?)(\\) @tags\\()', 'g');
+for (var i = 0; i < text.length; i++) {
+  var flag = false;
+  for (var j = 0; j < keys.length; j++) {
+    if (text[i].indexOf(keys[j]) != -1) {
+      flag = true;
+      value = tags[keys[j]];
+      text[i] = text[i].replace(keys[j],value).trim();
+      while (regExp.test(text)) text[i] = text[i].replace(regExp, '$1,');
 
-draft.defineTag('text',text);
-draft.defineTag('target',target);
+    }
+  }
+  if (!flag) text[i] += ` ${tags['default']}`;
+}
+text = text.join('\n');
+
+draft.defineTag('text', text);
