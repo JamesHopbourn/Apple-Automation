@@ -4,7 +4,7 @@ javascript: (function() {
     for (var i = 0; i < content.length; i++) {
         temp = content[i].innerText.split('\n')[2];
         if (temp.length < 6) {
-            temp += ".00"
+            temp += ".00";
         }
         result.push(temp);
     }
@@ -20,17 +20,14 @@ javascript: (function() {
     let minutes = Math.floor((total % 3600) / 60);
     let seconds = total % 60;
 
-    var textArea = document.createElement("textarea");
     hours = hours.toString().padStart(2, "0");
     minutes = minutes.toString().padStart(2, "0");
+
+    var textArea = document.createElement("textarea");
     textArea.value = hours + ":" + minutes;
     document.body.appendChild(textArea);
-
     textArea.select();
-
     document.execCommand("copy");
-
     document.body.removeChild(textArea);
-
     console.log("Text copied to clipboard");
 })();
